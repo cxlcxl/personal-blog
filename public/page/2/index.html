@@ -145,6 +145,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Git 解决每次 git pull 需要输入账号密码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>git bash 进入项目目录：
+git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.wtcxl.cn/posts/git-pull-repeat-enter-pass/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>golang air 热更新使用
     </h2>
   </header>
@@ -193,22 +206,12 @@
   <footer class="entry-footer"><span title='2022-11-20 10:25:27 +0800 CST'>十一月 20, 2022</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to K8s - Kubeadm 部署安装" href="https://www.wtcxl.cn/posts/k8s-2-install/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>K8s - 系统初始化
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>设置系统主机名 hostnamectl set-hostname k8s-master01 安装依赖包 yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables systemctl stop firewalld &amp;&amp; systemctl disable firewalld yum -y install iptables-services &amp;&amp; systemctl start iptables &amp;&amp; systemctl enable iptables &amp;&amp; iptables -F &amp;&amp; service iptables save 关闭 SELINUX swapoff -a &amp;&amp; sed -i &#39;/ swap / s/^\(.*\)$/#\1/g&#39; /etc/fstab setenforce 0 &amp;&amp; sed -i &#39;s/^SELINUX=.*/SELINUX=disabled/&#39; /etc/selinux/config 调整内核参数 cat &gt; kubernetes....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 系统初始化" href="https://www.wtcxl.cn/posts/k8s-1-init/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://www.wtcxl.cn/">
       «&nbsp;上一页&nbsp;
+    </a>
+    <a class="next" href="https://www.wtcxl.cn/page/3/">下一页&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>

@@ -9,7 +9,16 @@
       <link>https://www.wtcxl.cn/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Nov 2022 11:25:27 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 17:54:32 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang 环境搭建</title>
+      <link>https://www.wtcxl.cn/posts/golang-proxy/</link>
+      <pubDate>Mon, 21 Nov 2022 17:54:32 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/golang-proxy/</guid>
+      <description>go 环境搭建</description>
+    </item>
+    
     <item>
       <title>golang air 热更新使用</title>
       <link>https://www.wtcxl.cn/posts/golang-air/</link>
