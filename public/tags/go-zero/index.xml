@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>go-zero on Silent 的博客</title>
+    <link>https://www.wtcxl.cn/tags/go-zero/</link>
+    <description>Recent content in go-zero on Silent 的博客</description>
+    <image>
+      <url>https://www.wtcxl.cn/papermod-cover.png</url>
+      <link>https://www.wtcxl.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Nov 2022 10:25:27 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/tags/go-zero/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go-zero goctl 使用 proto 引入其他 proto 文件</title>
+      <link>https://www.wtcxl.cn/posts/go-zero-import-other-proto/</link>
+      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/go-zero-import-other-proto/</guid>
+      <description>goctl 使用 proto 引入其他 proto 文件</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Silent 的博客</title>
+    <link>https://www.wtcxl.cn/posts/</link>
+    <description>Recent content in Posts on Silent 的博客</description>
+    <image>
+      <url>https://www.wtcxl.cn/papermod-cover.png</url>
+      <link>https://www.wtcxl.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Nov 2022 16:31:51 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux scp 文件管理</title>
+      <link>https://www.wtcxl.cn/posts/linux-scp/</link>
+      <pubDate>Mon, 21 Nov 2022 16:31:51 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/linux-scp/</guid>
+      <description>scp 文件管理</description>
+    </item>
+    
+    <item>
+      <title>Virtual 本地虚拟机网络配置</title>
+      <link>https://www.wtcxl.cn/posts/virtual-network/</link>
+      <pubDate>Mon, 21 Nov 2022 15:34:03 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/virtual-network/</guid>
+      <description>本地虚拟机网络配置</description>
+    </item>
+    
+    <item>
+      <title>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题</title>
+      <link>https://www.wtcxl.cn/posts/vue-element-tree-checked-bug/</link>
+      <pubDate>Mon, 21 Nov 2022 15:31:53 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/vue-element-tree-checked-bug/</guid>
+      <description>el-tree 的 default-checked-keys 属性默认选中状态bug问题</description>
+    </item>
+    
+    <item>
+      <title>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）</title>
+      <link>https://www.wtcxl.cn/posts/virtual-space-not-enough/</link>
+      <pubDate>Mon, 21 Nov 2022 15:26:19 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/virtual-space-not-enough/</guid>
+      <description>虚拟机扩容（/dev/mapper/centos-root 空间不足）</description>
+    </item>
+    
+    <item>
+      <title>Git 解决每次 git pull 需要输入账号密码</title>
+      <link>https://www.wtcxl.cn/posts/git-pull-repeat-enter-pass/</link>
+      <pubDate>Mon, 21 Nov 2022 15:23:32 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/git-pull-repeat-enter-pass/</guid>
+      <description>解决每次 git pull 需要输入账号密码</description>
+    </item>
+    
+    <item>
+      <title>golang air 热更新使用</title>
+      <link>https://www.wtcxl.cn/posts/golang-air/</link>
+      <pubDate>Mon, 21 Nov 2022 11:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/golang-air/</guid>
+      <description>air 热更新使用</description>
+    </item>
+    
+    <item>
+      <title>go-zero goctl 使用 proto 引入其他 proto 文件</title>
+      <link>https://www.wtcxl.cn/posts/go-zero-import-other-proto/</link>
+      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/go-zero-import-other-proto/</guid>
+      <description>goctl 使用 proto 引入其他 proto 文件</description>
+    </item>
+    
+    <item>
+      <title>K8s - 资源清单</title>
+      <link>https://www.wtcxl.cn/posts/k8s-3-list/</link>
+      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/k8s-3-list/</guid>
+      <description>k8s 资源清单</description>
+    </item>
+    
+    <item>
+      <title>K8s - Kubeadm 部署安装</title>
+      <link>https://www.wtcxl.cn/posts/k8s-2-install/</link>
+      <pubDate>Sun, 20 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/k8s-2-install/</guid>
+      <description>k8s Kubeadm 部署安装</description>
+    </item>
+    
+    <item>
+      <title>K8s - 系统初始化</title>
+      <link>https://www.wtcxl.cn/posts/k8s-1-init/</link>
+      <pubDate>Sat, 19 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/posts/k8s-1-init/</guid>
+      <description>k8s 搭建环境系统初始化</description>
+    </item>
+    
+  </channel>
+</rss>

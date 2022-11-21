@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Silent 的博客</title>
+    <link>https://www.wtcxl.cn/tags/</link>
+    <description>Recent content in Tags on Silent 的博客</description>
+    <image>
+      <url>https://www.wtcxl.cn/papermod-cover.png</url>
+      <link>https://www.wtcxl.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Nov 2022 16:31:51 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>scp</title>
+      <link>https://www.wtcxl.cn/tags/scp/</link>
+      <pubDate>Mon, 21 Nov 2022 16:31:51 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/scp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>虚拟机</title>
+      <link>https://www.wtcxl.cn/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <pubDate>Mon, 21 Nov 2022 15:34:03 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>element</title>
+      <link>https://www.wtcxl.cn/tags/element/</link>
+      <pubDate>Mon, 21 Nov 2022 15:31:53 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/element/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://www.wtcxl.cn/tags/vue/</link>
+      <pubDate>Mon, 21 Nov 2022 15:31:53 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://www.wtcxl.cn/tags/golang/</link>
+      <pubDate>Mon, 21 Nov 2022 11:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go-zero</title>
+      <link>https://www.wtcxl.cn/tags/go-zero/</link>
+      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/go-zero/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://www.wtcxl.cn/tags/k8s/</link>
+      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proto</title>
+      <link>https://www.wtcxl.cn/tags/proto/</link>
+      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
+      
+      <guid>https://www.wtcxl.cn/tags/proto/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
