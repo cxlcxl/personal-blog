@@ -2,99 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.wtcxl.cn/categories/</loc>
+    <loc>https://www.silent-cxl.top/categories/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/git/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/linux/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/other-git-auto-publish/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E7%89%88/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/golang/</loc>
     <lastmod>2022-11-21T17:54:32+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/categories/golang/</loc>
+    <loc>https://www.silent-cxl.top/posts/golang-proxy/</loc>
     <lastmod>2022-11-21T17:54:32+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/golang-proxy/</loc>
-    <lastmod>2022-11-21T17:54:32+08:00</lastmod>
-  </url><url>
-    <loc>https://www.wtcxl.cn/posts/</loc>
-    <lastmod>2022-11-21T17:54:32+08:00</lastmod>
-  </url><url>
-    <loc>https://www.wtcxl.cn/</loc>
-    <lastmod>2022-11-21T17:54:32+08:00</lastmod>
-  </url><url>
-    <loc>https://www.wtcxl.cn/categories/linux/</loc>
+    <loc>https://www.silent-cxl.top/posts/linux-scp/</loc>
     <lastmod>2022-11-21T16:31:51+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/linux-scp/</loc>
+    <loc>https://www.silent-cxl.top/tags/scp/</loc>
     <lastmod>2022-11-21T16:31:51+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/scp/</loc>
-    <lastmod>2022-11-21T16:31:51+08:00</lastmod>
-  </url><url>
-    <loc>https://www.wtcxl.cn/tags/</loc>
-    <lastmod>2022-11-21T16:31:51+08:00</lastmod>
-  </url><url>
-    <loc>https://www.wtcxl.cn/posts/virtual-network/</loc>
+    <loc>https://www.silent-cxl.top/posts/virtual-network/</loc>
     <lastmod>2022-11-21T15:34:03+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <loc>https://www.silent-cxl.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2022-11-21T15:34:03+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <loc>https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2022-11-21T15:34:03+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/element/</loc>
+    <loc>https://www.silent-cxl.top/tags/element/</loc>
     <lastmod>2022-11-21T15:31:53+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/vue/</loc>
+    <loc>https://www.silent-cxl.top/tags/vue/</loc>
     <lastmod>2022-11-21T15:31:53+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/categories/vue/</loc>
+    <loc>https://www.silent-cxl.top/categories/vue/</loc>
     <lastmod>2022-11-21T15:31:53+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/vue-element-tree-checked-bug/</loc>
+    <loc>https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/</loc>
     <lastmod>2022-11-21T15:31:53+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/virtual-space-not-enough/</loc>
+    <loc>https://www.silent-cxl.top/posts/virtual-space-not-enough/</loc>
     <lastmod>2022-11-21T15:26:19+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/categories/git/</loc>
+    <loc>https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/</loc>
     <lastmod>2022-11-21T15:23:32+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/git-pull-repeat-enter-pass/</loc>
+    <loc>https://www.silent-cxl.top/about/</loc>
     <lastmod>2022-11-21T15:23:32+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/about/</loc>
-    <lastmod>2022-11-21T15:23:32+08:00</lastmod>
-  </url><url>
-    <loc>https://www.wtcxl.cn/tags/golang/</loc>
+    <loc>https://www.silent-cxl.top/tags/golang/</loc>
     <lastmod>2022-11-21T11:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/golang-air/</loc>
+    <loc>https://www.silent-cxl.top/posts/golang-air/</loc>
     <lastmod>2022-11-21T11:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/go-zero/</loc>
+    <loc>https://www.silent-cxl.top/tags/go-zero/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/categories/go-zero/</loc>
+    <loc>https://www.silent-cxl.top/categories/go-zero/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/go-zero-import-other-proto/</loc>
+    <loc>https://www.silent-cxl.top/posts/go-zero-import-other-proto/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/k8s/</loc>
+    <loc>https://www.silent-cxl.top/tags/k8s/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/categories/k8s/</loc>
+    <loc>https://www.silent-cxl.top/categories/k8s/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/k8s-3-list/</loc>
+    <loc>https://www.silent-cxl.top/posts/k8s-3-list/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/tags/proto/</loc>
+    <loc>https://www.silent-cxl.top/tags/proto/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/k8s-2-install/</loc>
+    <loc>https://www.silent-cxl.top/posts/k8s-2-install/</loc>
     <lastmod>2022-11-20T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/posts/k8s-1-init/</loc>
+    <loc>https://www.silent-cxl.top/posts/k8s-1-init/</loc>
     <lastmod>2022-11-19T10:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.wtcxl.cn/series/</loc>
+    <loc>https://www.silent-cxl.top/series/</loc>
   </url>
 </urlset>

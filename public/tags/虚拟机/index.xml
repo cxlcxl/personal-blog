@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>虚拟机 on Silent 的博客</title>
-    <link>https://www.wtcxl.cn/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+    <link>https://www.silent-cxl.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
     <description>Recent content in 虚拟机 on Silent 的博客</description>
     <image>
-      <url>https://www.wtcxl.cn/papermod-cover.png</url>
-      <link>https://www.wtcxl.cn/papermod-cover.png</link>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Nov 2022 15:34:03 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 15:34:03 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virtual 本地虚拟机网络配置</title>
-      <link>https://www.wtcxl.cn/posts/virtual-network/</link>
+      <link>https://www.silent-cxl.top/posts/virtual-network/</link>
       <pubDate>Mon, 21 Nov 2022 15:34:03 +0800</pubDate>
       
-      <guid>https://www.wtcxl.cn/posts/virtual-network/</guid>
+      <guid>https://www.silent-cxl.top/posts/virtual-network/</guid>
       <description>本地虚拟机网络配置</description>
     </item>
     
     <item>
       <title>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）</title>
-      <link>https://www.wtcxl.cn/posts/virtual-space-not-enough/</link>
+      <link>https://www.silent-cxl.top/posts/virtual-space-not-enough/</link>
       <pubDate>Mon, 21 Nov 2022 15:26:19 +0800</pubDate>
       
-      <guid>https://www.wtcxl.cn/posts/virtual-space-not-enough/</guid>
+      <guid>https://www.silent-cxl.top/posts/virtual-space-not-enough/</guid>
       <description>虚拟机扩容（/dev/mapper/centos-root 空间不足）</description>
     </item>
     

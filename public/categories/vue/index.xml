@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>vue on Silent 的博客</title>
-    <link>https://www.wtcxl.cn/categories/vue/</link>
+    <link>https://www.silent-cxl.top/categories/vue/</link>
     <description>Recent content in vue on Silent 的博客</description>
     <image>
-      <url>https://www.wtcxl.cn/papermod-cover.png</url>
-      <link>https://www.wtcxl.cn/papermod-cover.png</link>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Nov 2022 15:31:53 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 15:31:53 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题</title>
-      <link>https://www.wtcxl.cn/posts/vue-element-tree-checked-bug/</link>
+      <link>https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/</link>
       <pubDate>Mon, 21 Nov 2022 15:31:53 +0800</pubDate>
       
-      <guid>https://www.wtcxl.cn/posts/vue-element-tree-checked-bug/</guid>
+      <guid>https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/</guid>
       <description>el-tree 的 default-checked-keys 属性默认选中状态bug问题</description>
     </item>
     

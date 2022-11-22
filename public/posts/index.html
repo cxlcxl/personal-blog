@@ -9,16 +9,16 @@
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Silent 的博客">
 <meta name="author" content="silent">
-<link rel="canonical" href="https://www.wtcxl.cn/posts/">
+<link rel="canonical" href="https://www.silent-cxl.top/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://www.wtcxl.cn/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.wtcxl.cn/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.wtcxl.cn/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://www.wtcxl.cn/apple-touch-icon.png">
-<link rel="mask-icon" href="https://www.wtcxl.cn/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.silent-cxl.top/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.silent-cxl.top/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.wtcxl.cn/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/posts/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,10 +58,10 @@
 </noscript><meta property="og:title" content="Posts" />
 <meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.wtcxl.cn/posts/" /><meta property="og:image" content="https://www.wtcxl.cn/papermod-cover.png"/>
+<meta property="og:url" content="https://www.silent-cxl.top/posts/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.wtcxl.cn/papermod-cover.png"/>
+<meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
@@ -76,7 +76,7 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://www.wtcxl.cn/posts/"
+      "item": "https://www.silent-cxl.top/posts/"
     }
   ]
 }
@@ -98,7 +98,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.wtcxl.cn/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -124,17 +124,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.wtcxl.cn/tags/" title="标签">
+                <a href="https://www.silent-cxl.top/tags/" title="标签">
                     <span>标签</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.wtcxl.cn/categories/" title="分类">
+                <a href="https://www.silent-cxl.top/categories/" title="分类">
                     <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.wtcxl.cn/about/" title="About">
+                <a href="https://www.silent-cxl.top/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -142,7 +142,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://www.wtcxl.cn/">主页</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a></div>
   <h1>
     Posts
     <a href="index.xml" title="RSS" aria-label="RSS">
@@ -158,14 +158,27 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Other 从远程仓库定时自动发版
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>添加脚本文件到你期望存放的地址 #!/bin/bash SITEDIR=/www/projects/site BAKDIR=/www/baks DAYS=7 DATE=`date &#43;%Y%m%d` REMOTE=`gitee/github/gitlab 仓库地址` # -c 压缩 # -x 解压 # -z 支持gzip解压文件 # -v 显示操作过程 # -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR cd /www/projects/ rm -rf site git clone $REMOTE site # 删除过期备份文件 # $bakdir find 备份文件的地址 #-type f 类型为普通文件 #-mtime 7 天之前的文件 #-exec rm -f 静默删除匹配出来的文件 # 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; echo &#34;complete!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Other 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Golang 环境搭建
     </h2>
   </header>
   <div class="entry-content">
-    <p>遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout 解决，终端执行：go env -w GOPROXY=https://goproxy.cn</p>
+    <p>遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout 解决，终端执行：go env -w GOPROXY=https://goproxy.cn
+待续…</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 17:54:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Golang 环境搭建" href="https://www.wtcxl.cn/posts/golang-proxy/"></a>
+  <a class="entry-link" aria-label="post link to Golang 环境搭建" href="https://www.silent-cxl.top/posts/golang-proxy/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -177,7 +190,7 @@
     <p># 从服务器上下载文件 scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] # 上传本地文件到服务器 scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] # 从服务器下载整个目录 scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] # 上传目录到服务器 scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.wtcxl.cn/posts/linux-scp/"></a>
+  <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -191,7 +204,7 @@
 TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IPADDR=192.168.120.61 IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_FAILURE_FATAL=no IPV6_ADDR_GEN_MODE=stable-privacy NAME=enp0s3 UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 DEVICE=enp0s3 ONBOOT=yes GETRWAY=192.168.56.1 NETMASK=255.255.255.0 DNS1=192.168.56.1 </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.wtcxl.cn/posts/virtual-network/"></a>
+  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -205,32 +218,18 @@ TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IP
 读取到接口数据后使用 this.$refs.tree.setCheckedNodes(***传入接口返回的节点 keys***) 设置默认； 提交前使用 this.$refs.tree.getCheckedKeys() 再次获取选中的节点并赋值 </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.wtcxl.cn/posts/vue-element-tree-checked-bug/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>查看根分区大小 df -h
-文件系统 类型 容量 已用 可用 已用% 挂载点 /dev/mapper/centos-root xfs 18G 1.1G 17G 6% / devtmpfs devtmpfs 479M 0 479M 0% /dev tmpfs tmpfs 489M 0 489M 0% /dev/shm tmpfs tmpfs 489M 6.7M 483M 2% /run tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup /dev/sda1 xfs 497M 125M 373M 25% /boot tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
-/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.wtcxl.cn/posts/virtual-space-not-enough/"></a>
+  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="next" href="https://www.wtcxl.cn/posts/page/2/">下一页&nbsp;&nbsp;»
+    <a class="next" href="https://www.silent-cxl.top/posts/page/2/">下一页&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://www.wtcxl.cn/">Silent 的博客</a></span>
+    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

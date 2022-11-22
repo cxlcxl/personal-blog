@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>scp on Silent 的博客</title>
-    <link>https://www.wtcxl.cn/tags/scp/</link>
+    <link>https://www.silent-cxl.top/tags/scp/</link>
     <description>Recent content in scp on Silent 的博客</description>
     <image>
-      <url>https://www.wtcxl.cn/papermod-cover.png</url>
-      <link>https://www.wtcxl.cn/papermod-cover.png</link>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Nov 2022 16:31:51 +0800</lastBuildDate><atom:link href="https://www.wtcxl.cn/tags/scp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 16:31:51 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/scp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux scp 文件管理</title>
-      <link>https://www.wtcxl.cn/posts/linux-scp/</link>
+      <link>https://www.silent-cxl.top/posts/linux-scp/</link>
       <pubDate>Mon, 21 Nov 2022 16:31:51 +0800</pubDate>
       
-      <guid>https://www.wtcxl.cn/posts/linux-scp/</guid>
+      <guid>https://www.silent-cxl.top/posts/linux-scp/</guid>
       <description>scp 文件管理</description>
     </item>
     

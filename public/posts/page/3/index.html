@@ -9,16 +9,16 @@
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Silent 的博客">
 <meta name="author" content="silent">
-<link rel="canonical" href="https://www.wtcxl.cn/posts/">
+<link rel="canonical" href="https://www.silent-cxl.top/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://www.wtcxl.cn/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.wtcxl.cn/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.wtcxl.cn/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://www.wtcxl.cn/apple-touch-icon.png">
-<link rel="mask-icon" href="https://www.wtcxl.cn/safari-pinned-tab.svg">
+<link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.silent-cxl.top/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.silent-cxl.top/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.wtcxl.cn/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/posts/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,10 +58,10 @@
 </noscript><meta property="og:title" content="Posts" />
 <meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.wtcxl.cn/posts/" /><meta property="og:image" content="https://www.wtcxl.cn/papermod-cover.png"/>
+<meta property="og:url" content="https://www.silent-cxl.top/posts/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.wtcxl.cn/papermod-cover.png"/>
+<meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
@@ -76,7 +76,7 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://www.wtcxl.cn/posts/"
+      "item": "https://www.silent-cxl.top/posts/"
     }
   ]
 }
@@ -98,7 +98,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.wtcxl.cn/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -124,17 +124,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.wtcxl.cn/tags/" title="标签">
+                <a href="https://www.silent-cxl.top/tags/" title="标签">
                     <span>标签</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.wtcxl.cn/categories/" title="分类">
+                <a href="https://www.silent-cxl.top/categories/" title="分类">
                     <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.wtcxl.cn/about/" title="About">
+                <a href="https://www.silent-cxl.top/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -142,7 +142,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://www.wtcxl.cn/">主页</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a></div>
   <h1>
     Posts
     <a href="index.xml" title="RSS" aria-label="RSS">
@@ -158,6 +158,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>K8s - Kubeadm 部署安装
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>kube-proxy开启ipvs的前置条件 modprobe br_netfilter cat &gt; /etc/sysconfig/modules/ipvs.modules &lt;&lt;EOF #!/bin/bash modprobe -- ip_vs modprobe -- ip_vs_rr modprobe -- ip_vs_wrr modprobe -- ip_vs_sh modprobe -- nf_conntrack_ipv4 EOF chmod 755 /etc/sysconfig/modules/ipvs.modules &amp;&amp; bash /etc/sysconfig/modules/ipvs.modules &amp;&amp; lsmod | grep -e ip_vs -e nf_conntrack_ipv4 如果报错：modprobe: FATAL: Module nf_conntrack_ipv4 not found. 内核高版本的 nf_conntrack_ipv4 已被 nf_conntrack 替换，将以上的 nf_conntrack_ipv4 改为 nf_conntrack 重新执行。
+安装 Docker 软件 yum install -y yum-utils device-mapper-persistent-data lvm2 # docker 依赖包 # docker 镜像源 yum-config-manager \ --add-repo \ http://mirrors....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-20 10:25:27 +0800 CST'>十一月 20, 2022</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Silent</footer>
+  <a class="entry-link" aria-label="post link to K8s - Kubeadm 部署安装" href="https://www.silent-cxl.top/posts/k8s-2-install/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>K8s - 系统初始化
     </h2>
   </header>
@@ -165,11 +178,11 @@
     <p>设置系统主机名 hostnamectl set-hostname k8s-master01 安装依赖包 yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables systemctl stop firewalld &amp;&amp; systemctl disable firewalld yum -y install iptables-services &amp;&amp; systemctl start iptables &amp;&amp; systemctl enable iptables &amp;&amp; iptables -F &amp;&amp; service iptables save 关闭 SELINUX swapoff -a &amp;&amp; sed -i &#39;/ swap / s/^\(.*\)$/#\1/g&#39; /etc/fstab setenforce 0 &amp;&amp; sed -i &#39;s/^SELINUX=.*/SELINUX=disabled/&#39; /etc/selinux/config 调整内核参数 cat &gt; kubernetes....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 系统初始化" href="https://www.wtcxl.cn/posts/k8s-1-init/"></a>
+  <a class="entry-link" aria-label="post link to K8s - 系统初始化" href="https://www.silent-cxl.top/posts/k8s-1-init/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="https://www.wtcxl.cn/posts/page/2/">
+    <a class="prev" href="https://www.silent-cxl.top/posts/page/2/">
       «&nbsp;上一页&nbsp;
     </a>
   </nav>
@@ -177,7 +190,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://www.wtcxl.cn/">Silent 的博客</a></span>
+    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
