@@ -3,7 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/vite/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/vue/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/vue3/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/vue/vue3-vite/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/vue/</loc>
+    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/vue/vue3-vuex/</loc>
+    <lastmod>2022-11-22T17:26:30+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/vue/vue3-login-permission/</loc>
+    <lastmod>2022-11-22T17:26:30+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/vuex/</loc>
+    <lastmod>2022-11-22T17:26:30+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/categories/git/</loc>
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
@@ -15,12 +45,6 @@
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/</loc>
-    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
-    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/tags/</loc>
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E7%89%88/</loc>
@@ -51,9 +75,6 @@
     <lastmod>2022-11-21T15:31:53+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/vue/</loc>
-    <lastmod>2022-11-21T15:31:53+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/vue/</loc>
     <lastmod>2022-11-21T15:31:53+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/</loc>

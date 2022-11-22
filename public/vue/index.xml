@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>vue on Silent 的博客</title>
-    <link>https://www.silent-cxl.top/categories/vue/</link>
-    <description>Recent content in vue on Silent 的博客</description>
+    <title>Vues on Silent 的博客</title>
+    <link>https://www.silent-cxl.top/vue/</link>
+    <description>Recent content in Vues on Silent 的博客</description>
     <image>
       <url>https://www.silent-cxl.top/papermod-cover.png</url>
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Nov 2022 17:53:38 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Nov 2022 17:53:38 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue3 Vite 使用基础配置</title>
       <link>https://www.silent-cxl.top/vue/vue3-vite/</link>
@@ -35,15 +35,6 @@
       
       <guid>https://www.silent-cxl.top/vue/vue3-login-permission/</guid>
       <description>页面登录拦截器</description>
-    </item>
-    
-    <item>
-      <title>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题</title>
-      <link>https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/</link>
-      <pubDate>Mon, 21 Nov 2022 15:31:53 +0800</pubDate>
-      
-      <guid>https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/</guid>
-      <description>el-tree 的 default-checked-keys 属性默认选中状态bug问题</description>
     </item>
     
   </channel>
