@@ -28,6 +28,11 @@ weight = 1
 #weight = 5
 
 [[languages.zh.menu.main]]
+name = "搜索"
+url = "search/"
+weight = 5
+
+[[languages.zh.menu.main]]
 name = "标签"
 url = "tags/"
 weight = 10
@@ -47,7 +52,7 @@ home = [ "HTML", "RSS", "JSON" ]
 
 [params]
 env = "production"
-description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+description = "silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流"
 author = "silent"
 defaultTheme = "auto"
 ShowShareButtons = true
@@ -80,18 +85,18 @@ images = [ "papermod-cover.png" ]
 
   [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/adityatelange/hugo-PaperMod"
+  url = "https://github.com/cxlcxl"
 
-  [[params.socialIcons]]
-  name = "KoFi"
-  url = "https://ko-fi.com/adityatelange"
+  #[[params.socialIcons]]
+  #name = "KoFi"
+  #url = "https://ko-fi.com/adityatelange"
 
   [[params.socialIcons]]
   name = "Rss"
   url = "index.xml"
 
   [params.editPost]
-  URL = "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+  URL = "https://github.com/cxlcxl/personal-blog/blob/master/content"
   Text = "Suggest Changes"
   appendFilePath = true
 

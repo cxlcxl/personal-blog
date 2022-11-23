@@ -1,10 +1,10 @@
 ---
-title: "Other 从远程仓库定时自动发版"
+title: "从远程仓库定时自动发版"
 date: 2022-11-22T14:15:52+08:00
 draft: false
 description: "从远程仓库定时自动发版"
 categories: ["linux", "git"]
-tags: ["自动发版"]
+tags: ["自动发版", "git", "shell"]
 ShowToc: true
 ShowBreadCrumbs: '' #原创文章，如需转载请注明文章作者和出处。谢谢！
 ---
