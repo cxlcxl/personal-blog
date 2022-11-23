@@ -3,13 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/</loc>
-    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/</loc>
-    <lastmod>2022-11-22T17:53:38+08:00</lastmod>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E5%85%AB%E8%BF%9B%E5%88%B6/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/computer-conversion/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E5%8D%81%E8%BF%9B%E5%88%B6/</loc>
+    <lastmod>2022-11-23T14:31:06+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/vite/</loc>
     <lastmod>2022-11-22T17:53:38+08:00</lastmod>
@@ -35,16 +56,19 @@
     <loc>https://www.silent-cxl.top/tags/vuex/</loc>
     <lastmod>2022-11-22T17:26:30+08:00</lastmod>
   </url><url>
+    <loc>https://www.silent-cxl.top/tags/git/</loc>
+    <lastmod>2022-11-22T14:15:52+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/categories/git/</loc>
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/categories/linux/</loc>
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/posts/other-git-auto-publish/</loc>
+    <loc>https://www.silent-cxl.top/tags/shell/</loc>
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
+    <loc>https://www.silent-cxl.top/posts/other-git-auto-publish/</loc>
     <lastmod>2022-11-22T14:15:52+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E7%89%88/</loc>
@@ -121,6 +145,8 @@
   </url><url>
     <loc>https://www.silent-cxl.top/posts/k8s-1-init/</loc>
     <lastmod>2022-11-19T10:25:27+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/search/</loc>
   </url><url>
     <loc>https://www.silent-cxl.top/series/</loc>
   </url>

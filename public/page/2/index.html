@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow">
 <title>Silent 的博客</title>
 
-<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
+<meta name="description" content="silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
@@ -58,7 +58,7 @@
 
     </style>
 </noscript><meta property="og:title" content="Silent 的博客" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.silent-cxl.top/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
@@ -66,7 +66,7 @@
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:title" content="Silent 的博客"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流"/>
 
 <script type="application/ld+json">
 {
@@ -74,10 +74,10 @@
   "@type": "Organization",
   "name": "Silent 的博客",
   "url": "https://www.silent-cxl.top/",
-  "description": "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod",
+  "description": "silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流",
   "thumbnailUrl": "https://www.silent-cxl.top/favicon.ico",
   "sameAs": [
-      "https://github.com/adityatelange/hugo-PaperMod", "https://ko-fi.com/adityatelange", "index.xml"
+      "https://github.com/cxlcxl", "index.xml"
   ]
 }
 </script>
@@ -124,6 +124,11 @@
         </div>
         <ul id="menu">
             <li>
+                <a href="https://www.silent-cxl.top/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/tags/" title="标签">
                     <span>标签</span>
                 </a>
@@ -142,6 +147,20 @@
     </nav>
 </header>
 <main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>解决方式：
+无需设置 default-checked-keys 属性
+读取到接口数据后使用 this.$refs.tree.setCheckedNodes(***传入接口返回的节点 keys***) 设置默认； 提交前使用 this.$refs.tree.getCheckedKeys() 再次获取选中的节点并赋值 </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -192,20 +211,6 @@ git config --global credential.helper store 输入以上命令后，重新拉取
   </div>
   <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to go-zero goctl 使用 proto 引入其他 proto 文件" href="https://www.silent-cxl.top/posts/go-zero-import-other-proto/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>K8s - 资源清单
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>资源清单格式 apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) kind: #资源类别 metadata： #资源元数据 name namespace lables annotations # 主要目的是方便用户阅读查找 spec: # 期望的状态（disired state） status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
-[root@k8s-master01 ~]# kubectl api-versions admissionregistration.k8s.io/v1beta1 apiextensions.k8s.io/v1beta1 apiregistration.k8s.io/v1 apiregistration.k8s.io/v1beta1 apps/v1 ......(以下省略) 获取资源的 apiVersion 版本信息
-[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 .....(以下省略) [root@k8s-master01 ~]# kubectl explain Ingress KIND: Ingress VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

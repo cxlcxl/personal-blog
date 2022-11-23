@@ -9,7 +9,16 @@
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Nov 2022 17:53:38 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Nov 2022 14:31:06 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>进制转换</title>
+      <link>https://www.silent-cxl.top/posts/computer-conversion/</link>
+      <pubDate>Wed, 23 Nov 2022 14:31:06 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/computer-conversion/</guid>
+      <description>进制转换</description>
+    </item>
+    
     <item>
       <title>Vue3 Vite 使用基础配置</title>
       <link>https://www.silent-cxl.top/vue/vue3-vite/</link>
@@ -38,7 +47,7 @@
     </item>
     
     <item>
-      <title>Other 从远程仓库定时自动发版</title>
+      <title>从远程仓库定时自动发版</title>
       <link>https://www.silent-cxl.top/posts/other-git-auto-publish/</link>
       <pubDate>Tue, 22 Nov 2022 14:15:52 +0800</pubDate>
       
@@ -155,6 +164,7 @@
       <guid>https://www.silent-cxl.top/posts/k8s-1-init/</guid>
       <description>k8s 搭建环境系统初始化</description>
     </item>
+    
     
   </channel>
 </rss>
