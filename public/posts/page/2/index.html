@@ -56,7 +56,7 @@
 
     </style>
 </noscript><meta property="og:title" content="Posts" />
-<meta property="og:description" content="silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流" />
+<meta property="og:description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，欢迎互相交流" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.silent-cxl.top/posts/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
@@ -64,7 +64,7 @@
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="silent - 一个普通的 PHP、Golang 程序员，欢迎互相交流"/>
+<meta name="twitter:description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，欢迎互相交流"/>
 
 
 <script type="application/ld+json">
@@ -163,6 +163,32 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Linux scp 文件管理
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p># 从服务器上下载文件 scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] # 上传本地文件到服务器 scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] # 从服务器下载整个目录 scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] # 上传目录到服务器 scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] # 如果用到非 22 端口则在 scp 后使用 -P 参数 </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Virtual 本地虚拟机网络配置
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
+配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
+TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IPADDR=192.168.120.61 IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_FAILURE_FATAL=no IPV6_ADDR_GEN_MODE=stable-privacy NAME=enp0s3 UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 DEVICE=enp0s3 ONBOOT=yes GETRWAY=192.168.56.1 NETMASK=255.255.255.0 DNS1=192.168.56.1 </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
     </h2>
   </header>
@@ -212,18 +238,6 @@ git config --global credential.helper store 输入以上命令后，重新拉取
   </div>
   <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>go-zero goctl 使用 proto 引入其他 proto 文件
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>编写 proto 文件 // role.proto 文件 syntax = &#34;proto3&#34;; option go_package = &#34;./marketing&#34;; package marketing; message RoleCreateReq { string role_name = 1; } // user.proto 文件 syntax = &#34;proto3&#34;; option go_package = &#34;./rbac&#34;; package rbac; import &#34;pb/role.proto&#34;; // 以执行 goctl 命令为起始路径 message UserCreateReq { string username = 1; string email = 2; } message BaseResp { int64 code = 1; } service RbacCenter{ // RPC 服务 rpc RoleCreate(RoleCreateReq) returns(BaseResp); rpc UserCreate(UserCreateReq) returns(BaseResp); } 两个文件放在同一目录内...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to go-zero goctl 使用 proto 引入其他 proto 文件" href="https://www.silent-cxl.top/posts/go-zero-import-other-proto/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

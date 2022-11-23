@@ -21,28 +21,28 @@
     
     <item>
       <title>Vue3 Vite 使用基础配置</title>
-      <link>https://www.silent-cxl.top/vue/vue3-vite/</link>
+      <link>https://www.silent-cxl.top/posts/vue-vite/</link>
       <pubDate>Tue, 22 Nov 2022 17:53:38 +0800</pubDate>
       
-      <guid>https://www.silent-cxl.top/vue/vue3-vite/</guid>
+      <guid>https://www.silent-cxl.top/posts/vue-vite/</guid>
       <description>Vite 使用基础配置</description>
     </item>
     
     <item>
       <title>Vue3 使用 Vuex 做登录信息</title>
-      <link>https://www.silent-cxl.top/vue/vue3-vuex/</link>
+      <link>https://www.silent-cxl.top/posts/vue-vuex/</link>
       <pubDate>Tue, 22 Nov 2022 17:26:30 +0800</pubDate>
       
-      <guid>https://www.silent-cxl.top/vue/vue3-vuex/</guid>
+      <guid>https://www.silent-cxl.top/posts/vue-vuex/</guid>
       <description>使用 Vuex 做登录信息</description>
     </item>
     
     <item>
       <title>Vue3 页面登录拦截器</title>
-      <link>https://www.silent-cxl.top/vue/vue3-login-permission/</link>
+      <link>https://www.silent-cxl.top/posts/vue-login-permission/</link>
       <pubDate>Tue, 22 Nov 2022 17:26:30 +0800</pubDate>
       
-      <guid>https://www.silent-cxl.top/vue/vue3-login-permission/</guid>
+      <guid>https://www.silent-cxl.top/posts/vue-login-permission/</guid>
       <description>页面登录拦截器</description>
     </item>
     
@@ -117,7 +117,7 @@
       <guid>https://www.silent-cxl.top/about/</guid>
       <description>你好！我是 silent，中文名：程晓良，很高兴你能进入我的博客，如有互相交流的可添加微信：Silent-Cxl（备注：技术交流）。
 关于我 我是一名从服务行业转行的 PHP/Golang 开发，会点前端技能，能用 vue、jQuery 等前端框架。
-13 年毕业的我在酒店里做服务员，经过几年的努力并没有什么出路，17年毅然准备转行，但是却并没有头绪，恰巧碰上技术开发岗位的招聘，果断选择尝试，然而没有成功入职，却交了智商费用 500，而后自学了前端到深圳干了一年前端开发，再通过自学 PHP 转到了后端开发，21 年了解到了 golang 的火爆又开始转到了 golang，如今在深圳一家上市公司担任开发一职。</description>
+13 年毕业的我在酒店里做服务员，经过几年的努力并没有什么出路，17年毅然准备转行，但是却并没有头绪，恰巧碰上技术开发岗位的招聘，果断选择尝试，然而没有成功入职，却交了智商费用 500，而后自学了前端到深圳干了一年前端开发，再通过自学 PHP 转到了后端开发，21 年了解到了 golang 的火爆又开始转到了 golang，如今在深圳一家上市公司担任开发。</description>
     </item>
     
     <item>

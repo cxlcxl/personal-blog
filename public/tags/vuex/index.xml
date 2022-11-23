@@ -12,10 +12,10 @@
     <lastBuildDate>Tue, 22 Nov 2022 17:26:30 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/vuex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue3 使用 Vuex 做登录信息</title>
-      <link>https://www.silent-cxl.top/vue/vue3-vuex/</link>
+      <link>https://www.silent-cxl.top/posts/vue-vuex/</link>
       <pubDate>Tue, 22 Nov 2022 17:26:30 +0800</pubDate>
       
-      <guid>https://www.silent-cxl.top/vue/vue3-vuex/</guid>
+      <guid>https://www.silent-cxl.top/posts/vue-vuex/</guid>
       <description>使用 Vuex 做登录信息</description>
     </item>
     
