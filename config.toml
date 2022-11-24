@@ -23,20 +23,15 @@ weight = 1
   tag = "tags"
   series = "series"
 
-#[[languages.zh.menu.main]]
-#name = "归档"
-#url = "archives"
-#weight = 5
-
 [[languages.zh.menu.main]]
 name = "搜索"
 url = "search/"
 weight = 5
 
-[[languages.zh.menu.main]]
-name = "标签"
-url = "tags/"
-weight = 10
+#[[languages.zh.menu.main]]
+#name = "系列"
+#url = "series/"
+#weight = 10
 
 [[languages.zh.menu.main]]
 name = "分类"
@@ -63,8 +58,15 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 ShowRssButtonInSectionTermList = true
+comments = true
 ShowToc = true
 images = [ "papermod-cover.png" ]
+  ## 配置 utteranc评论,教程参考 https://utteranc.es/
+  [params.utteranc]
+  enable = true
+  repo = "cxlcxl/comments-for-hugo"
+  issueTerm = "pathname"
+  theme = "github-light"
 
   [params.profileMode]
   enabled = false
