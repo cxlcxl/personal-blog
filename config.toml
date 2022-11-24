@@ -24,14 +24,14 @@ weight = 1
   series = "series"
 
 [[languages.zh.menu.main]]
-name = "搜索"
-url = "search/"
+name = "归档"
+url = "archives/"
 weight = 5
 
-#[[languages.zh.menu.main]]
-#name = "系列"
-#url = "series/"
-#weight = 10
+[[languages.zh.menu.main]]
+name = "搜索"
+url = "search/"
+weight = 10
 
 [[languages.zh.menu.main]]
 name = "分类"
@@ -39,7 +39,7 @@ url = "categories/"
 weight = 15
 
 [[languages.zh.menu.main]]
-name = "About"
+name = "关于"
 url = "about/"
 weight = 20
 
@@ -48,7 +48,7 @@ home = [ "HTML", "RSS", "JSON" ]
 
 [params]
 env = "production"
-description = "silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流"
+description = "Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"
 author = "silent"
 defaultTheme = "auto"
 ShowShareButtons = true
@@ -83,8 +83,8 @@ images = [ "papermod-cover.png" ]
     url = "tags"
 
   [params.homeInfoParams]
-  Title = "Silent 的博客"
-  Content = "Silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流。"
+  Title = "Hi, Hello world!"
+  Content = "Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"
 
   [[params.socialIcons]]
   name = "github"

@@ -7,6 +7,8 @@ categories: ["hugo"]
 tags: ["hugo", "博客搭建", "搭建博客"]
 ShowToc: true
 ShowBreadCrumbs: ''
+cover:
+  image: ""
 ---
 
 ### Hugo 的安装
@@ -59,6 +61,8 @@ description: "使用 Hugo 搭建自己的博客"
 categories: ["hugo"]                    # 数组，分类可以用上
 tags: ["hugo", "博客搭建"]               # 数组，标签可以用上
 ShowToc: true                          # 是否显示内容页的目录
+cover:
+  image: ""                            # 列表展示的图片
 ```
 
 ### 启动
