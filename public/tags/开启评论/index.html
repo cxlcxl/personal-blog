@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>开启评论 | Silent 的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流">
+<meta name="author" content="silent">
+<link rel="canonical" href="https://www.silent-cxl.top/tags/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.silent-cxl.top/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.silent-cxl.top/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/tags/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="开启评论" />
+<meta property="og:description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.silent-cxl.top/tags/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
+
+<meta name="twitter:title" content="开启评论"/>
+<meta name="twitter:description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流"/>
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.silent-cxl.top/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a>&nbsp;»&nbsp;<a href="https://www.silent-cxl.top/tags/">Tags</a></div>
+  <h1>
+    开启评论
+    <a href="index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Hugo PaperMod 开启评论
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>创建评论使用的 github 仓库 操作步骤如下图 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置
+Hugo 配置文件文件修改 config.toml
+[params] # ... comments = true #使用的是 utteranc 评论，教程参考 https://utteranc.es/ [params.utteranc] enable = true repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 issueTerm = &#34;pathname&#34; theme = &#34;github-light&#34; comments.html 文件修改 文件位置：themes/PaperMod/layouts/partials/comments.html
+{{- /* Comments area start */ -}} {{- /* to add comments read =&gt; https://gohugo.io/content-management/comments/ */ -}} {{ if .Site.Params.utteranc.enable }} &lt;div class=&#34;post bg-white&#34;&gt; &lt;script src=&#34;https://utteranc.es/client.js&#34; repo= &#34;{{ .Site.Params.utteranc.repo }}&#34; issue-term=&#34;{{ ....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+  <div>
+    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 的博客</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备88888888号-1</a>
+    </span>
+  </div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

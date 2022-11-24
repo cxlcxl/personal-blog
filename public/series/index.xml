@@ -8,6 +8,7 @@
       <url>https://www.silent-cxl.top/papermod-cover.png</url>
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://www.silent-cxl.top/series/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备88888888号-1</copyright><atom:link href="https://www.silent-cxl.top/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

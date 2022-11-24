@@ -9,7 +9,26 @@
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 15:42:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>粤ICP备88888888号-1</copyright>
+    <lastBuildDate>Thu, 24 Nov 2022 20:48:28 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>https://www.silent-cxl.top/categories/hugo/</link>
+      <pubDate>Thu, 24 Nov 2022 20:48:28 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go-zero</title>
+      <link>https://www.silent-cxl.top/categories/go-zero/</link>
+      <pubDate>Thu, 24 Nov 2022 15:42:05 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/categories/go-zero/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>k8s</title>
       <link>https://www.silent-cxl.top/categories/k8s/</link>
@@ -70,15 +89,6 @@
       <pubDate>Mon, 21 Nov 2022 15:34:03 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go-zero</title>
-      <link>https://www.silent-cxl.top/categories/go-zero/</link>
-      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
-      
-      <guid>https://www.silent-cxl.top/categories/go-zero/</guid>
       <description></description>
     </item>
     

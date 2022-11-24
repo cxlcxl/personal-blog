@@ -3,12 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-11-24T15:42:05+08:00</lastmod>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/hugo/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/hugo/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/hugo-build-blog/</loc>
+    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/hugo-supprt-comments/</loc>
+    <lastmod>2022-11-24T20:29:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/papermod/</loc>
+    <lastmod>2022-11-24T20:29:38+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/</loc>
+    <lastmod>2022-11-24T20:29:38+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/deployment/</loc>
     <lastmod>2022-11-24T15:42:05+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/go-zero/</loc>
+    <lastmod>2022-11-24T15:42:05+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/go-zero/</loc>
     <lastmod>2022-11-24T15:42:05+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/k8s/</loc>
@@ -18,15 +54,6 @@
     <lastmod>2022-11-24T15:42:05+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</loc>
-    <lastmod>2022-11-24T15:42:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
-    <lastmod>2022-11-24T15:42:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
-    <lastmod>2022-11-24T15:42:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/tags/</loc>
     <lastmod>2022-11-24T15:42:05+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/git/</loc>
@@ -137,10 +164,7 @@
     <loc>https://www.silent-cxl.top/posts/golang-air/</loc>
     <lastmod>2022-11-21T11:25:27+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/categories/go-zero/</loc>
-    <lastmod>2022-11-21T10:25:27+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/go-zero-import-other-proto/</loc>
+    <loc>https://www.silent-cxl.top/posts/gozero-import-other-proto/</loc>
     <lastmod>2022-11-21T10:25:27+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/k8s-3-list/</loc>

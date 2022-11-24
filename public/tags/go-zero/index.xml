@@ -9,6 +9,7 @@
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备88888888号-1</copyright>
     <lastBuildDate>Thu, 24 Nov 2022 15:42:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/go-zero/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s 上 Go-Zero 服务本机手动部署记录</title>
@@ -21,10 +22,10 @@
     
     <item>
       <title>go-zero goctl 使用 proto 引入其他 proto 文件</title>
-      <link>https://www.silent-cxl.top/posts/go-zero-import-other-proto/</link>
+      <link>https://www.silent-cxl.top/posts/gozero-import-other-proto/</link>
       <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
       
-      <guid>https://www.silent-cxl.top/posts/go-zero-import-other-proto/</guid>
+      <guid>https://www.silent-cxl.top/posts/gozero-import-other-proto/</guid>
       <description>goctl 使用 proto 引入其他 proto 文件</description>
     </item>
     
