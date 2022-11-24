@@ -52,7 +52,7 @@ home = [ "HTML", "RSS", "JSON" ]
 
 [params]
 env = "production"
-description = "silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，欢迎互相交流"
+description = "silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流"
 author = "silent"
 defaultTheme = "auto"
 ShowShareButtons = true
@@ -81,7 +81,7 @@ images = [ "papermod-cover.png" ]
 
   [params.homeInfoParams]
   Title = "Silent 的博客"
-  Content = "Silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，欢迎互相交流。"
+  Content = "Silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流。"
 
   [[params.socialIcons]]
   name = "github"

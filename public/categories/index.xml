@@ -9,7 +9,16 @@
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 11:11:31 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 15:42:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>k8s</title>
+      <link>https://www.silent-cxl.top/categories/k8s/</link>
+      <pubDate>Thu, 24 Nov 2022 15:42:05 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/categories/k8s/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>git</title>
       <link>https://www.silent-cxl.top/categories/git/</link>
@@ -70,15 +79,6 @@
       <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/categories/go-zero/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>k8s</title>
-      <link>https://www.silent-cxl.top/categories/k8s/</link>
-      <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
-      
-      <guid>https://www.silent-cxl.top/categories/k8s/</guid>
       <description></description>
     </item>
     

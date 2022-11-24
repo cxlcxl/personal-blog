@@ -9,7 +9,16 @@
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 11:11:31 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 15:42:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K8s 上 Go-Zero 服务本机手动部署记录</title>
+      <link>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</link>
+      <pubDate>Thu, 24 Nov 2022 15:42:05 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</guid>
+      <description>K8s 上 Go-Zero 服务本机手动部署记录</description>
+    </item>
+    
     <item>
       <title>Git 忽略文件使用</title>
       <link>https://www.silent-cxl.top/posts/git-ignore-use/</link>

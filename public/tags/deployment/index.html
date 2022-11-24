@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Categories | Silent 的博客</title>
+<title>deployment | Silent 的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流">
 <meta name="author" content="silent">
-<link rel="canonical" href="https://www.silent-cxl.top/categories/">
+<link rel="canonical" href="https://www.silent-cxl.top/tags/deployment/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://www.silent-cxl.top/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/categories/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/tags/deployment/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,15 +55,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Categories" />
+</noscript><meta property="og:title" content="deployment" />
 <meta property="og:description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.silent-cxl.top/categories/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
+<meta property="og:url" content="https://www.silent-cxl.top/tags/deployment/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="deployment"/>
 <meta name="twitter:description" content="silent - 一个普通的 PHP、Golang 程序员，记录问题、随笔、学习经验，互相交流"/>
 
 </head>
@@ -120,7 +120,7 @@
             </li>
             <li>
                 <a href="https://www.silent-cxl.top/categories/" title="分类">
-                    <span class="active">分类</span>
+                    <span>分类</span>
                 </a>
             </li>
             <li>
@@ -131,37 +131,32 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a>&nbsp;»&nbsp;<a href="https://www.silent-cxl.top/tags/">Tags</a></div>
+  <h1>
+    deployment
+    <a href="index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://www.silent-cxl.top/categories/git/">git <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/go-zero/">go-zero <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/golang/">golang <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/k8s/">k8s <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/linux/">linux <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/vue/">vue <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">进制转换 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机 <sup><strong><sup>2</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>K8s 上 Go-Zero 服务本机手动部署记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 kubectl create ns bs // 可以查看刚刚创建的 namespace kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 #创建账号 apiVersion: v1 kind: ServiceAccount metadata: namespace: bs name: ads-test --- #创建角色对应操作 apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRole metadata: name: discovery-ads-test rules: - apiGroups: [&#34;&#34;] resources: [&#34;endpoints&#34;] # endpoints verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] --- #给账号绑定角色 apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: find-ads-test-discovery-ads-test roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: discovery-ads-test subjects: - kind: ServiceAccount name: ads-test namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
+</article>
     </main>
     
 <footer class="footer">
