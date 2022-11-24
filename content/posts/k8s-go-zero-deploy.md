@@ -3,7 +3,7 @@ title: "K8s 上 Go-Zero 服务本机手动部署记录"
 date: 2022-11-24T15:42:05+08:00
 draft: false
 description: "K8s 上 Go-Zero 服务本机手动部署记录"
-categories: ["k8s"]
+categories: ["k8s", "go-zero"]
 tags: ["k8s", "go-zero", "deployment"]
 ShowToc: true
 ShowBreadCrumbs: '' #原创文章，如需转载请注明文章作者和出处。谢谢！
