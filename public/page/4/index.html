@@ -150,6 +150,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>K8s - 资源清单
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>资源清单格式 apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) kind: #资源类别 metadata： #资源元数据 name namespace lables annotations # 主要目的是方便用户阅读查找 spec: # 期望的状态（disired state） status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
+[root@k8s-master01 ~]# kubectl api-versions admissionregistration.k8s.io/v1beta1 apiextensions.k8s.io/v1beta1 apiregistration.k8s.io/v1 apiregistration.k8s.io/v1beta1 apps/v1 ......(以下省略) 获取资源的 apiVersion 版本信息
+[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 .....(以下省略) [root@k8s-master01 ~]# kubectl explain Ingress KIND: Ingress VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
+  <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>K8s - Kubeadm 部署安装
     </h2>
   </header>

@@ -163,6 +163,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Vue3 Vite 使用基础配置
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>import { defineConfig, loadEnv } from &#34;vite&#34; import vue from &#34;@vitejs/plugin-vue&#34; import path from &#34;path&#34; import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; // https://vitejs.dev/config/ export default defineConfig(({ command, mode }) =&gt; { console.log(&#34;vite.config defineConfig&#34;, command, mode) const env = loadEnv(mode, process.cwd(), &#34;&#34;) return { plugins: [ vue(), nodePolyfills({ protocolImports: true, }), ], resolve: { alias: { &#34;@&#34;: path.resolve(__dirname, &#34;src&#34;), &#34;@v&#34;: path.resolve(__dirname, &#34;src/views&#34;), &#34;@a&#34;: path.resolve(__dirname, &#34;src/apis&#34;), }, }, define: { &#34;process.env&#34;: env, }, server: { proxy: { &#34;/api/&#34;: { target: process....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Vue3 使用 Vuex 做登录信息
     </h2>
   </header>
@@ -223,20 +235,6 @@
   </div>
   <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Virtual 本地虚拟机网络配置
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
-配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
-TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IPADDR=192.168.120.61 IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_FAILURE_FATAL=no IPV6_ADDR_GEN_MODE=stable-privacy NAME=enp0s3 UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 DEVICE=enp0s3 ONBOOT=yes GETRWAY=192.168.56.1 NETMASK=255.255.255.0 DNS1=192.168.56.1 </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

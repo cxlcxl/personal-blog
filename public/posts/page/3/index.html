@@ -163,6 +163,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Virtual 本地虚拟机网络配置
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
+配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
+TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IPADDR=192.168.120.61 IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_FAILURE_FATAL=no IPV6_ADDR_GEN_MODE=stable-privacy NAME=enp0s3 UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 DEVICE=enp0s3 ONBOOT=yes GETRWAY=192.168.56.1 NETMASK=255.255.255.0 DNS1=192.168.56.1 </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
     </h2>
   </header>
@@ -224,20 +238,6 @@ git config --global credential.helper store 输入以上命令后，重新拉取
   </div>
   <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to go-zero goctl 使用 proto 引入其他 proto 文件" href="https://www.silent-cxl.top/posts/gozero-import-other-proto/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>K8s - 资源清单
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>资源清单格式 apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) kind: #资源类别 metadata： #资源元数据 name namespace lables annotations # 主要目的是方便用户阅读查找 spec: # 期望的状态（disired state） status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
-[root@k8s-master01 ~]# kubectl api-versions admissionregistration.k8s.io/v1beta1 apiextensions.k8s.io/v1beta1 apiregistration.k8s.io/v1 apiregistration.k8s.io/v1beta1 apps/v1 ......(以下省略) 获取资源的 apiVersion 版本信息
-[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 .....(以下省略) [root@k8s-master01 ~]# kubectl explain Ingress KIND: Ingress VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

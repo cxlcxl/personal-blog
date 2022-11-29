@@ -163,6 +163,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Go 打乱数据排序
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>// func shuffle[T any](slice []T) { // go1.18 及以上 func shuffle(slice []int64) { if len(slice) == 1 { return } r := rand.New(rand.NewSource(time.Now().UnixNano())) for len(slice) &gt; 0 { n := len(slice) randIndex := r.Intn(n) slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] slice = slice[:n-1] } } </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/go-shuffle/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>使用 Hugo 搭建自己的博客
     </h2>
   </header>
@@ -227,18 +239,6 @@ Hugo 配置文件文件修改 config.toml
   </div>
   <footer class="entry-footer"><span title='2022-11-23 14:31:06 +0800 CST'>十一月 23, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to 进制转换" href="https://www.silent-cxl.top/posts/computer-conversion/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Vue3 Vite 使用基础配置
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>import { defineConfig, loadEnv } from &#34;vite&#34; import vue from &#34;@vitejs/plugin-vue&#34; import path from &#34;path&#34; import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; // https://vitejs.dev/config/ export default defineConfig(({ command, mode }) =&gt; { console.log(&#34;vite.config defineConfig&#34;, command, mode) const env = loadEnv(mode, process.cwd(), &#34;&#34;) return { plugins: [ vue(), nodePolyfills({ protocolImports: true, }), ], resolve: { alias: { &#34;@&#34;: path.resolve(__dirname, &#34;src&#34;), &#34;@v&#34;: path.resolve(__dirname, &#34;src/views&#34;), &#34;@a&#34;: path.resolve(__dirname, &#34;src/apis&#34;), }, }, define: { &#34;process.env&#34;: env, }, server: { proxy: { &#34;/api/&#34;: { target: process....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
