@@ -23,21 +23,3 @@ jobs:
     # 获取源码
     - name: Checkout
       uses: actions/checkout@master
-
-    - name: Configure HW credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        hw-access-key-id: ${{ secrets.HW_ACCESS_KEY_ID }}
-        hw-secret-access-key: ${{ secrets.HW_SECRET_ACCESS_KEY }}
-
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
-
-    - name: Deploy Amazon ECS task definition
-      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-      with:
-        task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ${{ env.ECS_SERVICE }}
-        cluster: ${{ env.ECS_CLUSTER }}
-        wait-for-service-stability: true
