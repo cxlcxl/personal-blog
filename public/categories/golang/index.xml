@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备88888888号-1</copyright>
-    <lastBuildDate>Mon, 21 Nov 2022 17:54:32 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 14:39:24 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 打乱数据排序</title>
+      <link>https://www.silent-cxl.top/posts/go-shuffle/</link>
+      <pubDate>Tue, 29 Nov 2022 14:39:24 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/go-shuffle/</guid>
+      <description>打乱数据排序</description>
+    </item>
+    
     <item>
       <title>Golang 环境搭建</title>
       <link>https://www.silent-cxl.top/posts/golang-proxy/</link>

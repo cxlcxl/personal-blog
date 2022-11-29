@@ -3,7 +3,7 @@ title: "Go 打乱数据排序"
 date: 2022-11-29T14:39:24+08:00
 draft: false
 description: "打乱数据排序"
-categories: ["go"]
+categories: ["golang"]
 ShowToc: true
 ShowBreadCrumbs: ''
 ---
