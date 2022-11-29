@@ -63,10 +63,21 @@ ShowToc = true
 images = [ "papermod-cover.png" ]
   ## 配置 utteranc评论,教程参考 https://utteranc.es/
   [params.utteranc]
-  enable = true
+  enable = false
   repo = "cxlcxl/comments-for-hugo"
   issueTerm = "pathname"
   theme = "github-light"
+  ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN
+  [params.giscus]
+  enable = true
+  repo = "cxlcxl/comments-for-hugo"
+  repoId = "R_kgDOIeSMUw"
+  category = "General"
+  categoryId = "DIC_kwDOIeSMU84CSrE5"
+  mapping = "pathname"
+  theme = "light_protanopia"
+  lang = "zh-CN"
+  crossorigin = "anonymous"
 
   [params.profileMode]
   enabled = false

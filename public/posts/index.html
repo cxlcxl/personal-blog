@@ -192,10 +192,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>创建评论使用的 github 仓库 操作步骤如下图 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置
-Hugo 配置文件文件修改 config.toml
-[params] # ... comments = true #使用的是 utteranc 评论，教程参考 https://utteranc.es/ [params.utteranc] enable = true repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 issueTerm = &#34;pathname&#34; theme = &#34;github-light&#34; comments.html 文件修改 文件位置：themes/PaperMod/layouts/partials/comments.html
-{{- /* Comments area start */ -}} {{- /* to add comments read =&gt; https://gohugo.io/content-management/comments/ */ -}} {{ if .Site.Params.utteranc.enable }} &lt;div class=&#34;post bg-white&#34;&gt; &lt;script src=&#34;https://utteranc.es/client.js&#34; repo= &#34;{{ .Site.Params.utteranc.repo }}&#34; issue-term=&#34;{{ ....</p>
+    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
+[params] # ... comments = true #使用的是 utteranc 评论，教程参考 https://utteranc.es/ [params.utteranc] enable = false repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 issueTerm = &#34;pathname&#34; theme = &#34;github-light&#34; ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN [params.giscus] enable = true repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 repoId = &#34;&#34; category = &#34;&#34; categoryId = &#34;&#34; mapping = &#34;pathname&#34; theme = &#34;light_protanopia&#34; lang = &#34;zh-CN&#34; crossorigin = &#34;anonymous&#34; comments....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
