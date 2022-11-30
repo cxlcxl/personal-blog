@@ -26,11 +26,37 @@ showToc: true
 - 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
 
 ### 解题
-#### 1. 粗暴阶梯法
-解题思路：`abcabcbb`
-指针遍历，从 0 开始，遇到重复字符指针加 1，重新从 1 开始遍历，直到结束
 
 ```go
+// 题解 1
+func lengthOfLongestSubstring1(str string) int {
+    maxLen := 0
+    hasStrings := make([]string, 0)
+    for i := 0; i < len(str); i++ {
+        current := str[i : i+1]
+        if key := stringInArray(hasStrings, current); key != -1 {
+            if stringsLen := len(hasStrings); maxLen < stringsLen {
+                maxLen = stringsLen
+            }
+            hasStrings = hasStrings[key+1:]
+        }
+        hasStrings = append(hasStrings, current)
+    }
+    if stringsLen := len(hasStrings); stringsLen > maxLen {
+        return stringsLen
+    }
+    return maxLen
+}
+func stringInArray(x []string, target string) int {
+    for key, v := range x {
+        if v == target {
+            return key
+        }
+    }
+    return -1
+}
+
+// 题解 2
 func lengthOfLongestSubstring(s string) int {
     if s == "" {
         return 0
