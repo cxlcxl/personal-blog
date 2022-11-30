@@ -10,7 +10,7 @@
 <meta name="description" content="k8s 资源清单">
 <meta name="author" content="Silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/k8s-3-list/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -98,8 +98,8 @@
   "keywords": [
     "k8s"
   ],
-  "articleBody": "资源清单格式 apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) kind: #资源类别 metadata： #资源元数据 name namespace lables annotations # 主要目的是方便用户阅读查找 spec: # 期望的状态（disired state） status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息\n[root@k8s-master01 ~]# kubectl api-versions admissionregistration.k8s.io/v1beta1 apiextensions.k8s.io/v1beta1 apiregistration.k8s.io/v1 apiregistration.k8s.io/v1beta1 apps/v1 ......(以下省略) 获取资源的 apiVersion 版本信息\n[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 .....(以下省略) [root@k8s-master01 ~]# kubectl explain Ingress KIND: Ingress VERSION: extensions/v1beta1 获取字段设置帮助文档\n[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 DESCRIPTION: Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts. FIELDS: apiVersion ........ ........ 字段配置格式\napiVersion #表示字符串类型 metadata #表示需要嵌套多层字段 labels #表示由k:v组成的映射 finalizers \u003c[]string\u003e #表示字串列表 ownerReferences \u003c[]Object\u003e #表示对象列表 hostPID #布尔类型 priority #整型 name -required- #如果类型后面接 -required-，表示为必填字段 通过定义清单文件创建 Pod apiVersion: v1 # 根绝对象类型可以查询 kubectl explain pod 取 version 的值 kind: Pod # 对象类型先确定 metadata: name: pod-demo namespace: default labels: app: myapp spec: containers: - name: myapp-1 image: harbor.hongfu.com/library/myapp:v1 - name: busybox-1 image: harbor.hongfu.com/library/busybox:v1 command: # 替换镜像默认封装的命令 - \"/bin/sh\" - \"-c\" - \"sleep 3600\" kubectl get pod xx.xx.xx -o yaml kubectl create -f [yaml-filename] # 创建资源 kubectl explain pod # 获取 kind 所属的 apiVersion # 读取子对象配置 kubectl explain pod.metadata kubectl get pod -n kube-system [pod-name] -o yaml # 查看某个 pod yaml 配置清单 -n 名称控件，默认 default -o wide kubectl exec -it [pod-name] -c [container-name] # 进入某个 pod 的容器 kubectl logs [pod-name] kubectl describe pod [pod-name] kubectl delete [pod | svc] [--all | pod-name] # 删除 pod、service ",
-  "wordCount" : "260",
+  "articleBody": "资源清单格式 1apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) 2kind: #资源类别 3metadata： #资源元数据 4 name 5 namespace 6 lables 7 annotations # 主要目的是方便用户阅读查找 8spec: # 期望的状态（disired state） 9status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息\n1[root@k8s-master01 ~]# kubectl api-versions 2admissionregistration.k8s.io/v1beta1 3apiextensions.k8s.io/v1beta1 4apiregistration.k8s.io/v1 5apiregistration.k8s.io/v1beta1 6apps/v1 7......(以下省略) 获取资源的 apiVersion 版本信息\n1[root@k8s-master01 ~]# kubectl explain pod 2KIND: Pod 3VERSION: v1 4.....(以下省略) 5 6[root@k8s-master01 ~]# kubectl explain Ingress 7KIND: Ingress 8VERSION: extensions/v1beta1 获取字段设置帮助文档\n1[root@k8s-master01 ~]# kubectl explain pod 2KIND: Pod 3VERSION: v1 4 5DESCRIPTION: 6 Pod is a collection of containers that can run on a host. This resource is 7 created by clients and scheduled onto hosts. 8 9FIELDS: 10 apiVersion 11 ........ 12 ........ 字段配置格式\n1apiVersion #表示字符串类型 2metadata #表示需要嵌套多层字段 3labels #表示由k:v组成的映射 4finalizers \u003c[]string\u003e #表示字串列表 5ownerReferences \u003c[]Object\u003e #表示对象列表 6hostPID #布尔类型 7priority #整型 8name -required- #如果类型后面接 -required-，表示为必填字段 通过定义清单文件创建 Pod 1apiVersion: v1 # 根绝对象类型可以查询 kubectl explain pod 取 version 的值 2kind: Pod # 对象类型先确定 3metadata: 4 name: pod-demo 5 namespace: default 6 labels: 7 app: myapp 8spec: 9 containers: 10 - name: myapp-1 11 image: harbor.hongfu.com/library/myapp:v1 12 - name: busybox-1 13 image: harbor.hongfu.com/library/busybox:v1 14 command: # 替换镜像默认封装的命令 15 - \"/bin/sh\" 16 - \"-c\" 17 - \"sleep 3600\" 1kubectl get pod xx.xx.xx -o yaml 2 1kubectl create -f [yaml-filename] # 创建资源 2kubectl explain pod # 获取 kind 所属的 apiVersion 3 # 读取子对象配置 4 kubectl explain pod.metadata 5kubectl get pod 6 -n kube-system [pod-name] -o yaml # 查看某个 pod yaml 配置清单 -n 名称控件，默认 default 7 -o wide 8kubectl exec -it [pod-name] -c [container-name] # 进入某个 pod 的容器 9kubectl logs [pod-name] 10kubectl describe pod [pod-name] 11kubectl delete [pod | svc] [--all | pod-name] # 删除 pod、service ",
+  "wordCount" : "289",
   "inLanguage": "zh",
   "datePublished": "2022-11-21T10:25:27+08:00",
   "dateModified": "2022-11-21T10:25:27+08:00",
@@ -179,6 +179,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -220,89 +225,89 @@
 </div>
 
   <div class="post-content"><h2 id="资源清单格式">资源清单格式<a hidden class="anchor" aria-hidden="true" href="#资源清单格式">#</a></h2>
-<pre tabindex="0"><code class="language-yam" data-lang="yam">apiVersion: group/apiversion  # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 )
-kind:       #资源类别
-metadata：  #资源元数据
-   name
-   namespace
-   lables
-   annotations   # 主要目的是方便用户阅读查找
-spec: # 期望的状态（disired state）
-status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义
-</code></pre><!--配置清单主要有五个一级字段，其中status用户不能定义，有k8s自身维护-->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">apiVersion: group/apiversion  # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 )
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kind:       #资源类别
+</span></span><span class="line"><span class="ln">3</span><span class="cl">metadata：  #资源元数据
+</span></span><span class="line"><span class="ln">4</span><span class="cl">   name
+</span></span><span class="line"><span class="ln">5</span><span class="cl">   namespace
+</span></span><span class="line"><span class="ln">6</span><span class="cl">   lables
+</span></span><span class="line"><span class="ln">7</span><span class="cl">   annotations   # 主要目的是方便用户阅读查找
+</span></span><span class="line"><span class="ln">8</span><span class="cl">spec: # 期望的状态（disired state）
+</span></span><span class="line"><span class="ln">9</span><span class="cl">status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义
+</span></span></code></pre></div><!--配置清单主要有五个一级字段，其中status用户不能定义，有k8s自身维护-->
 <h2 id="资源清单的常用命令">资源清单的常用命令<a hidden class="anchor" aria-hidden="true" href="#资源清单的常用命令">#</a></h2>
 <p><strong>获取 apiversion 版本信息</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@k8s-master01 ~<span class="o">]</span><span class="c1"># kubectl api-versions </span>
-</span></span><span class="line"><span class="cl">admissionregistration.k8s.io/v1beta1
-</span></span><span class="line"><span class="cl">apiextensions.k8s.io/v1beta1
-</span></span><span class="line"><span class="cl">apiregistration.k8s.io/v1
-</span></span><span class="line"><span class="cl">apiregistration.k8s.io/v1beta1
-</span></span><span class="line"><span class="cl">apps/v1
-</span></span><span class="line"><span class="cl">......<span class="o">(</span>以下省略<span class="o">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl"><span class="o">[</span>root@k8s-master01 ~<span class="o">]</span><span class="c1"># kubectl api-versions </span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">admissionregistration.k8s.io/v1beta1
+</span></span><span class="line"><span class="ln">3</span><span class="cl">apiextensions.k8s.io/v1beta1
+</span></span><span class="line"><span class="ln">4</span><span class="cl">apiregistration.k8s.io/v1
+</span></span><span class="line"><span class="ln">5</span><span class="cl">apiregistration.k8s.io/v1beta1
+</span></span><span class="line"><span class="ln">6</span><span class="cl">apps/v1
+</span></span><span class="line"><span class="ln">7</span><span class="cl">......<span class="o">(</span>以下省略<span class="o">)</span>
 </span></span></code></pre></div><p><strong>获取资源的 apiVersion 版本信息</strong></p>
-<pre tabindex="0"><code class="language-shel" data-lang="shel">[root@k8s-master01 ~]# kubectl explain pod
-KIND:     Pod
-VERSION:  v1
-.....(以下省略)
-
-[root@k8s-master01 ~]# kubectl explain Ingress
-KIND:     Ingress
-VERSION:  extensions/v1beta1
-</code></pre><p><strong>获取字段设置帮助文档</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@k8s-master01 ~<span class="o">]</span><span class="c1"># kubectl explain pod</span>
-</span></span><span class="line"><span class="cl">KIND:     Pod
-</span></span><span class="line"><span class="cl">VERSION:  v1
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">DESCRIPTION:
-</span></span><span class="line"><span class="cl">     Pod is a collection of containers that can run on a host. This resource is
-</span></span><span class="line"><span class="cl">     created by clients and scheduled onto hosts.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">FIELDS:
-</span></span><span class="line"><span class="cl">   apiVersion    &lt;string&gt;
-</span></span><span class="line"><span class="cl">     ........
-</span></span><span class="line"><span class="cl">     ........
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">[root@k8s-master01 ~]# kubectl explain pod
+</span></span><span class="line"><span class="ln">2</span><span class="cl">KIND:     Pod
+</span></span><span class="line"><span class="ln">3</span><span class="cl">VERSION:  v1
+</span></span><span class="line"><span class="ln">4</span><span class="cl">.....(以下省略)
+</span></span><span class="line"><span class="ln">5</span><span class="cl">
+</span></span><span class="line"><span class="ln">6</span><span class="cl">[root@k8s-master01 ~]# kubectl explain Ingress
+</span></span><span class="line"><span class="ln">7</span><span class="cl">KIND:     Ingress
+</span></span><span class="line"><span class="ln">8</span><span class="cl">VERSION:  extensions/v1beta1
+</span></span></code></pre></div><p><strong>获取字段设置帮助文档</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="o">[</span>root@k8s-master01 ~<span class="o">]</span><span class="c1"># kubectl explain pod</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">KIND:     Pod
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">VERSION:  v1
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">DESCRIPTION:
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">     Pod is a collection of containers that can run on a host. This resource is
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">     created by clients and scheduled onto hosts.
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">FIELDS:
+</span></span><span class="line"><span class="ln">10</span><span class="cl">   apiVersion    &lt;string&gt;
+</span></span><span class="line"><span class="ln">11</span><span class="cl">     ........
+</span></span><span class="line"><span class="ln">12</span><span class="cl">     ........
 </span></span></code></pre></div><p><strong>字段配置格式</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">apiVersion &lt;string&gt;         </span><span class="w"> </span><span class="c">#表示字符串类型</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">metadata &lt;Object&gt;           </span><span class="w"> </span><span class="c">#表示需要嵌套多层字段</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">labels &lt;map[string]string&gt;  </span><span class="w"> </span><span class="c">#表示由k:v组成的映射</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">finalizers &lt;[]string&gt;       </span><span class="w"> </span><span class="c">#表示字串列表</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">ownerReferences &lt;[]Object&gt;  </span><span class="w"> </span><span class="c">#表示对象列表</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">hostPID &lt;boolean&gt;           </span><span class="w"> </span><span class="c">#布尔类型</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">priority &lt;integer&gt;          </span><span class="w"> </span><span class="c">#整型</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">name &lt;string&gt; -required-    </span><span class="w"> </span><span class="c">#如果类型后面接 -required-，表示为必填字段</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="l">apiVersion &lt;string&gt;         </span><span class="w"> </span><span class="c">#表示字符串类型</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w"></span><span class="l">metadata &lt;Object&gt;           </span><span class="w"> </span><span class="c">#表示需要嵌套多层字段</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w"></span><span class="l">labels &lt;map[string]string&gt;  </span><span class="w"> </span><span class="c">#表示由k:v组成的映射</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w"></span><span class="l">finalizers &lt;[]string&gt;       </span><span class="w"> </span><span class="c">#表示字串列表</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w"></span><span class="l">ownerReferences &lt;[]Object&gt;  </span><span class="w"> </span><span class="c">#表示对象列表</span><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w"></span><span class="l">hostPID &lt;boolean&gt;           </span><span class="w"> </span><span class="c">#布尔类型</span><span class="w">
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="w"></span><span class="l">priority &lt;integer&gt;          </span><span class="w"> </span><span class="c">#整型</span><span class="w">
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="w"></span><span class="l">name &lt;string&gt; -required-    </span><span class="w"> </span><span class="c">#如果类型后面接 -required-，表示为必填字段</span><span class="w">
 </span></span></span></code></pre></div><h2 id="通过定义清单文件创建-pod">通过定义清单文件创建 Pod<a hidden class="anchor" aria-hidden="true" href="#通过定义清单文件创建-pod">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w"> </span><span class="c"># 根绝对象类型可以查询 kubectl explain pod 取 version 的值</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod </span><span class="w"> </span><span class="c"># 对象类型先确定</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pod-demo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">default</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">myapp</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">myapp-1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">harbor.hongfu.com/library/myapp:v1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">busybox-1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">harbor.hongfu.com/library/busybox:v1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="c"># 替换镜像默认封装的命令</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;/bin/sh&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;-c&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;sleep 3600&#34;</span><span class="w">
-</span></span></span></code></pre></div><pre tabindex="0"><code class="language-she" data-lang="she">kubectl get pod xx.xx.xx -o yaml  
-&lt;!--使用 -o 参数 加 yaml，可以将资源的配置以 yaml的格式输出出来，也可以使用json，输出为json格式--&gt; 
-</code></pre><!--资源被创建的流程：Kubectl（Yaml） >>> KubeapiServer（Json）-->
-<pre tabindex="0"><code class="language-base" data-lang="base">kubectl create -f [yaml-filename] # 创建资源
-kubectl explain pod # 获取 kind 所属的 apiVersion
-    # 读取子对象配置
-    kubectl explain pod.metadata
-kubectl get pod
-    -n kube-system [pod-name] -o yaml # 查看某个 pod yaml 配置清单 -n 名称控件，默认 default
-    -o wide
-kubectl exec -it [pod-name] -c [container-name] # 进入某个 pod 的容器
-kubectl logs [pod-name]
-kubectl describe pod [pod-name]
-kubectl delete [pod | svc] [--all | pod-name] # 删除 pod、service
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w"> </span><span class="c"># 根绝对象类型可以查询 kubectl explain pod 取 version 的值</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod </span><span class="w"> </span><span class="c"># 对象类型先确定</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pod-demo</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">default</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">myapp</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">myapp-1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">harbor.hongfu.com/library/myapp:v1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">busybox-1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">harbor.hongfu.com/library/busybox:v1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="c"># 替换镜像默认封装的命令</span><span class="w">
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="w">    </span>- <span class="s2">&#34;/bin/sh&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w">    </span>- <span class="s2">&#34;-c&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="w">    </span>- <span class="s2">&#34;sleep 3600&#34;</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">kubectl get pod xx.xx.xx -o yaml  
+</span></span><span class="line"><span class="ln">2</span><span class="cl">&lt;!--使用 -o 参数 加 yaml，可以将资源的配置以 yaml的格式输出出来，也可以使用json，输出为json格式--&gt; 
+</span></span></code></pre></div><!--资源被创建的流程：Kubectl（Yaml） >>> KubeapiServer（Json）-->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">kubectl create -f [yaml-filename] # 创建资源
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">kubectl explain pod # 获取 kind 所属的 apiVersion
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    # 读取子对象配置
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    kubectl explain pod.metadata
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">kubectl get pod
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    -n kube-system [pod-name] -o yaml # 查看某个 pod yaml 配置清单 -n 名称控件，默认 default
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    -o wide
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">kubectl exec -it [pod-name] -c [container-name] # 进入某个 pod 的容器
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">kubectl logs [pod-name]
+</span></span><span class="line"><span class="ln">10</span><span class="cl">kubectl describe pod [pod-name]
+</span></span><span class="line"><span class="ln">11</span><span class="cl">kubectl delete [pod | svc] [--all | pod-name] # 删除 pod、service
+</span></span></code></pre></div>
 
   </div>
 

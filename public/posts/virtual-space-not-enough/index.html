@@ -10,7 +10,7 @@
 <meta name="description" content="虚拟机扩容（/dev/mapper/centos-root 空间不足）">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -98,8 +98,8 @@
   "keywords": [
     "虚拟机"
   ],
-  "articleBody": "查看根分区大小 df -h\n文件系统 类型 容量 已用 可用 已用% 挂载点 /dev/mapper/centos-root xfs 18G 1.1G 17G 6% / devtmpfs devtmpfs 479M 0 479M 0% /dev tmpfs tmpfs 489M 0 489M 0% /dev/shm tmpfs tmpfs 489M 6.7M 483M 2% /run tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup /dev/sda1 xfs 497M 125M 373M 25% /boot tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*\n/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb\nPhysical volume \"/dev/sdb\" successfully created 把 pv 加入 vg 中，相当于扩充 vg 的大小 先使用 vgs 查看 vg 组 vgs\nVG #PV #LV #SN Attr VSize VFree centos 2 2 0 wz--n- 59.50g 20.04g 扩展 vg，使用 vgextend 命令 vgextend centos /dev/sdb\n把 vg 卷扩展了，在用 vgs 查看一下 vgs\nVG #PV #LV #SN Attr VSize VFree centos 2 2 0 wz--n- 39.50g 20.04g lvs\nLV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert root centos -wi-ao---- 17.47g swap centos -wi-ao---- 2.00g 虽然我们把vg扩展了，但是lv还没有扩展 扩展 lv，使用 lvextend 命令 lvextend -L +20G /dev/mapper/centos-root\nSize of logical volume centos/root changed from 17.47 GiB (4472 extents) to 37.47 GiB (9592 extents). Logical volume root successfully resized 命令使系统重新读取大小 xfs_growfs /dev/mapper/centos-root\nmeta-data=/dev/mapper/centos-root isize=256 agcount=4, agsize=1144832 blks = sectsz=512 attr=2, projid32bit=1 = crc=0 finobt=0 data = bsize=4096 blocks=4579328, imaxpct=25 = sunit=0 swidth=0 blks naming =version 2 bsize=4096 ascii-ci=0 ftype=0 log =internal bsize=4096 blocks=2560, version=2 = sectsz=512 sunit=0 blks, lazy-count=1 realtime =none extsz=4096 blocks=0, rtextents=0 data blocks changed from 4579328 to 9822208 再使用 df -h 查看 df -h\n文件系统 容量 已用 可用 已用% 挂载点 /dev/mapper/centos-root 38G 1.1G 37G 3% / devtmpfs 479M 0 479M 0% /dev tmpfs 489M 0 489M 0% /dev/shm tmpfs 489M 6.7M 483M 2% /run tmpfs 489M 0 489M 0% /sys/fs/cgroup /dev/sda1 497M 125M 373M 25% /boot tmpfs 98M 0 98M 0% /run/user/0 转载自：虚拟机扩容（/dev/mapper/centos-root 空间不足）\n",
-  "wordCount" : "288",
+  "articleBody": "查看根分区大小 df -h\n1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*\n1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb\n1Physical volume \"/dev/sdb\" successfully created 把 pv 加入 vg 中，相当于扩充 vg 的大小 先使用 vgs 查看 vg 组 vgs\n1VG #PV #LV #SN Attr VSize VFree 2centos 2 2 0 wz--n- 59.50g 20.04g 扩展 vg，使用 vgextend 命令 vgextend centos /dev/sdb\n把 vg 卷扩展了，在用 vgs 查看一下 vgs\n1VG #PV #LV #SN Attr VSize VFree 2centos 2 2 0 wz--n- 39.50g 20.04g lvs\n1LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert 2 root centos -wi-ao---- 17.47g 3 swap centos -wi-ao---- 2.00g 虽然我们把vg扩展了，但是lv还没有扩展 扩展 lv，使用 lvextend 命令 lvextend -L +20G /dev/mapper/centos-root\n1Size of logical volume centos/root changed from 17.47 GiB (4472 extents) to 37.47 GiB (9592 extents). 2Logical volume root successfully resized 命令使系统重新读取大小 xfs_growfs /dev/mapper/centos-root\n1meta-data=/dev/mapper/centos-root isize=256 agcount=4, agsize=1144832 blks 2 = sectsz=512 attr=2, projid32bit=1 3 = crc=0 finobt=0 4data = bsize=4096 blocks=4579328, imaxpct=25 5 = sunit=0 swidth=0 blks 6naming =version 2 bsize=4096 ascii-ci=0 ftype=0 7log =internal bsize=4096 blocks=2560, version=2 8 = sectsz=512 sunit=0 blks, lazy-count=1 9realtime =none extsz=4096 blocks=0, rtextents=0 10data blocks changed from 4579328 to 9822208 再使用 df -h 查看 df -h\n1文件系统 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root 38G 1.1G 37G 3% / 3devtmpfs 479M 0 479M 0% /dev 4tmpfs 489M 0 489M 0% /dev/shm 5tmpfs 489M 6.7M 483M 2% /run 6tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 497M 125M 373M 25% /boot 8tmpfs 98M 0 98M 0% /run/user/0 转载自：虚拟机扩容（/dev/mapper/centos-root 空间不足）\n",
+  "wordCount" : "294",
   "inLanguage": "zh",
   "datePublished": "2022-11-21T15:26:19+08:00",
   "dateModified": "2022-11-21T15:26:19+08:00",
@@ -179,6 +179,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -235,25 +240,25 @@
 <blockquote>
 <p>df -h</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">文件系统                类型      容量  已用  可用 已用% 挂载点
-</span></span><span class="line"><span class="cl">/dev/mapper/centos-root xfs        18G  1.1G   17G    6% /
-</span></span><span class="line"><span class="cl">devtmpfs                devtmpfs  479M     <span class="m">0</span>  479M    0% /dev
-</span></span><span class="line"><span class="cl">tmpfs                   tmpfs     489M     <span class="m">0</span>  489M    0% /dev/shm
-</span></span><span class="line"><span class="cl">tmpfs                   tmpfs     489M  6.7M  483M    2% /run
-</span></span><span class="line"><span class="cl">tmpfs                   tmpfs     489M     <span class="m">0</span>  489M    0% /sys/fs/cgroup
-</span></span><span class="line"><span class="cl">/dev/sda1               xfs       497M  125M  373M   25% /boot
-</span></span><span class="line"><span class="cl">tmpfs                   tmpfs      98M     <span class="m">0</span>   98M    0% /run/user/0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">文件系统                类型      容量  已用  可用 已用% 挂载点
+</span></span><span class="line"><span class="ln">2</span><span class="cl">/dev/mapper/centos-root xfs        18G  1.1G   17G    6% /
+</span></span><span class="line"><span class="ln">3</span><span class="cl">devtmpfs                devtmpfs  479M     <span class="m">0</span>  479M    0% /dev
+</span></span><span class="line"><span class="ln">4</span><span class="cl">tmpfs                   tmpfs     489M     <span class="m">0</span>  489M    0% /dev/shm
+</span></span><span class="line"><span class="ln">5</span><span class="cl">tmpfs                   tmpfs     489M  6.7M  483M    2% /run
+</span></span><span class="line"><span class="ln">6</span><span class="cl">tmpfs                   tmpfs     489M     <span class="m">0</span>  489M    0% /sys/fs/cgroup
+</span></span><span class="line"><span class="ln">7</span><span class="cl">/dev/sda1               xfs       497M  125M  373M   25% /boot
+</span></span><span class="line"><span class="ln">8</span><span class="cl">tmpfs                   tmpfs      98M     <span class="m">0</span>   98M    0% /run/user/0
 </span></span></code></pre></div><h4 id="在虚拟机中添加一块物理的磁盘重起虚拟机">在虚拟机中添加一块物理的磁盘，重起虚拟机<a hidden class="anchor" aria-hidden="true" href="#在虚拟机中添加一块物理的磁盘重起虚拟机">#</a></h4>
 <h4 id="查看磁盘编号">查看磁盘编号<a hidden class="anchor" aria-hidden="true" href="#查看磁盘编号">#</a></h4>
 <blockquote>
 <p>ls /dev/sd*</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/dev/sda  /dev/sda1  /dev/sda2  /dev/sdb
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">/dev/sda  /dev/sda1  /dev/sda2  /dev/sdb
 </span></span></code></pre></div><h4 id="创建pv">创建pv<a hidden class="anchor" aria-hidden="true" href="#创建pv">#</a></h4>
 <blockquote>
 <p>pvcreate /dev/sdb</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Physical volume <span class="s2">&#34;/dev/sdb&#34;</span> successfully created
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">Physical volume <span class="s2">&#34;/dev/sdb&#34;</span> successfully created
 </span></span></code></pre></div><h4 id="把-pv-加入-vg-中相当于扩充-vg-的大小">把 pv 加入 vg 中，相当于扩充 vg 的大小<a hidden class="anchor" aria-hidden="true" href="#把-pv-加入-vg-中相当于扩充-vg-的大小">#</a></h4>
 <ul>
 <li>先使用 vgs 查看 vg 组</li>
@@ -261,8 +266,8 @@
 <blockquote>
 <p>vgs</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">VG <span class="c1">#PV #LV #SN Attr VSize VFree</span>
-</span></span><span class="line"><span class="cl">centos <span class="m">2</span> <span class="m">2</span> <span class="m">0</span> wz--n- 59.50g 20.04g
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">VG <span class="c1">#PV #LV #SN Attr VSize VFree</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">centos <span class="m">2</span> <span class="m">2</span> <span class="m">0</span> wz--n- 59.50g 20.04g
 </span></span></code></pre></div><ul>
 <li>扩展 vg，使用 vgextend 命令</li>
 </ul>
@@ -273,46 +278,46 @@
 <blockquote>
 <p>vgs</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">VG     <span class="c1">#PV #LV #SN Attr   VSize  VFree</span>
-</span></span><span class="line"><span class="cl">centos   <span class="m">2</span>   <span class="m">2</span>   <span class="m">0</span> wz--n- 39.50g 20.04g
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">VG     <span class="c1">#PV #LV #SN Attr   VSize  VFree</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">centos   <span class="m">2</span>   <span class="m">2</span>   <span class="m">0</span> wz--n- 39.50g 20.04g
 </span></span></code></pre></div><blockquote>
 <p>lvs</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">LV   VG     Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
-</span></span><span class="line"><span class="cl">  root centos -wi-ao---- 17.47g                                                   
-</span></span><span class="line"><span class="cl">  swap centos -wi-ao----  2.00g  虽然我们把vg扩展了，但是lv还没有扩展
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">LV   VG     Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  root centos -wi-ao---- 17.47g                                                   
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  swap centos -wi-ao----  2.00g  虽然我们把vg扩展了，但是lv还没有扩展
 </span></span></code></pre></div><h4 id="扩展-lv使用-lvextend-命令">扩展 lv，使用 lvextend 命令<a hidden class="anchor" aria-hidden="true" href="#扩展-lv使用-lvextend-命令">#</a></h4>
 <blockquote>
 <p>lvextend -L +20G /dev/mapper/centos-root</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Size of logical volume centos/root changed from 17.47 GiB <span class="o">(</span><span class="m">4472</span> extents<span class="o">)</span> to 37.47 GiB <span class="o">(</span><span class="m">9592</span> extents<span class="o">)</span>.
-</span></span><span class="line"><span class="cl">Logical volume root successfully resized
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">Size of logical volume centos/root changed from 17.47 GiB <span class="o">(</span><span class="m">4472</span> extents<span class="o">)</span> to 37.47 GiB <span class="o">(</span><span class="m">9592</span> extents<span class="o">)</span>.
+</span></span><span class="line"><span class="ln">2</span><span class="cl">Logical volume root successfully resized
 </span></span></code></pre></div><h4 id="命令使系统重新读取大小">命令使系统重新读取大小<a hidden class="anchor" aria-hidden="true" href="#命令使系统重新读取大小">#</a></h4>
 <blockquote>
 <p>xfs_growfs /dev/mapper/centos-root</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">meta-data<span class="o">=</span>/dev/mapper/centos-root <span class="nv">isize</span><span class="o">=</span><span class="m">256</span>    <span class="nv">agcount</span><span class="o">=</span>4, <span class="nv">agsize</span><span class="o">=</span><span class="m">1144832</span> <span class="nv">blks</span>
-</span></span><span class="line"><span class="cl">         <span class="o">=</span>                       <span class="nv">sectsz</span><span class="o">=</span><span class="m">512</span>   <span class="nv">attr</span><span class="o">=</span>2, <span class="nv">projid32bit</span><span class="o">=</span><span class="nv">1</span>
-</span></span><span class="line"><span class="cl">         <span class="o">=</span>                       <span class="nv">crc</span><span class="o">=</span><span class="m">0</span>        <span class="nv">finobt</span><span class="o">=</span><span class="m">0</span>
-</span></span><span class="line"><span class="cl"><span class="nv">data</span>     <span class="o">=</span>                       <span class="nv">bsize</span><span class="o">=</span><span class="m">4096</span>   <span class="nv">blocks</span><span class="o">=</span>4579328, <span class="nv">imaxpct</span><span class="o">=</span><span class="nv">25</span>
-</span></span><span class="line"><span class="cl">         <span class="o">=</span>                       <span class="nv">sunit</span><span class="o">=</span><span class="m">0</span>      <span class="nv">swidth</span><span class="o">=</span><span class="m">0</span> blks
-</span></span><span class="line"><span class="cl"><span class="nv">naming</span>   <span class="o">=</span>version <span class="m">2</span>              <span class="nv">bsize</span><span class="o">=</span><span class="m">4096</span>   ascii-ci<span class="o">=</span><span class="m">0</span> <span class="nv">ftype</span><span class="o">=</span><span class="m">0</span>
-</span></span><span class="line"><span class="cl"><span class="nv">log</span>      <span class="o">=</span>internal               <span class="nv">bsize</span><span class="o">=</span><span class="m">4096</span>   <span class="nv">blocks</span><span class="o">=</span>2560, <span class="nv">version</span><span class="o">=</span><span class="nv">2</span>
-</span></span><span class="line"><span class="cl">         <span class="o">=</span>                       <span class="nv">sectsz</span><span class="o">=</span><span class="m">512</span>   <span class="nv">sunit</span><span class="o">=</span><span class="m">0</span> blks, lazy-count<span class="o">=</span><span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="nv">realtime</span> <span class="o">=</span>none                   <span class="nv">extsz</span><span class="o">=</span><span class="m">4096</span>   <span class="nv">blocks</span><span class="o">=</span>0, <span class="nv">rtextents</span><span class="o">=</span><span class="m">0</span>
-</span></span><span class="line"><span class="cl">data blocks changed from <span class="m">4579328</span> to <span class="m">9822208</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl">meta-data<span class="o">=</span>/dev/mapper/centos-root <span class="nv">isize</span><span class="o">=</span><span class="m">256</span>    <span class="nv">agcount</span><span class="o">=</span>4, <span class="nv">agsize</span><span class="o">=</span><span class="m">1144832</span> <span class="nv">blks</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">         <span class="o">=</span>                       <span class="nv">sectsz</span><span class="o">=</span><span class="m">512</span>   <span class="nv">attr</span><span class="o">=</span>2, <span class="nv">projid32bit</span><span class="o">=</span><span class="nv">1</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">         <span class="o">=</span>                       <span class="nv">crc</span><span class="o">=</span><span class="m">0</span>        <span class="nv">finobt</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nv">data</span>     <span class="o">=</span>                       <span class="nv">bsize</span><span class="o">=</span><span class="m">4096</span>   <span class="nv">blocks</span><span class="o">=</span>4579328, <span class="nv">imaxpct</span><span class="o">=</span><span class="nv">25</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">         <span class="o">=</span>                       <span class="nv">sunit</span><span class="o">=</span><span class="m">0</span>      <span class="nv">swidth</span><span class="o">=</span><span class="m">0</span> blks
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nv">naming</span>   <span class="o">=</span>version <span class="m">2</span>              <span class="nv">bsize</span><span class="o">=</span><span class="m">4096</span>   ascii-ci<span class="o">=</span><span class="m">0</span> <span class="nv">ftype</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nv">log</span>      <span class="o">=</span>internal               <span class="nv">bsize</span><span class="o">=</span><span class="m">4096</span>   <span class="nv">blocks</span><span class="o">=</span>2560, <span class="nv">version</span><span class="o">=</span><span class="nv">2</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">         <span class="o">=</span>                       <span class="nv">sectsz</span><span class="o">=</span><span class="m">512</span>   <span class="nv">sunit</span><span class="o">=</span><span class="m">0</span> blks, lazy-count<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nv">realtime</span> <span class="o">=</span>none                   <span class="nv">extsz</span><span class="o">=</span><span class="m">4096</span>   <span class="nv">blocks</span><span class="o">=</span>0, <span class="nv">rtextents</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">data blocks changed from <span class="m">4579328</span> to <span class="m">9822208</span>
 </span></span></code></pre></div><h4 id="再使用-df---h-查看">再使用 df  -h 查看<a hidden class="anchor" aria-hidden="true" href="#再使用-df---h-查看">#</a></h4>
 <blockquote>
 <p>df -h</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">文件系统                 容量  已用  可用 已用% 挂载点
-</span></span><span class="line"><span class="cl">/dev/mapper/centos-root   38G  1.1G   37G    3% /
-</span></span><span class="line"><span class="cl">devtmpfs                 479M     <span class="m">0</span>  479M    0% /dev
-</span></span><span class="line"><span class="cl">tmpfs                    489M     <span class="m">0</span>  489M    0% /dev/shm
-</span></span><span class="line"><span class="cl">tmpfs                    489M  6.7M  483M    2% /run
-</span></span><span class="line"><span class="cl">tmpfs                    489M     <span class="m">0</span>  489M    0% /sys/fs/cgroup
-</span></span><span class="line"><span class="cl">/dev/sda1                497M  125M  373M   25% /boot
-</span></span><span class="line"><span class="cl">tmpfs                     98M     <span class="m">0</span>   98M    0% /run/user/0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">文件系统                 容量  已用  可用 已用% 挂载点
+</span></span><span class="line"><span class="ln">2</span><span class="cl">/dev/mapper/centos-root   38G  1.1G   37G    3% /
+</span></span><span class="line"><span class="ln">3</span><span class="cl">devtmpfs                 479M     <span class="m">0</span>  479M    0% /dev
+</span></span><span class="line"><span class="ln">4</span><span class="cl">tmpfs                    489M     <span class="m">0</span>  489M    0% /dev/shm
+</span></span><span class="line"><span class="ln">5</span><span class="cl">tmpfs                    489M  6.7M  483M    2% /run
+</span></span><span class="line"><span class="ln">6</span><span class="cl">tmpfs                    489M     <span class="m">0</span>  489M    0% /sys/fs/cgroup
+</span></span><span class="line"><span class="ln">7</span><span class="cl">/dev/sda1                497M  125M  373M   25% /boot
+</span></span><span class="line"><span class="ln">8</span><span class="cl">tmpfs                     98M     <span class="m">0</span>   98M    0% /run/user/0
 </span></span></code></pre></div><p><a href="https://www.cnblogs.com/feiyun126/p/7680534.html">转载自：虚拟机扩容（/dev/mapper/centos-root 空间不足）</a></p>
 
 

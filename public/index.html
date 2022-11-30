@@ -11,7 +11,7 @@
 <meta name="description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -139,6 +139,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -183,7 +188,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>先上 github-acitons 部署 yml 文件内容 name: 部署到服务器 on: push: branches: [ &#34;master&#34; ] # master 分支有提交自动部署 permissions: write-all jobs: deploy: name: Deploy runs-on: ubuntu-latest environment: production steps: # 获取源码 master 分支，也可以写 tag 版本 - name: Checkout uses: actions/checkout@master # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 - name: 部署到服务器 uses: easingthemes/ssh-deploy@main env: SSH_PRIVATE_KEY: ${{ secrets.BLOG_ECS_KEY }} ARGS: &#34;-avzr --delete&#34; # 部署前删除目录 SOURCE: &#34;public/&#34; REMOTE_HOST: ${{ secrets.BLOG_ECS_HOST }} REMOTE_USER: ${{ secrets.BLOG_ECS_USER }} TARGET: ${{ secrets....</p>
+    <p>先上 github-acitons 部署 yml 文件内容 1name: 部署到服务器 2on: 3 push: 4 branches: [ &#34;master&#34; ] # master 分支有提交自动部署 5 6permissions: write-all 7jobs: 8 deploy: 9 name: Deploy 10 runs-on: ubuntu-latest 11 environment: production 12 13 steps: 14 # 获取源码 master 分支，也可以写 tag 版本 15 - name: Checkout 16 uses: actions/checkout@master 17 18 # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 19 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 20 - name: 部署到服务器 21 uses: easingthemes/ssh-deploy@main 22 env: 23 SSH_PRIVATE_KEY: ${{ secrets....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-30 11:04:47 +0800 CST'>十一月 30, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to 记录 Github Actions 实现代码提交自动部署" href="https://www.silent-cxl.top/posts/deploy-github-actions/"></a>
@@ -195,7 +200,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>// func shuffle[T any](slice []T) { // go1.18 及以上 func shuffle(slice []int64) { if len(slice) == 1 { return } r := rand.New(rand.NewSource(time.Now().UnixNano())) for len(slice) &gt; 0 { n := len(slice) randIndex := r.Intn(n) slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] slice = slice[:n-1] } } </p>
+    <p> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3	if len(slice) == 1 { 4	return 5	} 6	r := rand.New(rand.NewSource(time.Now().UnixNano())) 7	for len(slice) &gt; 0 { 8	n := len(slice) 9	randIndex := r.Intn(n) 10	slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11	slice = slice[:n-1] 12	} 13} </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/go-shuffle/"></a>
@@ -207,8 +212,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Hugo 的安装 安装可查看官方文档 安装完成后按照文档的快速启动项目操作 # 创建一个项目 hugo new site [项目名称，如：myblog] # 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） cd myblog # 初始化 git 仓库 git init git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 # 设置主题 theme = &#34;PaperMod&#34; 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题
-创建你的内容 运行如下命令 hugo new posts/first-post....</p>
+    <p>Hugo 的安装 安装可查看官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = &#34;PaperMod&#34; 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题
+创建你的内容 运行如下命令 1hugo new posts/first-post....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-24 20:48:28 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to 使用 Hugo 搭建自己的博客" href="https://www.silent-cxl.top/posts/hugo-build-blog/"></a>
@@ -221,9 +226,9 @@
   </header>
   <div class="entry-content">
     <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
-[params] # ... comments = true #使用的是 utteranc 评论，教程参考 https://utteranc.es/ [params.utteranc] enable = false repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 issueTerm = &#34;pathname&#34; theme = &#34;github-light&#34; ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN [params.giscus] enable = true repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 repoId = &#34;&#34; category = &#34;&#34; categoryId = &#34;&#34; mapping = &#34;pathname&#34; theme = &#34;light_protanopia&#34; lang = &#34;zh-CN&#34; crossorigin = &#34;anonymous&#34; comments....</p>
+1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
 </article>
 
@@ -233,7 +238,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 kubectl create ns bs // 可以查看刚刚创建的 namespace kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 #创建账号 apiVersion: v1 kind: ServiceAccount metadata: namespace: bs name: ads-test --- #创建角色对应操作 apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRole metadata: name: discovery-ads-test rules: - apiGroups: [&#34;&#34;] resources: [&#34;endpoints&#34;] # endpoints verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] --- #给账号绑定角色 apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: find-ads-test-discovery-ads-test roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: discovery-ads-test subjects: - kind: ServiceAccount name: ads-test namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
+    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&#34;&#34;] 16 resources: [&#34;endpoints&#34;] # endpoints 17 verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
@@ -246,7 +251,7 @@
   </header>
   <div class="entry-content">
     <p> 匹配中间文件夹 示例 .gitignore 内容：匹配 app 下的所有模块文件夹下 config 下以 .pro.yaml 结尾的文件
-// app/user/config/databse.pro.yaml // app/goods/config/databse.pro.yaml // ... app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
+1// app/user/config/databse.pro.yaml 2// app/goods/config/databse.pro.yaml 3// ... 4app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 1git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-24 11:11:31 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Git 忽略文件使用" href="https://www.silent-cxl.top/posts/git-ignore-use/"></a>

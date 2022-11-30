@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - Silent 的博客">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -139,6 +139,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -167,7 +172,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p># 从服务器上下载文件 scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] # 上传本地文件到服务器 scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] # 从服务器下载整个目录 scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] # 上传目录到服务器 scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] # 如果用到非 22 端口则在 scp 后使用 -P 参数 </p>
+    <p> 1# 从服务器上下载文件 2scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] 3 4# 上传本地文件到服务器 5scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] 6 7# 从服务器下载整个目录 8scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] 9 10# 上传目录到服务器 11scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] 12 13# 如果用到非 22 端口则在 scp 后使用 -P 参数 </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
@@ -181,7 +186,7 @@
   <div class="entry-content">
     <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
 配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
-TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IPADDR=192.168.120.61 IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_FAILURE_FATAL=no IPV6_ADDR_GEN_MODE=stable-privacy NAME=enp0s3 UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 DEVICE=enp0s3 ONBOOT=yes GETRWAY=192.168.56.1 NETMASK=255.255.255.0 DNS1=192.168.56.1 </p>
+1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
@@ -208,8 +213,8 @@ TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IP
   </header>
   <div class="entry-content">
     <p>查看根分区大小 df -h
-文件系统 类型 容量 已用 可用 已用% 挂载点 /dev/mapper/centos-root xfs 18G 1.1G 17G 6% / devtmpfs devtmpfs 479M 0 479M 0% /dev tmpfs tmpfs 489M 0 489M 0% /dev/shm tmpfs tmpfs 489M 6.7M 483M 2% /run tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup /dev/sda1 xfs 497M 125M 373M 25% /boot tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
-/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
+1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
+1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
@@ -222,7 +227,7 @@ TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IP
   </header>
   <div class="entry-content">
     <p>git bash 进入项目目录：
-git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
+1git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
@@ -234,9 +239,9 @@ git config --global credential.helper store 输入以上命令后，重新拉取
     </h2>
   </header>
   <div class="entry-content">
-    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf # .air.conf 文件内容 root = &#34;.&#34; tmp_dir = &#34;tmp&#34; [build] # Just plain old shell command. You could use `make` as well. cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; # Binary file yields from `cmd`. bin = &#34;tmp/main&#34; # Customize binary. full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; # Watch these filename extensions. include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] # Ignore these filename extensions or directories....</p>
+    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf 1# .air.conf 文件内容 2root = &#34;.&#34; 3tmp_dir = &#34;tmp&#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; 8# Binary file yields from `cmd`. 9bin = &#34;tmp/main&#34; 10# Customize binary. 11full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; 12# Watch these filename extensions. 13include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] 14# Ignore these filename extensions or directories....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
+  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
 </article>
 <footer class="page-footer">

@@ -10,7 +10,7 @@
 <meta name="description" content="本地虚拟机网络配置">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/virtual-network/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -98,7 +98,7 @@
   "keywords": [
     "虚拟机"
   ],
-  "articleBody": " 虚拟机版本：CentOS Linux release 7.9.2009 (Core)\n配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3\nTYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=static DEFROUTE=yes IPADDR=192.168.120.61 IPV4_FAILURE_FATAL=no IPV6INIT=yes IPV6_AUTOCONF=yes IPV6_DEFROUTE=yes IPV6_FAILURE_FATAL=no IPV6_ADDR_GEN_MODE=stable-privacy NAME=enp0s3 UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 DEVICE=enp0s3 ONBOOT=yes GETRWAY=192.168.56.1 NETMASK=255.255.255.0 DNS1=192.168.56.1 ",
+  "articleBody": " 虚拟机版本：CentOS Linux release 7.9.2009 (Core)\n配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3\n1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 ",
   "wordCount" : "25",
   "inLanguage": "zh",
   "datePublished": "2022-11-21T15:34:03+08:00",
@@ -179,6 +179,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -206,25 +211,25 @@
 <p>虚拟机版本：<code>CentOS Linux release 7.9.2009 (Core)</code></p>
 </blockquote>
 <p>配置文件地址：<code>/etc/sysconfig/network-scripts/ifcfg-enp0s3</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">TYPE</span><span class="o">=</span>Ethernet
-</span></span><span class="line"><span class="cl"><span class="nv">PROXY_METHOD</span><span class="o">=</span>none
-</span></span><span class="line"><span class="cl"><span class="nv">BROWSER_ONLY</span><span class="o">=</span>no
-</span></span><span class="line"><span class="cl"><span class="nv">BOOTPROTO</span><span class="o">=</span>static
-</span></span><span class="line"><span class="cl"><span class="nv">DEFROUTE</span><span class="o">=</span>yes
-</span></span><span class="line"><span class="cl"><span class="nv">IPADDR</span><span class="o">=</span>192.168.120.61
-</span></span><span class="line"><span class="cl"><span class="nv">IPV4_FAILURE_FATAL</span><span class="o">=</span>no
-</span></span><span class="line"><span class="cl"><span class="nv">IPV6INIT</span><span class="o">=</span>yes
-</span></span><span class="line"><span class="cl"><span class="nv">IPV6_AUTOCONF</span><span class="o">=</span>yes
-</span></span><span class="line"><span class="cl"><span class="nv">IPV6_DEFROUTE</span><span class="o">=</span>yes
-</span></span><span class="line"><span class="cl"><span class="nv">IPV6_FAILURE_FATAL</span><span class="o">=</span>no
-</span></span><span class="line"><span class="cl"><span class="nv">IPV6_ADDR_GEN_MODE</span><span class="o">=</span>stable-privacy
-</span></span><span class="line"><span class="cl"><span class="nv">NAME</span><span class="o">=</span>enp0s3
-</span></span><span class="line"><span class="cl"><span class="nv">UUID</span><span class="o">=</span>03dae35b-d264-45e4-8d73-8920ab61cd02
-</span></span><span class="line"><span class="cl"><span class="nv">DEVICE</span><span class="o">=</span>enp0s3
-</span></span><span class="line"><span class="cl"><span class="nv">ONBOOT</span><span class="o">=</span>yes
-</span></span><span class="line"><span class="cl"><span class="nv">GETRWAY</span><span class="o">=</span>192.168.56.1
-</span></span><span class="line"><span class="cl"><span class="nv">NETMASK</span><span class="o">=</span>255.255.255.0
-</span></span><span class="line"><span class="cl"><span class="nv">DNS1</span><span class="o">=</span>192.168.56.1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nv">TYPE</span><span class="o">=</span>Ethernet
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nv">PROXY_METHOD</span><span class="o">=</span>none
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nv">BROWSER_ONLY</span><span class="o">=</span>no
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nv">BOOTPROTO</span><span class="o">=</span>static
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="nv">DEFROUTE</span><span class="o">=</span>yes
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nv">IPADDR</span><span class="o">=</span>192.168.120.61
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nv">IPV4_FAILURE_FATAL</span><span class="o">=</span>no
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="nv">IPV6INIT</span><span class="o">=</span>yes
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nv">IPV6_AUTOCONF</span><span class="o">=</span>yes
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nv">IPV6_DEFROUTE</span><span class="o">=</span>yes
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nv">IPV6_FAILURE_FATAL</span><span class="o">=</span>no
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="nv">IPV6_ADDR_GEN_MODE</span><span class="o">=</span>stable-privacy
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="nv">NAME</span><span class="o">=</span>enp0s3
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="nv">UUID</span><span class="o">=</span>03dae35b-d264-45e4-8d73-8920ab61cd02
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="nv">DEVICE</span><span class="o">=</span>enp0s3
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="nv">ONBOOT</span><span class="o">=</span>yes
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="nv">GETRWAY</span><span class="o">=</span>192.168.56.1
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="nv">NETMASK</span><span class="o">=</span>255.255.255.0
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="nv">DNS1</span><span class="o">=</span>192.168.56.1
 </span></span></code></pre></div>
 
   </div>

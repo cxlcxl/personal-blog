@@ -10,7 +10,7 @@
 <meta name="description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/tags/git/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -124,6 +124,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://www.silent-cxl.top/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -153,7 +158,7 @@
   </header>
   <div class="entry-content">
     <p> 匹配中间文件夹 示例 .gitignore 内容：匹配 app 下的所有模块文件夹下 config 下以 .pro.yaml 结尾的文件
-// app/user/config/databse.pro.yaml // app/goods/config/databse.pro.yaml // ... app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
+1// app/user/config/databse.pro.yaml 2// app/goods/config/databse.pro.yaml 3// ... 4app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 1git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-24 11:11:31 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Git 忽略文件使用" href="https://www.silent-cxl.top/posts/git-ignore-use/"></a>
@@ -165,7 +170,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>添加脚本文件到你期望存放的地址 #!/bin/bash SITEDIR=/www/projects/site BAKDIR=/www/baks DAYS=7 DATE=`date &#43;%Y%m%d` REMOTE=`gitee/github/gitlab 仓库地址` # -c 压缩 # -x 解压 # -z 支持gzip解压文件 # -v 显示操作过程 # -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR cd /www/projects/ rm -rf site git clone $REMOTE site # 删除过期备份文件 # $bakdir find 备份文件的地址 #-type f 类型为普通文件 #-mtime 7 天之前的文件 #-exec rm -f 静默删除匹配出来的文件 # 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; echo &#34;complete!...</p>
+    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
