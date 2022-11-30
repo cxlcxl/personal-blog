@@ -39,6 +39,11 @@ url = "categories/"
 weight = 15
 
 [[languages.zh.menu.main]]
+name = "算法入门"
+url = "algorithm/"
+weight = 16
+
+[[languages.zh.menu.main]]
 name = "关于"
 url = "about/"
 weight = 20
@@ -120,8 +125,18 @@ images = [ "papermod-cover.png" ]
 [markup.goldmark.renderer]
 unsafe = true
 
-[markup.highlight]
-noClasses = false
+pygmentsUseClasses = true
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "github"
+    tabWidth = 4
 
 [privacy.vimeo]
 disabled = false
