@@ -1,12 +1,8 @@
-name: Deploy to Huawei ECS
+name: 部署到服务器
 on:
   push:
     branches: [ "master" ]
-env:
-  ECS_SSH_KEY: ""
-  ECS_SERVICE: 114.116.99.135
-  ECS_USER: "blogaction"
-  ECS_TARGET: "/www/projects/site/"
+
 permissions: write-all
 jobs:
   deploy:
@@ -19,12 +15,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Deploy to Huawei Ecs
+    - name: 部署到服务器
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.BLOG_ACTIONS_KEY }}
+        SSH_PRIVATE_KEY: ${{ secrets.BLOG_ECS_KEY }}
         ARGS: "-avzr --delete"
         SOURCE: "public/"
-        REMOTE_HOST: ${{ env.ECS_SERVICE }}
-        REMOTE_USER: ${{ env.ECS_USER }}
-        TARGET: ${{ env.ECS_TARGET }}
+        REMOTE_HOST: ${{ secrets.BLOG_ECS_HOST }}
+        REMOTE_USER: ${{ secrets.BLOG_ECS_USER }}
+        TARGET: ${{ secrets.BLOG_ECS_TARGET }}
