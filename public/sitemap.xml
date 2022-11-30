@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.silent-cxl.top/tags/actions/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-11-29T14:39:24+08:00</lastmod>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/deploy/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/github/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/hugo/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/deploy-github-actions/</loc>
+    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/go-shuffle/</loc>
     <lastmod>2022-11-29T14:39:24+08:00</lastmod>
@@ -11,19 +35,7 @@
     <loc>https://www.silent-cxl.top/categories/golang/</loc>
     <lastmod>2022-11-29T14:39:24+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
-    <lastmod>2022-11-29T14:39:24+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
-    <lastmod>2022-11-29T14:39:24+08:00</lastmod>
-  </url><url>
     <loc>https://www.silent-cxl.top/tags/hugo/</loc>
-    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/hugo/</loc>
-    <lastmod>2022-11-24T20:48:28+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/tags/</loc>
     <lastmod>2022-11-24T20:48:28+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>

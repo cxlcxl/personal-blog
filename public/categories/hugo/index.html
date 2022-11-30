@@ -148,6 +148,18 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>记录 Github Actions 实现代码提交自动部署
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>先上 github-acitons 部署 yml 文件内容 name: 部署到服务器 on: push: branches: [ &#34;master&#34; ] # master 分支有提交自动部署 permissions: write-all jobs: deploy: name: Deploy runs-on: ubuntu-latest environment: production steps: # 获取源码 master 分支，也可以写 tag 版本 - name: Checkout uses: actions/checkout@master # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 - name: 部署到服务器 uses: easingthemes/ssh-deploy@main env: SSH_PRIVATE_KEY: ${{ secrets.BLOG_ECS_KEY }} ARGS: &#34;-avzr --delete&#34; # 部署前删除目录 SOURCE: &#34;public/&#34; REMOTE_HOST: ${{ secrets.BLOG_ECS_HOST }} REMOTE_USER: ${{ secrets.BLOG_ECS_USER }} TARGET: ${{ secrets....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-30 11:04:47 +0800 CST'>十一月 30, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 记录 Github Actions 实现代码提交自动部署" href="https://www.silent-cxl.top/posts/deploy-github-actions/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>使用 Hugo 搭建自己的博客
     </h2>
   </header>
