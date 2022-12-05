@@ -9,7 +9,7 @@
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>粤ICP备88888888号-1</copyright>
+    <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Wed, 30 Nov 2022 11:04:47 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>记录 Github Actions 实现代码提交自动部署</title>

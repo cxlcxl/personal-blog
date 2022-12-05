@@ -10,7 +10,7 @@ buildExpired = false
 enableEmoji = true
 pygmentsUseClasses = true
 defaultContentLanguage = "zh"
-copyright = "粤ICP备88888888号-1"
+copyright = "粤ICP备2022145969号-1"
 
 [minify]
 disableXML = true
