@@ -12,7 +12,7 @@ ShowBreadCrumbs: ''
 ### 创建评论使用的 github 仓库
 
 - 操作步骤如下图（utteranc 的操作截图）
-- [giscus](https://giscus.app/zh-CN) 驱动与 [utteranc](https://utteranc.es/) 驱动开启操作大同小异，步骤基本相同
+- <a href="https://giscus.app/zh-CN" target="_blank">giscus</a> 驱动与 <a href="https://utteranc.es/" target="_blank">utteranc</a> 驱动开启操作大同小异，步骤基本相同
 
 ![](/images/hugo-utteranc-comment-step.png)
 

@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - Silent 的博客">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.695753f2d0790f4292ca6a660b3b13cd8f11f2a3dbc550a3e7e002d3b9288127.css" integrity="sha256-aVdT8tB5D0KSympmCzsTzY8R8qPbxVCj5&#43;AC07kogSc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -165,6 +165,18 @@
     </a>
   </h1>
 </header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>golang air 热更新使用
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf 1# .air.conf 文件内容 2root = &#34;.&#34; 3tmp_dir = &#34;tmp&#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; 8# Binary file yields from `cmd`. 9bin = &#34;tmp/main&#34; 10# Customize binary. 11full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; 12# Watch these filename extensions. 13include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] 14# Ignore these filename extensions or directories....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
+  <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">

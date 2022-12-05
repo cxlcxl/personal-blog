@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.silent-cxl.top/categories/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/css/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/css/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/css-font-color-animation/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/%E6%96%87%E5%AD%97%E8%89%B2%E5%BD%A9%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2022-12-05T14:26:59+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/categories/algorithm/</loc>
     <lastmod>2022-11-30T18:02:12+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/algorithm/</loc>
-    <lastmod>2022-11-30T18:02:12+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-11-30T18:02:12+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
     <lastmod>2022-11-30T18:02:12+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/algorithm/longest-substring/</loc>
@@ -33,12 +51,6 @@
     <lastmod>2022-11-30T11:04:47+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/categories/hugo/</loc>
-    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
-    <lastmod>2022-11-30T11:04:47+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/tags/</loc>
     <lastmod>2022-11-30T11:04:47+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/deploy-github-actions/</loc>

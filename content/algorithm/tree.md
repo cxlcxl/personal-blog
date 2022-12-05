@@ -1,8 +1,8 @@
 ---
-title: "递归数"
+title: "递归树"
 date: 2022-11-30T14:12:36+08:00
 draft: false
-description: "递归数"
+description: "递归树"
 categories: ["algorithm"]
 showToc: false
 ---

@@ -10,7 +10,7 @@
 <meta name="description" content="使用 Hugo 搭建自己的博客">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/hugo-build-blog/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.21bd771277d7e5855a14e3f16c8a68488eca6c0cf783a7445e74c84ff9524878.css" integrity="sha256-Ib13EnfX5YVaFOPxbIpoSI7KbAz3g6dEXnTIT/lSSHg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.695753f2d0790f4292ca6a660b3b13cd8f11f2a3dbc550a3e7e002d3b9288127.css" integrity="sha256-aVdT8tB5D0KSympmCzsTzY8R8qPbxVCj5&#43;AC07kogSc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -98,8 +98,8 @@
   "keywords": [
     "hugo", "博客搭建", "搭建博客"
   ],
-  "articleBody": "Hugo 的安装 安装可查看官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = \"PaperMod\" 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题\n创建你的内容 运行如下命令 1hugo new posts/first-post.md 在 content/posts/ 里可以看到刚刚创建的 md 文件，一般内容头部（更多可以在官网查看） 1title: \"使用 Hugo 搭建自己的博客\" 2date: 2022-11-24T20:48:28+08:00 3draft: false # 是否是草稿，构建的时候可以用上 4description: \"使用 Hugo 搭建自己的博客\" 5categories: [\"hugo\"] # 数组，分类可以用上 6tags: [\"hugo\", \"博客搭建\"] # 数组，标签可以用上 7ShowToc: true # 是否显示内容页的目录 8cover: 9 image: \"\" # 列表展示的图片 启动 1hugo server -D # -D buildDraft 构建草稿 2 3 4Start building sites … 5hugo v0.106.0+extended darwin/amd64 BuildDate=unknown 6.... 7.... 8Environment: \"development\" 9Serving pages from memory 10Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender 11Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 12Press Ctrl+C to stop 这时就可以在浏览器打开你构建出来的地址了：http://localhost:1313/ 发布 直接运行 hugo 命令，完成后可以在根目录找到 public 目录，是纯 html 格式的文件，将整个目录丢到 nginx 或其他服务器运行就可以了 1hugo 附上 nginx 的 https 配置，如果不需要 https 直接去掉注释标注 https 中间部分然后监听 80 端口即可\n1server { 2 #SSL 默认访问端口号为 443 3 #listen 80; 4 listen 443 ssl; 5 #请填写绑定证书的域名 6 server_name www.silent-cxl.top silent-cxl.top; 7 8 ############# https ############# 9 #请填写证书文件的相对路径或绝对路 10 ssl_certificate cert/silent-cxl.top.crt; 11 #请填写私钥文件的相对路径或绝对路径 12 ssl_certificate_key cert/silent-cxl.top.key; 13 ssl_session_timeout 5m; 14 #请按照以下协议配置 15 ssl_protocols TLSv1.2 TLSv1.3; 16 #请按照以下套件配置，配置加密套件，写法遵循 openssl 标准。 17 ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE; 18 ssl_prefer_server_ciphers on; 19 ############# https ############# 20 21 root /usr/share/nginx/html/site/public/; 22 index index.html index.htm; 23 24 access_log /var/log/nginx/access.hugosite.log main; 25 error_log /var/log/nginx/error.hugosite.log; 26 27 location / { 28 try_files $uri $uri/ /index.html; 29 } 30 31 error_page 500 502 503 504 /50x.html; 32 location = /50x.html { 33 root /usr/share/nginx/html; 34 } 35} 36 37############# https ############# 38server { 39 listen 80; 40 #请填写绑定证书的域名 41 server_name www.silent-cxl.top; 42 #把http的域名请求转成https 43 return 301 https://$host$request_uri; 44} 45############# https ############# ",
-  "wordCount" : "314",
+  "articleBody": "Hugo 的安装 安装可查看 官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = \"PaperMod\" 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题\n创建你的内容 运行如下命令 1hugo new posts/first-post.md 在 content/posts/ 里可以看到刚刚创建的 md 文件，一般内容头部（更多可以在官网查看） 1title: \"使用 Hugo 搭建自己的博客\" 2date: 2022-11-24T20:48:28+08:00 3draft: false # 是否是草稿，构建的时候可以用上 4description: \"使用 Hugo 搭建自己的博客\" 5categories: [\"hugo\"] # 数组，分类可以用上 6tags: [\"hugo\", \"博客搭建\"] # 数组，标签可以用上 7ShowToc: true # 是否显示内容页的目录 8cover: 9 image: \"\" # 列表展示的图片 启动 1hugo server -D # -D buildDraft 构建草稿 2 3 4Start building sites … 5hugo v0.106.0+extended darwin/amd64 BuildDate=unknown 6.... 7.... 8Environment: \"development\" 9Serving pages from memory 10Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender 11Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 12Press Ctrl+C to stop 这时就可以在浏览器打开你构建出来的地址了：http://localhost:1313/ 发布 直接运行 hugo 命令，完成后可以在根目录找到 public 目录，是纯 html 格式的文件，将整个目录丢到 nginx 或其他服务器运行就可以了 1hugo 附上 nginx 的 https 配置，如果不需要 https 直接去掉注释标注 https 中间部分然后监听 80 端口即可\n1server { 2 #SSL 默认访问端口号为 443 3 #listen 80; 4 listen 443 ssl; 5 #请填写绑定证书的域名 6 server_name www.silent-cxl.top silent-cxl.top; 7 8 ############# https ############# 9 #请填写证书文件的相对路径或绝对路 10 ssl_certificate cert/silent-cxl.top.crt; 11 #请填写私钥文件的相对路径或绝对路径 12 ssl_certificate_key cert/silent-cxl.top.key; 13 ssl_session_timeout 5m; 14 #请按照以下协议配置 15 ssl_protocols TLSv1.2 TLSv1.3; 16 #请按照以下套件配置，配置加密套件，写法遵循 openssl 标准。 17 ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE; 18 ssl_prefer_server_ciphers on; 19 ############# https ############# 20 21 root /usr/share/nginx/html/site/public/; 22 index index.html index.htm; 23 24 access_log /var/log/nginx/access.hugosite.log main; 25 error_log /var/log/nginx/error.hugosite.log; 26 27 location / { 28 try_files $uri $uri/ /index.html; 29 } 30 31 error_page 500 502 503 504 /50x.html; 32 location = /50x.html { 33 root /usr/share/nginx/html; 34 } 35} 36 37############# https ############# 38server { 39 listen 80; 40 #请填写绑定证书的域名 41 server_name www.silent-cxl.top; 42 #把http的域名请求转成https 43 return 301 https://$host$request_uri; 44} 45############# https ############# ",
+  "wordCount" : "315",
   "inLanguage": "zh",
   "datePublished": "2022-11-24T20:48:28+08:00",
   "dateModified": "2022-11-24T20:48:28+08:00",
@@ -232,7 +232,7 @@
 
   <div class="post-content"><h3 id="hugo-的安装">Hugo 的安装<a hidden class="anchor" aria-hidden="true" href="#hugo-的安装">#</a></h3>
 <ul>
-<li>安装可查看<a href="https://gohugo.io/installation/">官方文档</a></li>
+<li>安装可查看 <a href="https://gohugo.io/installation/" target="_blank">官方文档</a></li>
 <li>安装完成后按照文档的快速启动项目操作</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 创建一个项目</span>
@@ -246,8 +246,8 @@
 </span></span><span class="line"><span class="ln">9</span><span class="cl">git remote add origin <span class="o">[</span>你的 github/gitee/gitlab 仓库地址<span class="o">]</span>
 </span></span></code></pre></div><h3 id="下载一个你喜欢的主题">下载一个你喜欢的主题<a hidden class="anchor" aria-hidden="true" href="#下载一个你喜欢的主题">#</a></h3>
 <ul>
-<li>官方文档 <a href="https://themes.gohugo.io/">主题库</a> 这里有很多</li>
-<li>我使用的是这个 <a href="https://github.com/adityatelange/hugo-PaperMod">主题</a> stars 还挺多的</li>
+<li>官方文档 <a href="https://themes.gohugo.io/" target="_blank">主题库</a> 这里有很多</li>
+<li>我使用的是这个 <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">主题</a> stars 还挺多的</li>
 <li>直接在你的项目目录执行下面 <code>git</code> 命令就可以了</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">git clone [主题仓库地址] themes/主题名

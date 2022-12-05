@@ -13,7 +13,7 @@ cover:
 
 ### Hugo 的安装
 
-- 安装可查看[官方文档](https://gohugo.io/installation/)
+- 安装可查看 <a href="https://gohugo.io/installation/" target="_blank">官方文档</a>
 - 安装完成后按照文档的快速启动项目操作
 ```bash
 # 创建一个项目
@@ -28,8 +28,8 @@ git remote add origin [你的 github/gitee/gitlab 仓库地址]
 ```
 
 ### 下载一个你喜欢的主题
-- 官方文档 [主题库](https://themes.gohugo.io/) 这里有很多
-- 我使用的是这个 [主题](https://github.com/adityatelange/hugo-PaperMod) stars 还挺多的
+- 官方文档 <a href="https://themes.gohugo.io/" target="_blank">主题库</a> 这里有很多
+- 我使用的是这个 <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">主题</a> stars 还挺多的
 - 直接在你的项目目录执行下面 `git` 命令就可以了
 ```git
 git clone [主题仓库地址] themes/主题名
