@@ -9,7 +9,7 @@ ShowToc: true
 ShowBreadCrumbs: ''
 ---
 
-> <div class="css-font-color-animation">记录一个遇到的文字色彩动画</div>
+> 记录一个遇到的文字色彩动画
 
 ```css
 .example {
