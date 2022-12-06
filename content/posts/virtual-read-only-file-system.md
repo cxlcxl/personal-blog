@@ -30,5 +30,5 @@ VBoxManage getextradata YOURVMNAME enumerate
 用管理员身份开启虚拟机，OK！
 
 参考博文  
-<a href="https://blog.csdn.net/qazx123q/article/details/88894482" target="_blank">https://blog.csdn.net/qazx123q/article/details/88894482</a>
-<a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/" target="_blank">https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</a>
+- <a href="https://blog.csdn.net/qazx123q/article/details/88894482" target="_blank">https://blog.csdn.net/qazx123q/article/details/88894482</a>
+- <a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/" target="_blank">https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</a>

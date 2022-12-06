@@ -193,7 +193,7 @@
 关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
 1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机，OK！
 参考博文
-https://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</p>
+https://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/ </p>
   </div>
   <footer class="entry-footer"><span title='2022-12-06 10:56:41 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to VirtualBox 虚拟机 Read-only file system" href="https://www.silent-cxl.top/posts/virtual-read-only-file-system/"></a>
@@ -244,10 +244,10 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
     </h2>
   </header>
   <div class="entry-content">
-    <p> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3	if len(slice) == 1 { 4	return 5	} 6	r := rand.New(rand.NewSource(time.Now().UnixNano())) 7	for len(slice) &gt; 0 { 8	n := len(slice) 9	randIndex := r.Intn(n) 10	slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11	slice = slice[:n-1] 12	} 13} </p>
+    <p> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3 if len(slice) == 1 { 4 return 5 } 6 r := rand.New(rand.NewSource(time.Now().UnixNano())) 7 for len(slice) &gt; 0 { 8 n := len(slice) 9 randIndex := r.Intn(n) 10 slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11 slice = slice[:n-1] 12 } 13} </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/go-shuffle/"></a>
+  <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/golang-shuffle/"></a>
 </article>
 
 <article class="post-entry"> 
