@@ -80,7 +80,7 @@ images = [ "papermod-cover.png" ]
   category = "General"
   categoryId = "DIC_kwDOIeSMU84CSrE5"
   mapping = "pathname"
-  theme = "light_protanopia"
+  theme = "dark_dimmed"
   lang = "zh-CN"
   crossorigin = "anonymous"
 

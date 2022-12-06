@@ -11,7 +11,7 @@
 <meta name="description" content="VirtualBox 虚拟机 Read-only file system">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/virtual-read-only-file-system/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.6ea267a683737a7417dc779262a78729721b56d8938a629f9a8285225cb331c1.css" integrity="sha256-bqJnpoNzenQX3HeSYqeHKXIbVtiTimKfmoKFIlyzMcE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -99,8 +99,8 @@
   "keywords": [
     "虚拟机", "deploy"
   ],
-  "articleBody": "在虚拟机中创建软连接时报错 Read-only file system，修改方法如下\n关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\\Program Files\\Oracle\\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功\n1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机，OK！\n参考博文\nhttps://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/ ",
-  "wordCount" : "26",
+  "articleBody": "在虚拟机中创建软连接时报错 Read-only file system，修改方法如下\n关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\\Program Files\\Oracle\\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功\n1VBoxManage getextradata YOURVMNAME enumerate 参考博文：https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/\n",
+  "wordCount" : "23",
   "inLanguage": "zh",
   "datePublished": "2022-12-06T10:56:41+08:00",
   "dateModified": "2022-12-06T10:56:41+08:00",
@@ -230,12 +230,7 @@ var _hmt = _hmt || [];
 </ul>
 <p>查看是否配置成功</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">VBoxManage getextradata YOURVMNAME enumerate
-</span></span></code></pre></div><p>用管理员身份开启虚拟机，OK！</p>
-<p>参考博文</p>
-<ul>
-<li><a href="https://blog.csdn.net/qazx123q/article/details/88894482" target="_blank"><a href="https://blog.csdn.net/qazx123q/article/details/88894482">https://blog.csdn.net/qazx123q/article/details/88894482</a></a></li>
-<li><a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/" target="_blank"><a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/">https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</a></a></li>
-</ul>
+</span></span></code></pre></div><p>参考博文：<a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/" target="_blank"><a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/">https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</a></a></p>
 
 
   </div>
@@ -300,7 +295,7 @@ var _hmt = _hmt || [];
 </div>
   </footer>
 
-<div class="post bg-white">
+<div class="post comments-bg-white">
   <script src="https://giscus.app/client.js"
         data-repo="cxlcxl/comments-for-hugo"
         data-repo-id="R_kgDOIeSMUw"
@@ -311,7 +306,7 @@ var _hmt = _hmt || [];
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="light_protanopia"
+        data-theme="dark_dimmed"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
