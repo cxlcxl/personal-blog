@@ -158,14 +158,9 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>在虚拟机中创建软连接时报错 Read-only file system,修改方法如下
-1：关闭虚拟机
-2：用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox)
-3:运行
-1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径)
-查看是否配置成功
-1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机
-OK！
+    <p>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下
+关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
+1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机，OK！
 参考博文
 https://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</p>
   </div>
@@ -179,7 +174,8 @@ https://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing
     </h2>
   </header>
   <div class="entry-content">
-    <p>1ERROR: for local_nginx Cannot start service nginx: driver failed programming external connectivity on endpoint local_nginx (c3d788a28999dc7888524cd93d63a5dac3da0fe00d9c7d8a09e8bb815005b9f0): Bind for 0.0.0.0:8098 failed: port is already allocated 容器没有运行了，但是端口还在绑定占用 解决：
+    <p>1ERROR: for local_nginx Cannot start service nginx: driver failed programming external connectivity on endpoint local_nginx (c3d788a28999dc7888524cd93d63a5dac3da0fe00d9c7d8a09e8bb815005b9f0): Bind for 0.0.0.0:8098 failed: port is already allocated 容器没有运行了，但是端口还在绑定占用
+解决：
 systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db systemctl restart docker.service </p>
   </div>
   <footer class="entry-footer"><span title='2022-12-06 10:54:37 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>

@@ -99,8 +99,8 @@
   "keywords": [
     "虚拟机", "deploy"
   ],
-  "articleBody": "在虚拟机中创建软连接时报错 Read-only file system,修改方法如下\n1：关闭虚拟机\n2：用管理员身份启用cmd，进入到虚拟机安装目录(C:\\Program Files\\Oracle\\VirtualBox)\n3:运行\n1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径)\n查看是否配置成功\n1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机\nOK！\n参考博文\nhttps://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/\n",
-  "wordCount" : "27",
+  "articleBody": "在虚拟机中创建软连接时报错 Read-only file system，修改方法如下\n关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\\Program Files\\Oracle\\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功\n1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机，OK！\n参考博文\nhttps://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/\n",
+  "wordCount" : "26",
   "inLanguage": "zh",
   "datePublished": "2022-12-06T10:56:41+08:00",
   "dateModified": "2022-12-06T10:56:41+08:00",
@@ -208,17 +208,20 @@
 </div>
   </header> 
 
-  <div class="post-content"><p>在虚拟机中创建软连接时报错 Read-only file system,修改方法如下</p>
-<p>1：关闭虚拟机</p>
-<p>2：用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox)</p>
-<p>3:运行</p>
+  <div class="post-content"><p><strong>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下</strong></p>
+<ol>
+<li>关闭虚拟机</li>
+<li>用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox)</li>
+<li>运行以下命令</li>
+</ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME <span class="m">1</span>
-</span></span></code></pre></div><p><code>YOURVMNAME</code> ：虚拟机中系统名称
-<code>YOURSHAREFOLDERNAME</code> ：虚拟机本地共享文件夹名称(不用带路径)</p>
+</span></span></code></pre></div><ul>
+<li><code>YOURVMNAME</code> ：虚拟机中系统名称</li>
+<li><code>YOURSHAREFOLDERNAME</code> ：虚拟机本地共享文件夹名称(不用带路径)</li>
+</ul>
 <p>查看是否配置成功</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">VBoxManage getextradata YOURVMNAME enumerate
-</span></span></code></pre></div><p>用管理员身份开启虚拟机</p>
-<p>OK！</p>
+</span></span></code></pre></div><p>用管理员身份开启虚拟机，OK！</p>
 <p>参考博文<br>
 <a href="https://blog.csdn.net/qazx123q/article/details/88894482" target="_blank"><a href="https://blog.csdn.net/qazx123q/article/details/88894482">https://blog.csdn.net/qazx123q/article/details/88894482</a></a>
 <a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/" target="_blank"><a href="https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/">https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</a></a></p>
