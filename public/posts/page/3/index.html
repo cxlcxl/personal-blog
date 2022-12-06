@@ -3,6 +3,7 @@
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Posts | Silent 代码搬运工</title>
@@ -168,6 +169,31 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Vue3 页面登录拦截器
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>直接上代码
+1// intercept.js 2import NProgress from &#34;nprogress&#34; 3import &#34;nprogress/nprogress.css&#34; // progress bar style 4import store from &#34;@/store&#34; 5import router from &#34;./router&#34; 6import settings from &#34;./settings&#34; 7import { getToken } from &#34;@/utils/token&#34; 8import { ElMessage } from &#34;element-plus&#34; 9 10NProgress.configure({ showSpinner: false }) 11const excludeUris = [&#34;/login&#34;, &#34;/sso/callback&#34;] 12 13router.beforeEach(async (to, from, next) =&gt; { 14 NProgress.start() 15 // 顺便设置 icon title 16 document.title = to.meta.title 17 ? `${to.meta.title} - ${settings....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 页面登录拦截器" href="https://www.silent-cxl.top/posts/vue-login-permission/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>从远程仓库定时自动发版
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Golang 环境搭建
     </h2>
   </header>
@@ -217,33 +243,6 @@
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>查看根分区大小 df -h
-1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
-1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Git 解决每次 git pull 需要输入账号密码
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>git bash 进入项目目录：
-1git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

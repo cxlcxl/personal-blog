@@ -3,6 +3,7 @@
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Posts | Silent 代码搬运工</title>
@@ -168,6 +169,33 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>查看根分区大小 df -h
+1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
+1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Git 解决每次 git pull 需要输入账号密码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>git bash 进入项目目录：
+1git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>golang air 热更新使用
     </h2>
   </header>
@@ -216,22 +244,12 @@
   <footer class="entry-footer"><span title='2022-11-20 10:25:27 +0800 CST'>十一月 20, 2022</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to K8s - Kubeadm 部署安装" href="https://www.silent-cxl.top/posts/k8s-2-install/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>K8s - 系统初始化
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>设置系统主机名 1hostnamectl set-hostname k8s-master01 安装依赖包 1yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables 1systemctl stop firewalld &amp;&amp; systemctl disable firewalld 2yum -y install iptables-services &amp;&amp; systemctl start iptables &amp;&amp; systemctl enable iptables &amp;&amp; iptables -F &amp;&amp; service iptables save 关闭 SELINUX 1swapoff -a &amp;&amp; sed -i &#39;/ swap / s/^\(.*\)$/#\1/g&#39; /etc/fstab 2setenforce 0 &amp;&amp; sed -i &#39;s/^SELINUX=.*/SELINUX=disabled/&#39; /etc/selinux/config 调整内核参数 1cat &gt; kubernetes....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 系统初始化" href="https://www.silent-cxl.top/posts/k8s-1-init/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://www.silent-cxl.top/posts/page/3/">
       «&nbsp;上一页&nbsp;
+    </a>
+    <a class="next" href="https://www.silent-cxl.top/posts/page/5/">下一页&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>

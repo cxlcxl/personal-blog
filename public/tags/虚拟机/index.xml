@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Mon, 21 Nov 2022 15:34:03 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VirtualBox 虚拟机 Read-only file system</title>
+      <link>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</link>
+      <pubDate>Tue, 06 Dec 2022 10:56:41 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</guid>
+      <description>VirtualBox 虚拟机 Read-only file system</description>
+    </item>
+    
     <item>
       <title>Virtual 本地虚拟机网络配置</title>
       <link>https://www.silent-cxl.top/posts/virtual-network/</link>

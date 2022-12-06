@@ -3,6 +3,7 @@
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>虚拟机 | Silent 代码搬运工</title>
@@ -150,6 +151,27 @@
     </a>
   </h1>
 </header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>VirtualBox 虚拟机 Read-only file system
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在虚拟机中创建软连接时报错 Read-only file system,修改方法如下
+1：关闭虚拟机
+2：用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox)
+3:运行
+1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径)
+查看是否配置成功
+1VBoxManage getextradata YOURVMNAME enumerate 用管理员身份开启虚拟机
+OK！
+参考博文
+https://blog.csdn.net/qazx123q/article/details/88894482 https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 10:56:41 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to VirtualBox 虚拟机 Read-only file system" href="https://www.silent-cxl.top/posts/virtual-read-only-file-system/"></a>
+</article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">

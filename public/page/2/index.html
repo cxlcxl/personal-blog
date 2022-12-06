@@ -4,6 +4,7 @@
 <head>
 	<meta name="generator" content="Hugo 0.106.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Silent 代码搬运工</title>
@@ -155,6 +156,31 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Hugo PaperMod 开启评论
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
+1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>K8s 上 Go-Zero 服务本机手动部署记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&#34;&#34;] 16 resources: [&#34;endpoints&#34;] # endpoints 17 verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Git 忽略文件使用
     </h2>
   </header>
@@ -205,31 +231,6 @@
   </div>
   <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Vue3 使用 Vuex 做登录信息" href="https://www.silent-cxl.top/posts/vue-vuex/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Vue3 页面登录拦截器
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>直接上代码
-1// intercept.js 2import NProgress from &#34;nprogress&#34; 3import &#34;nprogress/nprogress.css&#34; // progress bar style 4import store from &#34;@/store&#34; 5import router from &#34;./router&#34; 6import settings from &#34;./settings&#34; 7import { getToken } from &#34;@/utils/token&#34; 8import { ElMessage } from &#34;element-plus&#34; 9 10NProgress.configure({ showSpinner: false }) 11const excludeUris = [&#34;/login&#34;, &#34;/sso/callback&#34;] 12 13router.beforeEach(async (to, from, next) =&gt; { 14 NProgress.start() 15 // 顺便设置 icon title 16 document.title = to.meta.title 17 ? `${to.meta.title} - ${settings....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 页面登录拦截器" href="https://www.silent-cxl.top/posts/vue-login-permission/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>从远程仓库定时自动发版
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

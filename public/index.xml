@@ -10,7 +10,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Mon, 05 Dec 2022 14:26:59 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VirtualBox 虚拟机 Read-only file system</title>
+      <link>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</link>
+      <pubDate>Tue, 06 Dec 2022 10:56:41 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</guid>
+      <description>VirtualBox 虚拟机 Read-only file system</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose Port Is Already Allocated</title>
+      <link>https://www.silent-cxl.top/posts/docker-compose-port-is-already-allocated/</link>
+      <pubDate>Tue, 06 Dec 2022 10:54:37 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/docker-compose-port-is-already-allocated/</guid>
+      <description>docker-compose up 报错：Bind for 0.0.0.0:8098 failed: port is already allocated</description>
+    </item>
+    
     <item>
       <title>Css 文字色彩动画</title>
       <link>https://www.silent-cxl.top/posts/css-font-color-animation/</link>
