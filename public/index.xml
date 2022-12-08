@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 14:31:21 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode:1775、通过最少操作次数使数组的和相等</title>
+      <link>https://www.silent-cxl.top/algorithm/leetcode-1775/</link>
+      <pubDate>Thu, 08 Dec 2022 14:31:21 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/algorithm/leetcode-1775/</guid>
+      <description>通过最少操作次数使数组的和相等 给你两个长度可能不等的整数数组 nums1 和 nums2 。两个数组中的所有值都在 1 到 6 之间（包含 1 和 6）。 每次操作中，你可以选择 任意 数组中的任意一个整数，将它变成 1 到 6 之间 任意 的值（包含 1 和 6）。 请你返回使 nums1 中所有数的和与 nums2 中所有数的和相等的最少操作次数。如果无法使两个数组的和相等，请返回 -1 。 示例 1 1输入：nums1 = [1,2,3,4,5,6], nums2 = [1,1,2,2,2,2] 2输出：3 3解释：你可以通过 3 次操作使 nums1 中所有数的和与 nums2 中所有数的和相等。以下数组下标都从 0 开始。 4- 将 nums2[0] 变为 6 。 nums1 = [1,2,3,4,5,6], nums2 = [6,1,2,2,2,2] 。 5- 将 nums1[5] 变为 1 。 nums1 = [1,2,3,4,5,1], nums2 = [6,1,2,2,2,2] 。 6- 将 nums1[2] 变为 2 。 nums1 = [1,2,2,4,5,1], nums2 = [6,1,2,2,2,2] 。 示例 2 1输入：nums1 = [1,1,1,1,1,1,1], nums2 = [6] 2输出：-1 3解释：没有办法减少 nums1 的和或者增加 nums2 的和使二者相等。 go 题解</description>
+    </item>
+    
     <item>
       <title>VirtualBox 虚拟机 Read-only file system</title>
       <link>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</link>
