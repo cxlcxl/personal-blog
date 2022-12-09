@@ -1,6 +1,6 @@
 baseURL = "https://www.silent-cxl.top/"
-title = "Silent 的博客"
-paginate = 5
+title = "Silent 代码搬运工"
+paginate = 6
 theme = "PaperMod"
 enableInlineShortcodes = true
 enableRobotsTXT = true
@@ -10,6 +10,7 @@ buildExpired = false
 enableEmoji = true
 pygmentsUseClasses = true
 defaultContentLanguage = "zh"
+copyright = "粤ICP备2022145969号-1"
 
 [minify]
 disableXML = true
@@ -22,14 +23,14 @@ weight = 1
   tag = "tags"
   series = "series"
 
-#[[languages.zh.menu.main]]
-#name = "归档"
-#url = "archives"
-#weight = 5
+[[languages.zh.menu.main]]
+name = "归档"
+url = "archives/"
+weight = 5
 
 [[languages.zh.menu.main]]
-name = "标签"
-url = "tags/"
+name = "搜索"
+url = "search/"
 weight = 10
 
 [[languages.zh.menu.main]]
@@ -38,7 +39,12 @@ url = "categories/"
 weight = 15
 
 [[languages.zh.menu.main]]
-name = "About"
+name = "算法入门"
+url = "algorithm/"
+weight = 16
+
+[[languages.zh.menu.main]]
+name = "关于"
 url = "about/"
 weight = 20
 
@@ -47,7 +53,7 @@ home = [ "HTML", "RSS", "JSON" ]
 
 [params]
 env = "production"
-description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+description = "Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"
 author = "silent"
 defaultTheme = "auto"
 ShowShareButtons = true
@@ -57,8 +63,26 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 ShowRssButtonInSectionTermList = true
+comments = true
 ShowToc = true
 images = [ "papermod-cover.png" ]
+  ## 配置 utteranc评论,教程参考 https://utteranc.es/
+  [params.utteranc]
+  enable = false
+  repo = "cxlcxl/comments-for-hugo"
+  issueTerm = "pathname"
+  theme = "github-light"
+  ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN
+  [params.giscus]
+  enable = true
+  repo = "cxlcxl/comments-for-hugo"
+  repoId = "R_kgDOIeSMUw"
+  category = "General"
+  categoryId = "DIC_kwDOIeSMU84CSrE5"
+  mapping = "pathname"
+  theme = "dark_dimmed"
+  lang = "zh-CN"
+  crossorigin = "anonymous"
 
   [params.profileMode]
   enabled = false
@@ -75,23 +99,23 @@ images = [ "papermod-cover.png" ]
     url = "tags"
 
   [params.homeInfoParams]
-  Title = "Silent 的博客"
-  Content = "一个普通的 PHP、Golang 程序员，欢迎互相交流."
+  Title = "Hi, Hello world!"
+  Content = "Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"
 
   [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/adityatelange/hugo-PaperMod"
+  url = "https://github.com/cxlcxl"
 
-  [[params.socialIcons]]
-  name = "KoFi"
-  url = "https://ko-fi.com/adityatelange"
+  #[[params.socialIcons]]
+  #name = "KoFi"
+  #url = "https://ko-fi.com/adityatelange"
 
   [[params.socialIcons]]
   name = "Rss"
   url = "index.xml"
 
   [params.editPost]
-  URL = "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+  URL = "https://github.com/cxlcxl/personal-blog/blob/master/content"
   Text = "Suggest Changes"
   appendFilePath = true
 
@@ -101,8 +125,18 @@ images = [ "papermod-cover.png" ]
 [markup.goldmark.renderer]
 unsafe = true
 
-[markup.highlight]
-noClasses = false
+pygmentsUseClasses = true
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "github"
+    tabWidth = 4
 
 [privacy.vimeo]
 disabled = false

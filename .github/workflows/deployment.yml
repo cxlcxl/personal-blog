@@ -1,0 +1,26 @@
+name: 部署到服务器
+on:
+  push:
+    branches: [ "master" ]
+
+permissions: write-all
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    # 获取源码
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: 部署到服务器
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.BLOG_ECS_KEY }}
+        ARGS: "-avzr --delete"
+        SOURCE: "public/"
+        REMOTE_HOST: ${{ secrets.BLOG_ECS_HOST }}
+        REMOTE_USER: ${{ secrets.BLOG_ECS_USER }}
+        TARGET: ${{ secrets.BLOG_ECS_TARGET }}

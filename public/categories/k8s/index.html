@@ -3,14 +3,15 @@
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>k8s | Silent 的博客</title>
+<title>k8s | Silent 代码搬运工</title>
 <meta name="keywords" content="">
-<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
+<meta name="description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/categories/k8s/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -56,7 +57,7 @@
 
     </style>
 </noscript><meta property="og:title" content="k8s" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.silent-cxl.top/categories/k8s/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
@@ -64,7 +65,16 @@
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:title" content="k8s"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"/>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3a6d61147913067e1508766c10f53139";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 </head>
 
@@ -83,7 +93,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -109,8 +119,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.silent-cxl.top/tags/" title="标签">
-                    <span>标签</span>
+                <a href="https://www.silent-cxl.top/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/search/" title="搜索">
+                    <span>搜索</span>
                 </a>
             </li>
             <li>
@@ -119,8 +134,13 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="About">
-                    <span>About</span>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/about/" title="关于">
+                    <span>关于</span>
                 </a>
             </li>
         </ul>
@@ -143,13 +163,25 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>K8s 上 Go-Zero 服务本机手动部署记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&#34;&#34;] 16 resources: [&#34;endpoints&#34;] # endpoints 17 verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>K8s - 资源清单
     </h2>
   </header>
   <div class="entry-content">
-    <p>资源清单格式 apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) kind: #资源类别 metadata： #资源元数据 name namespace lables annotations # 主要目的是方便用户阅读查找 spec: # 期望的状态（disired state） status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
-[root@k8s-master01 ~]# kubectl api-versions admissionregistration.k8s.io/v1beta1 apiextensions.k8s.io/v1beta1 apiregistration.k8s.io/v1 apiregistration.k8s.io/v1beta1 apps/v1 ......(以下省略) 获取资源的 apiVersion 版本信息
-[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 .....(以下省略) [root@k8s-master01 ~]# kubectl explain Ingress KIND: Ingress VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
+    <p>资源清单格式 1apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) 2kind: #资源类别 3metadata： #资源元数据 4 name 5 namespace 6 lables 7 annotations # 主要目的是方便用户阅读查找 8spec: # 期望的状态（disired state） 9status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
+1[root@k8s-master01 ~]# kubectl api-versions 2admissionregistration.k8s.io/v1beta1 3apiextensions.k8s.io/v1beta1 4apiregistration.k8s.io/v1 5apiregistration.k8s.io/v1beta1 6apps/v1 7......(以下省略) 获取资源的 apiVersion 版本信息
+1[root@k8s-master01 ~]# kubectl explain pod 2KIND: Pod 3VERSION: v1 4.....(以下省略) 5 6[root@k8s-master01 ~]# kubectl explain Ingress 7KIND: Ingress 8VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
@@ -161,8 +193,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>kube-proxy开启ipvs的前置条件 modprobe br_netfilter cat &gt; /etc/sysconfig/modules/ipvs.modules &lt;&lt;EOF #!/bin/bash modprobe -- ip_vs modprobe -- ip_vs_rr modprobe -- ip_vs_wrr modprobe -- ip_vs_sh modprobe -- nf_conntrack_ipv4 EOF chmod 755 /etc/sysconfig/modules/ipvs.modules &amp;&amp; bash /etc/sysconfig/modules/ipvs.modules &amp;&amp; lsmod | grep -e ip_vs -e nf_conntrack_ipv4 如果报错：modprobe: FATAL: Module nf_conntrack_ipv4 not found. 内核高版本的 nf_conntrack_ipv4 已被 nf_conntrack 替换，将以上的 nf_conntrack_ipv4 改为 nf_conntrack 重新执行。
-安装 Docker 软件 yum install -y yum-utils device-mapper-persistent-data lvm2 # docker 依赖包 # docker 镜像源 yum-config-manager \ --add-repo \ http://mirrors....</p>
+    <p>kube-proxy开启ipvs的前置条件 1modprobe br_netfilter 2 3cat &gt; /etc/sysconfig/modules/ipvs.modules &lt;&lt;EOF 4#!/bin/bash 5modprobe -- ip_vs 6modprobe -- ip_vs_rr 7modprobe -- ip_vs_wrr 8modprobe -- ip_vs_sh 9modprobe -- nf_conntrack_ipv4 10EOF 11 12chmod 755 /etc/sysconfig/modules/ipvs.modules &amp;&amp; bash /etc/sysconfig/modules/ipvs.modules &amp;&amp; lsmod | grep -e ip_vs -e nf_conntrack_ipv4 如果报错：modprobe: FATAL: Module nf_conntrack_ipv4 not found. 内核高版本的 nf_conntrack_ipv4 已被 nf_conntrack 替换，将以上的 nf_conntrack_ipv4 改为 nf_conntrack 重新执行。
+安装 Docker 软件 1yum install -y yum-utils device-mapper-persistent-data lvm2 # docker 依赖包 2 3# docker 镜像源 4yum-config-manager \ 5 --add-repo \ 6 http://mirrors....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-20 10:25:27 +0800 CST'>十一月 20, 2022</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to K8s - Kubeadm 部署安装" href="https://www.silent-cxl.top/posts/k8s-2-install/"></a>
@@ -174,7 +206,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>设置系统主机名 hostnamectl set-hostname k8s-master01 安装依赖包 yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables systemctl stop firewalld &amp;&amp; systemctl disable firewalld yum -y install iptables-services &amp;&amp; systemctl start iptables &amp;&amp; systemctl enable iptables &amp;&amp; iptables -F &amp;&amp; service iptables save 关闭 SELINUX swapoff -a &amp;&amp; sed -i &#39;/ swap / s/^\(.*\)$/#\1/g&#39; /etc/fstab setenforce 0 &amp;&amp; sed -i &#39;s/^SELINUX=.*/SELINUX=disabled/&#39; /etc/selinux/config 调整内核参数 cat &gt; kubernetes....</p>
+    <p>设置系统主机名 1hostnamectl set-hostname k8s-master01 安装依赖包 1yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables 1systemctl stop firewalld &amp;&amp; systemctl disable firewalld 2yum -y install iptables-services &amp;&amp; systemctl start iptables &amp;&amp; systemctl enable iptables &amp;&amp; iptables -F &amp;&amp; service iptables save 关闭 SELINUX 1swapoff -a &amp;&amp; sed -i &#39;/ swap / s/^\(.*\)$/#\1/g&#39; /etc/fstab 2setenforce 0 &amp;&amp; sed -i &#39;s/^SELINUX=.*/SELINUX=disabled/&#39; /etc/selinux/config 调整内核参数 1cat &gt; kubernetes....</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to K8s - 系统初始化" href="https://www.silent-cxl.top/posts/k8s-1-init/"></a>
@@ -182,12 +214,19 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 的博客</a></span>
+  <div>
+    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
+  </div>
+  <div>
+    <span>
+        <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2022145969号-1</a>
+    </span>
+  </div>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -222,7 +261,6 @@
             }
         });
     });
-
 </script>
 <script>
     var mybutton = document.getElementById("top-link");

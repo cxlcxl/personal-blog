@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>k8s on Silent 的博客</title>
+    <title>k8s on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/tags/k8s/</link>
-    <description>Recent content in k8s on Silent 的博客</description>
+    <description>Recent content in k8s on Silent 代码搬运工</description>
     <image>
       <url>https://www.silent-cxl.top/papermod-cover.png</url>
       <link>https://www.silent-cxl.top/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Nov 2022 10:25:27 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>粤ICP备2022145969号-1</copyright>
+    <lastBuildDate>Thu, 24 Nov 2022 15:42:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K8s 上 Go-Zero 服务本机手动部署记录</title>
+      <link>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</link>
+      <pubDate>Thu, 24 Nov 2022 15:42:05 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</guid>
+      <description>K8s 上 Go-Zero 服务本机手动部署记录</description>
+    </item>
+    
     <item>
       <title>K8s - 资源清单</title>
       <link>https://www.silent-cxl.top/posts/k8s-3-list/</link>

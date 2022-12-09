@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>algorithm on Silent 代码搬运工</title>
+    <link>https://www.silent-cxl.top/categories/algorithm/</link>
+    <description>Recent content in algorithm on Silent 代码搬运工</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备2022145969号-1</copyright>
+    <lastBuildDate>Thu, 08 Dec 2022 14:50:36 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode:1812、判断国际象棋棋盘中一个格子的颜色</title>
+      <link>https://www.silent-cxl.top/algorithm/leetcode-1812/</link>
+      <pubDate>Thu, 08 Dec 2022 14:50:36 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/algorithm/leetcode-1812/</guid>
+      <description> 给你一个坐标 coordinates ，它是一个字符串，表示国际象棋棋盘中一个格子的坐标。下图是国际象棋棋盘示意图。 - 如果所给格子的颜色是白色，请你返回 true，如果是黑色，请返回 false 。 - 给定坐标一定代表国际象棋棋盘上一个存在的格子。坐标第一个字符是字母，第二个字符是数字。 示例 1： 1输入：coordinates = &amp;#34;a1&amp;#34; 2输出：false 3解释：如上图棋盘所示，&amp;#34;a1&amp;#34; 坐标的格子是黑色的，所以返回 false 。 go 题解
+1func squareIsWhite(coordinates string) bool { 2 // a-h 的字母转换 byte 为 ascii 数字，转换单双，一个单一个双才是白色 3 return (coordinates[0]%2)^(coordinates[1]%2) == 1 4} </description>
+    </item>
+    
+    <item>
+      <title>Leetcode:1775、通过最少操作次数使数组的和相等</title>
+      <link>https://www.silent-cxl.top/algorithm/leetcode-1775/</link>
+      <pubDate>Thu, 08 Dec 2022 14:31:21 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/algorithm/leetcode-1775/</guid>
+      <description>给你两个长度可能不等的整数数组 nums1 和 nums2 。两个数组中的所有值都在 1 到 6 之间（包含 1 和 6）。 每次操作中，你可以选择 任意 数组中的任意一个整数，将它变成 1 到 6 之间 任意 的值（包含 1 和 6）。 请你返回使 nums1 中所有数的和与 nums2 中所有数的和相等的最少操作次数。如果无法使两个数组的和相等，请返回 -1 。 示例 1 1输入：nums1 = [1,2,3,4,5,6], nums2 = [1,1,2,2,2,2] 2输出：3 3解释：你可以通过 3 次操作使 nums1 中所有数的和与 nums2 中所有数的和相等。以下数组下标都从 0 开始。 4- 将 nums2[0] 变为 6 。 nums1 = [1,2,3,4,5,6], nums2 = [6,1,2,2,2,2] 。 5- 将 nums1[5] 变为 1 。 nums1 = [1,2,3,4,5,1], nums2 = [6,1,2,2,2,2] 。 6- 将 nums1[2] 变为 2 。 nums1 = [1,2,2,4,5,1], nums2 = [6,1,2,2,2,2] 。 示例 2 1输入：nums1 = [1,1,1,1,1,1,1], nums2 = [6] 2输出：-1 3解释：没有办法减少 nums1 的和或者增加 nums2 的和使二者相等。 go 题解</description>
+    </item>
+    
+    <item>
+      <title>最长无重复子串</title>
+      <link>https://www.silent-cxl.top/algorithm/longest-substring/</link>
+      <pubDate>Wed, 30 Nov 2022 18:02:12 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/algorithm/longest-substring/</guid>
+      <description>最长无重复子串</description>
+    </item>
+    
+    <item>
+      <title>递归树</title>
+      <link>https://www.silent-cxl.top/algorithm/tree/</link>
+      <pubDate>Wed, 30 Nov 2022 14:12:36 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/algorithm/tree/</guid>
+      <description>递归树</description>
+    </item>
+    
+    <item>
+      <title>Fibonacci 斐波那契数列</title>
+      <link>https://www.silent-cxl.top/algorithm/fibonacci/</link>
+      <pubDate>Wed, 30 Nov 2022 13:52:28 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/algorithm/fibonacci/</guid>
+      <description>斐波那契数列</description>
+    </item>
+    
+  </channel>
+</rss>

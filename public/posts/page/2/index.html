@@ -3,14 +3,15 @@
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Silent 的博客</title>
+<title>Posts | Silent 代码搬运工</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Silent 的博客">
+<meta name="description" content="Posts - Silent 代码搬运工">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -56,7 +57,7 @@
 
     </style>
 </noscript><meta property="og:title" content="Posts" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.silent-cxl.top/posts/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
@@ -64,7 +65,7 @@
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"/>
 
 
 <script type="application/ld+json">
@@ -80,7 +81,16 @@
     }
   ]
 }
+</script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3a6d61147913067e1508766c10f53139";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
+
 </head>
 
 <body class="list" id="top">
@@ -98,7 +108,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -124,8 +134,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.silent-cxl.top/tags/" title="标签">
-                    <span>标签</span>
+                <a href="https://www.silent-cxl.top/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/search/" title="搜索">
+                    <span>搜索</span>
                 </a>
             </li>
             <li>
@@ -134,8 +149,13 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="About">
-                    <span>About</span>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/about/" title="关于">
+                    <span>关于</span>
                 </a>
             </li>
         </ul>
@@ -158,67 +178,81 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
+    <h2>Hugo PaperMod 开启评论
     </h2>
   </header>
   <div class="entry-content">
-    <p>查看根分区大小 df -h
-文件系统 类型 容量 已用 可用 已用% 挂载点 /dev/mapper/centos-root xfs 18G 1.1G 17G 6% / devtmpfs devtmpfs 479M 0 479M 0% /dev tmpfs tmpfs 489M 0 489M 0% /dev/shm tmpfs tmpfs 489M 6.7M 483M 2% /run tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup /dev/sda1 xfs 497M 125M 373M 25% /boot tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
-/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
+    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
+1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Git 解决每次 git pull 需要输入账号密码
+    <h2>K8s 上 Go-Zero 服务本机手动部署记录
     </h2>
   </header>
   <div class="entry-content">
-    <p>git bash 进入项目目录：
-git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
+    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&#34;&#34;] 16 resources: [&#34;endpoints&#34;] # endpoints 17 verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>golang air 热更新使用
+    <h2>Git 忽略文件使用
     </h2>
   </header>
   <div class="entry-content">
-    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf # .air.conf 文件内容 root = &#34;.&#34; tmp_dir = &#34;tmp&#34; [build] # Just plain old shell command. You could use `make` as well. cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; # Binary file yields from `cmd`. bin = &#34;tmp/main&#34; # Customize binary. full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; # Watch these filename extensions. include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] # Ignore these filename extensions or directories....</p>
+    <p> 匹配中间文件夹 示例 .gitignore 内容：匹配 app 下的所有模块文件夹下 config 下以 .pro.yaml 结尾的文件
+1// app/user/config/databse.pro.yaml 2// app/goods/config/databse.pro.yaml 3// ... 4app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 1git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 11:11:31 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Git 忽略文件使用" href="https://www.silent-cxl.top/posts/git-ignore-use/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>go-zero goctl 使用 proto 引入其他 proto 文件
+    <h2>进制转换
     </h2>
   </header>
   <div class="entry-content">
-    <p>编写 proto 文件 // role.proto 文件 syntax = &#34;proto3&#34;; option go_package = &#34;./marketing&#34;; package marketing; message RoleCreateReq { string role_name = 1; } // user.proto 文件 syntax = &#34;proto3&#34;; option go_package = &#34;./rbac&#34;; package rbac; import &#34;pb/role.proto&#34;; // 以执行 goctl 命令为起始路径 message UserCreateReq { string username = 1; string email = 2; } message BaseResp { int64 code = 1; } service RbacCenter{ // RPC 服务 rpc RoleCreate(RoleCreateReq) returns(BaseResp); rpc UserCreate(UserCreateReq) returns(BaseResp); } 两个文件放在同一目录内...</p>
+    <p>世界上有 10 种人，懂二进制和不懂二进制的，实际上二进制只有 0 和 1，逢 2 进 1，所以 10 在二进制中并不是十进制的 10 而是十进制的 2。
+进制就是逢几进一，n 进制就是逢 n 进一。计算机只能识别二进制，人类最习惯使用的是十进制，而为了实际需要，又建立了八进制和十六进制。八进制就是逢八进一，十六进制就是逢十六进一。
+二进制转十进制 例二进制数：10010110，可转换如下
+1 1 0 0 1 0 1 1 0 // 二进制 21*2^7 &#43; 0*2^6 &#43; 0*2^5 &#43; 1*2^4 &#43; 0*2^3 &#43; 1*2^2 &#43; 1*2^1 &#43; 0*2^0 3128 &#43; 0 &#43; 0 &#43; 16 &#43; 0 &#43; 4 &#43; 2 &#43; 0 = 150 // 十进制 八进制转十进制 八进制：只有 0~7，逢 8 进 1...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to go-zero goctl 使用 proto 引入其他 proto 文件" href="https://www.silent-cxl.top/posts/go-zero-import-other-proto/"></a>
+  <footer class="entry-footer"><span title='2022-11-23 14:31:06 +0800 CST'>十一月 23, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 进制转换" href="https://www.silent-cxl.top/posts/computer-conversion/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>K8s - 资源清单
+    <h2>Vue3 Vite 使用基础配置
     </h2>
   </header>
   <div class="entry-content">
-    <p>资源清单格式 apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) kind: #资源类别 metadata： #资源元数据 name namespace lables annotations # 主要目的是方便用户阅读查找 spec: # 期望的状态（disired state） status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
-[root@k8s-master01 ~]# kubectl api-versions admissionregistration.k8s.io/v1beta1 apiextensions.k8s.io/v1beta1 apiregistration.k8s.io/v1 apiregistration.k8s.io/v1beta1 apps/v1 ......(以下省略) 获取资源的 apiVersion 版本信息
-[root@k8s-master01 ~]# kubectl explain pod KIND: Pod VERSION: v1 .....(以下省略) [root@k8s-master01 ~]# kubectl explain Ingress KIND: Ingress VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
+    <p>1import { defineConfig, loadEnv } from &#34;vite&#34; 2import vue from &#34;@vitejs/plugin-vue&#34; 3import path from &#34;path&#34; 4import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; 5 6// https://vitejs.dev/config/ 7export default defineConfig(({ command, mode }) =&gt; { 8 console.log(&#34;vite.config defineConfig&#34;, command, mode) 9 const env = loadEnv(mode, process.cwd(), &#34;&#34;) 10 return { 11 plugins: [ 12 vue(), 13 nodePolyfills({ 14 protocolImports: true, 15 }), 16 ], 17 resolve: { 18 alias: { 19 &#34;@&#34;: path....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
+  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Vue3 使用 Vuex 做登录信息
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 &#43; 库。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+目录结构：
+1|--public 2|--src 3... 4|----store # 新建 vuex 相关文件夹 5|------modules # 新建模块文件夹，存放 app.js,user.js 6|--------global.js 7|--------getters.js 8|--------app.js 9|--------user.js store 文件夹下创建 index.js 1import { createStore } from &#34;vuex&#34; 2 3import global from &#34;./modules/global.js&#34; 4import app from &#34;./modules/app.js&#34; // 应用基本数据 5import user from &#34;./modules/user.js&#34; // 登录信息 6import getters from &#34;./modules/getters.js&#34; 7 8export default createStore({ 9 // 公共模板直接在这里展开就可以 10 ...global, 11 modules: { 12 app, 13 user, 14 }, 15 getters, 16}) main....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 使用 Vuex 做登录信息" href="https://www.silent-cxl.top/posts/vue-vuex/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -232,12 +266,19 @@ git config --global credential.helper store 输入以上命令后，重新拉取
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 的博客</a></span>
+  <div>
+    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
+  </div>
+  <div>
+    <span>
+        <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2022145969号-1</a>
+    </span>
+  </div>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -272,7 +313,6 @@ git config --global credential.helper store 输入以上命令后，重新拉取
             }
         });
     });
-
 </script>
 <script>
     var mybutton = document.getElementById("top-link");

@@ -3,14 +3,15 @@
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>K8s - 系统初始化 | Silent 的博客</title>
+<title>K8s - 系统初始化 | Silent 代码搬运工</title>
 <meta name="keywords" content="k8s">
 <meta name="description" content="k8s 搭建环境系统初始化">
 <meta name="author" content="Silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/k8s-1-init/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ba9842667e355f85ff7f5a909443b4981e417184a849af6c0c445bb65f1f8490.css" integrity="sha256-uphCZn41X4X/f1qQlEO0mB5BcYSoSa9sDERbtl8fhJA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -98,8 +99,8 @@
   "keywords": [
     "k8s"
   ],
-  "articleBody": "设置系统主机名 hostnamectl set-hostname k8s-master01 安装依赖包 yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables systemctl stop firewalld \u0026\u0026 systemctl disable firewalld yum -y install iptables-services \u0026\u0026 systemctl start iptables \u0026\u0026 systemctl enable iptables \u0026\u0026 iptables -F \u0026\u0026 service iptables save 关闭 SELINUX swapoff -a \u0026\u0026 sed -i '/ swap / s/^\\(.*\\)$/#\\1/g' /etc/fstab setenforce 0 \u0026\u0026 sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config 调整内核参数 cat \u003e kubernetes.conf \u003c",
-  "wordCount" : "224",
+  "articleBody": "设置系统主机名 1hostnamectl set-hostname k8s-master01 安装依赖包 1yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables 1systemctl stop firewalld \u0026\u0026 systemctl disable firewalld 2yum -y install iptables-services \u0026\u0026 systemctl start iptables \u0026\u0026 systemctl enable iptables \u0026\u0026 iptables -F \u0026\u0026 service iptables save 关闭 SELINUX 1swapoff -a \u0026\u0026 sed -i '/ swap / s/^\\(.*\\)$/#\\1/g' /etc/fstab 2setenforce 0 \u0026\u0026 sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config 调整内核参数 1cat \u003e kubernetes.conf \u003c",
+  "wordCount" : "230",
   "inLanguage": "zh",
   "datePublished": "2022-11-19T10:25:27+08:00",
   "dateModified": "2022-11-19T10:25:27+08:00",
@@ -113,14 +114,23 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Silent 的博客",
+    "name": "Silent 代码搬运工",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.silent-cxl.top/favicon.ico"
     }
   }
 }
+</script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3a6d61147913067e1508766c10f53139";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
+
 </head>
 
 <body class="" id="top">
@@ -138,7 +148,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 的博客 (Alt + H)">Silent 的博客</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -164,8 +174,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.silent-cxl.top/tags/" title="标签">
-                    <span>标签</span>
+                <a href="https://www.silent-cxl.top/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/search/" title="搜索">
+                    <span>搜索</span>
                 </a>
             </li>
             <li>
@@ -174,8 +189,13 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="About">
-                    <span>About</span>
+                <a href="https://www.silent-cxl.top/algorithm/" title="算法入门">
+                    <span>算法入门</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.silent-cxl.top/about/" title="关于">
+                    <span>关于</span>
                 </a>
             </li>
         </ul>
@@ -192,7 +212,7 @@
     <div class="post-description">
       k8s 搭建环境系统初始化
     </div>
-    <div class="post-meta"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent&nbsp;|&nbsp;<a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content/posts/k8s-1-init.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent&nbsp;|&nbsp;<a href="https://github.com/cxlcxl/personal-blog/blob/master/content/posts/k8s-1-init.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
   </header> <div class="toc">
@@ -227,78 +247,78 @@
 </div>
 
   <div class="post-content"><h2 id="设置系统主机名">设置系统主机名<a hidden class="anchor" aria-hidden="true" href="#设置系统主机名">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hostnamectl  set-hostname  k8s-master01
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">hostnamectl  set-hostname  k8s-master01
 </span></span></code></pre></div><h2 id="安装依赖包">安装依赖包<a hidden class="anchor" aria-hidden="true" href="#安装依赖包">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">yum install -y conntrack ntpdate ntp ipvsadm ipset  iptables curl sysstat libseccomp wget  vim net-tools git
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">yum install -y conntrack ntpdate ntp ipvsadm ipset  iptables curl sysstat libseccomp wget  vim net-tools git
 </span></span></code></pre></div><h2 id="设置-iptables">设置 Iptables<a hidden class="anchor" aria-hidden="true" href="#设置-iptables">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl  stop firewalld  <span class="o">&amp;&amp;</span>  systemctl  disable firewalld
-</span></span><span class="line"><span class="cl">yum -y install iptables-services  <span class="o">&amp;&amp;</span>  systemctl  start iptables  <span class="o">&amp;&amp;</span>  systemctl  <span class="nb">enable</span> iptables  <span class="o">&amp;&amp;</span>  iptables -F  <span class="o">&amp;&amp;</span>  service iptables save
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">systemctl  stop firewalld  <span class="o">&amp;&amp;</span>  systemctl  disable firewalld
+</span></span><span class="line"><span class="ln">2</span><span class="cl">yum -y install iptables-services  <span class="o">&amp;&amp;</span>  systemctl  start iptables  <span class="o">&amp;&amp;</span>  systemctl  <span class="nb">enable</span> iptables  <span class="o">&amp;&amp;</span>  iptables -F  <span class="o">&amp;&amp;</span>  service iptables save
 </span></span></code></pre></div><h2 id="关闭-selinux">关闭 SELINUX<a hidden class="anchor" aria-hidden="true" href="#关闭-selinux">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">swapoff -a <span class="o">&amp;&amp;</span> sed -i <span class="s1">&#39;/ swap / s/^\(.*\)$/#\1/g&#39;</span> /etc/fstab
-</span></span><span class="line"><span class="cl">setenforce <span class="m">0</span> <span class="o">&amp;&amp;</span> sed -i <span class="s1">&#39;s/^SELINUX=.*/SELINUX=disabled/&#39;</span> /etc/selinux/config
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">swapoff -a <span class="o">&amp;&amp;</span> sed -i <span class="s1">&#39;/ swap / s/^\(.*\)$/#\1/g&#39;</span> /etc/fstab
+</span></span><span class="line"><span class="ln">2</span><span class="cl">setenforce <span class="m">0</span> <span class="o">&amp;&amp;</span> sed -i <span class="s1">&#39;s/^SELINUX=.*/SELINUX=disabled/&#39;</span> /etc/selinux/config
 </span></span></code></pre></div><h2 id="调整内核参数">调整内核参数<a hidden class="anchor" aria-hidden="true" href="#调整内核参数">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat &gt; kubernetes.conf <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">net.bridge.bridge-nf-call-iptables=1 # ipv4 的情况下所有经过网桥的网络必需经过 iptables 处理
-</span></span></span><span class="line"><span class="cl"><span class="s">net.bridge.bridge-nf-call-ip6tables=1 # ipv6 的情况下所有经过网桥的网络必需经过 iptables 处理
-</span></span></span><span class="line"><span class="cl"><span class="s">net.ipv4.ip_forward=1  #数据包转发
-</span></span></span><span class="line"><span class="cl"><span class="s">net.ipv4.tcp_tw_recycle=0
-</span></span></span><span class="line"><span class="cl"><span class="s">vm.swappiness=0 # 禁止使用 swap 空间，只有当系统 OOM 时才允许使用它
-</span></span></span><span class="line"><span class="cl"><span class="s">vm.overcommit_memory=1 # 不检查物理内存是否够用
-</span></span></span><span class="line"><span class="cl"><span class="s">vm.panic_on_oom=0 # 开启 OOM	
-</span></span></span><span class="line"><span class="cl"><span class="s">fs.inotify.max_user_instances=8192
-</span></span></span><span class="line"><span class="cl"><span class="s">fs.inotify.max_user_watches=1048576
-</span></span></span><span class="line"><span class="cl"><span class="s">fs.file-max=52706963
-</span></span></span><span class="line"><span class="cl"><span class="s">fs.nr_open=52706963
-</span></span></span><span class="line"><span class="cl"><span class="s">net.ipv6.conf.all.disable_ipv6=1
-</span></span></span><span class="line"><span class="cl"><span class="s">net.netfilter.nf_conntrack_max=2310720
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span><span class="line"><span class="cl">cp kubernetes.conf  /etc/sysctl.d/kubernetes.conf
-</span></span><span class="line"><span class="cl">sysctl -p /etc/sysctl.d/kubernetes.conf
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl">cat &gt; kubernetes.conf <span class="s">&lt;&lt;EOF
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="s">net.bridge.bridge-nf-call-iptables=1 # ipv4 的情况下所有经过网桥的网络必需经过 iptables 处理
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="s">net.bridge.bridge-nf-call-ip6tables=1 # ipv6 的情况下所有经过网桥的网络必需经过 iptables 处理
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s">net.ipv4.ip_forward=1  #数据包转发
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="s">net.ipv4.tcp_tw_recycle=0
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s">vm.swappiness=0 # 禁止使用 swap 空间，只有当系统 OOM 时才允许使用它
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s">vm.overcommit_memory=1 # 不检查物理内存是否够用
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s">vm.panic_on_oom=0 # 开启 OOM	
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s">fs.inotify.max_user_instances=8192
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="s">fs.inotify.max_user_watches=1048576
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s">fs.file-max=52706963
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="s">fs.nr_open=52706963
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s">net.ipv6.conf.all.disable_ipv6=1
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="s">net.netfilter.nf_conntrack_max=2310720
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">cp kubernetes.conf  /etc/sysctl.d/kubernetes.conf
+</span></span><span class="line"><span class="ln">17</span><span class="cl">sysctl -p /etc/sysctl.d/kubernetes.conf
 </span></span></code></pre></div><h2 id="调整系统时区">调整系统时区<a hidden class="anchor" aria-hidden="true" href="#调整系统时区">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 设置系统时区为 中国/上海</span>
-</span></span><span class="line"><span class="cl">timedatectl set-timezone Asia/Shanghai
-</span></span><span class="line"><span class="cl"><span class="c1"># 将当前的 UTC 时间写入硬件时钟</span>
-</span></span><span class="line"><span class="cl">timedatectl set-local-rtc <span class="m">0</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 重启依赖于系统时间的服务</span>
-</span></span><span class="line"><span class="cl">systemctl restart rsyslog 
-</span></span><span class="line"><span class="cl">systemctl restart crond
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 设置系统时区为 中国/上海</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">timedatectl set-timezone Asia/Shanghai
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># 将当前的 UTC 时间写入硬件时钟</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">timedatectl set-local-rtc <span class="m">0</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># 重启依赖于系统时间的服务</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">systemctl restart rsyslog 
+</span></span><span class="line"><span class="ln">7</span><span class="cl">systemctl restart crond
 </span></span></code></pre></div><h2 id="关闭系统不需要服务">关闭系统不需要服务<a hidden class="anchor" aria-hidden="true" href="#关闭系统不需要服务">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl stop postfix <span class="o">&amp;&amp;</span> systemctl disable postfix
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">systemctl stop postfix <span class="o">&amp;&amp;</span> systemctl disable postfix
 </span></span></code></pre></div><h2 id="设置日志">设置日志<a hidden class="anchor" aria-hidden="true" href="#设置日志">#</a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir /var/log/journal <span class="c1"># 持久化保存日志的目录</span>
-</span></span><span class="line"><span class="cl">mkdir /etc/systemd/journald.conf.d
-</span></span><span class="line"><span class="cl">cat &gt; /etc/systemd/journald.conf.d/99-prophet.conf <span class="s">&lt;&lt;EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">[Journal]
-</span></span></span><span class="line"><span class="cl"><span class="s"># 持久化保存到磁盘
-</span></span></span><span class="line"><span class="cl"><span class="s">Storage=persistent
-</span></span></span><span class="line"><span class="cl"><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s"># 压缩历史日志
-</span></span></span><span class="line"><span class="cl"><span class="s">Compress=yes
-</span></span></span><span class="line"><span class="cl"><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">SyncIntervalSec=5m
-</span></span></span><span class="line"><span class="cl"><span class="s">RateLimitInterval=30s
-</span></span></span><span class="line"><span class="cl"><span class="s">RateLimitBurst=1000
-</span></span></span><span class="line"><span class="cl"><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s"># 最大占用空间 10G
-</span></span></span><span class="line"><span class="cl"><span class="s">SystemMaxUse=10G
-</span></span></span><span class="line"><span class="cl"><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s"># 单日志文件最大 200M
-</span></span></span><span class="line"><span class="cl"><span class="s">SystemMaxFileSize=200M
-</span></span></span><span class="line"><span class="cl"><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s"># 日志保存时间 2 周
-</span></span></span><span class="line"><span class="cl"><span class="s">MaxRetentionSec=2week
-</span></span></span><span class="line"><span class="cl"><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s"># 不将日志转发到 syslog
-</span></span></span><span class="line"><span class="cl"><span class="s">ForwardToSyslog=no
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span><span class="line"><span class="cl">systemctl restart systemd-journald
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl">mkdir /var/log/journal <span class="c1"># 持久化保存日志的目录</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">mkdir /etc/systemd/journald.conf.d
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">cat &gt; /etc/systemd/journald.conf.d/99-prophet.conf <span class="s">&lt;&lt;EOF
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s">[Journal]
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="s"># 持久化保存到磁盘
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s">Storage=persistent
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s"># 压缩历史日志
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s">Compress=yes
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s">SyncIntervalSec=5m
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="s">RateLimitInterval=30s
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s">RateLimitBurst=1000
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="s"># 最大占用空间 10G
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="s">SystemMaxUse=10G
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="s"># 单日志文件最大 200M
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="s">SystemMaxFileSize=200M
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="s"># 日志保存时间 2 周
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="s">MaxRetentionSec=2week
+</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="s"># 不将日志转发到 syslog
+</span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="s">ForwardToSyslog=no
+</span></span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">systemctl restart systemd-journald
 </span></span></code></pre></div><h2 id="升级系统内核为-444">升级系统内核为 4.44<a hidden class="anchor" aria-hidden="true" href="#升级系统内核为-444">#</a></h2>
 <p>CentOS 7.x 系统自带的 3.10.x 内核存在一些 Bugs，导致运行的 Docker、Kubernetes 不稳定，例如： rpm -Uvh <a href="http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm">http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
-</span></span><span class="line"><span class="cl"><span class="c1"># 安装完成后检查 /boot/grub2/grub.cfg 中对应内核 menuentry 中是否包含 initrd16 配置，如果没有，再安装一次！</span>
-</span></span><span class="line"><span class="cl">yum --enablerepo<span class="o">=</span>elrepo-kernel install -y kernel-lt
-</span></span><span class="line"><span class="cl"><span class="c1"># 设置开机从新内核启动</span>
-</span></span><span class="line"><span class="cl">grub2-set-default <span class="s1">&#39;CentOS Linux (4.4.189-1.el7.elrepo.x86_64) 7 (Core)&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"># 安装完成后检查 /boot/grub2/grub.cfg 中对应内核 menuentry 中是否包含 initrd16 配置，如果没有，再安装一次！</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">yum --enablerepo<span class="o">=</span>elrepo-kernel install -y kernel-lt
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># 设置开机从新内核启动</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">grub2-set-default <span class="s1">&#39;CentOS Linux (4.4.189-1.el7.elrepo.x86_64) 7 (Core)&#39;</span>
 </span></span></code></pre></div>
 
   </div>
@@ -361,16 +381,42 @@
     </a>
 </div>
   </footer>
+
+<div class="post comments-bg-white">
+  <script src="https://giscus.app/client.js"
+        data-repo="cxlcxl/comments-for-hugo"
+        data-repo-id="R_kgDOIeSMUw"
+        data-category="General"
+        data-category-id="DIC_kwDOIeSMU84CSrE5"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_dimmed"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 的博客</a></span>
+  <div>
+    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
+  </div>
+  <div>
+    <span>
+        <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2022145969号-1</a>
+    </span>
+  </div>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -405,7 +451,6 @@
             }
         });
     });
-
 </script>
 <script>
     var mybutton = document.getElementById("top-link");

@@ -1,7 +1,6 @@
 ---
 title: "Git 解决每次 git pull 需要输入账号密码"
 date: 2022-11-21T15:23:32+08:00
-lastMod: 2022-11-21T15:23:32+08:00
 draft: false
 description: "解决每次 git pull 需要输入账号密码"
 categories: ["git"]

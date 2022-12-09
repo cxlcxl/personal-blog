@@ -89,4 +89,5 @@ tmpfs                    489M     0  489M    0% /sys/fs/cgroup
 /dev/sda1                497M  125M  373M   25% /boot
 tmpfs                     98M     0   98M    0% /run/user/0
 ```
-[转载自：虚拟机扩容（/dev/mapper/centos-root 空间不足）](https://www.cnblogs.com/feiyun126/p/7680534.html)
+
+转载自：<a href="https://www.cnblogs.com/feiyun126/p/7680534.html" target="_blank">虚拟机扩容（/dev/mapper/centos-root 空间不足</a>
