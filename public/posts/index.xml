@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2023 19:26:22 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Gorm 插入数据遇到重复时修改</title>
+      <link>https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/</link>
+      <pubDate>Wed, 04 Jan 2023 19:26:22 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/</guid>
+      <description>Golang Gorm on Duplicate Key Update</description>
+    </item>
+    
     <item>
       <title>VirtualBox 虚拟机 Read-only file system</title>
       <link>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</link>

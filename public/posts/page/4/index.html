@@ -178,6 +178,20 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>解决方式：
+无需设置 default-checked-keys 属性
+读取到接口数据后使用 this.$refs.tree.setCheckedNodes(***传入接口返回的节点 keys***) 设置默认； 提交前使用 this.$refs.tree.getCheckedKeys() 再次获取选中的节点并赋值 </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
     </h2>
   </header>
@@ -240,19 +254,6 @@ var _hmt = _hmt || [];
   </div>
   <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
   <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>K8s - Kubeadm 部署安装
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>kube-proxy开启ipvs的前置条件 1modprobe br_netfilter 2 3cat &gt; /etc/sysconfig/modules/ipvs.modules &lt;&lt;EOF 4#!/bin/bash 5modprobe -- ip_vs 6modprobe -- ip_vs_rr 7modprobe -- ip_vs_wrr 8modprobe -- ip_vs_sh 9modprobe -- nf_conntrack_ipv4 10EOF 11 12chmod 755 /etc/sysconfig/modules/ipvs.modules &amp;&amp; bash /etc/sysconfig/modules/ipvs.modules &amp;&amp; lsmod | grep -e ip_vs -e nf_conntrack_ipv4 如果报错：modprobe: FATAL: Module nf_conntrack_ipv4 not found. 内核高版本的 nf_conntrack_ipv4 已被 nf_conntrack 替换，将以上的 nf_conntrack_ipv4 改为 nf_conntrack 重新执行。
-安装 Docker 软件 1yum install -y yum-utils device-mapper-persistent-data lvm2 # docker 依赖包 2 3# docker 镜像源 4yum-config-manager \ 5 --add-repo \ 6 http://mirrors....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-20 10:25:27 +0800 CST'>十一月 20, 2022</span>&nbsp;·&nbsp;5 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - Kubeadm 部署安装" href="https://www.silent-cxl.top/posts/k8s-2-install/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

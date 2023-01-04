@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.silent-cxl.top/categories/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/golang/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/gorm/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/categories/algorithm/</loc>
     <lastmod>2022-12-08T14:50:36+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/algorithm/</loc>
     <lastmod>2022-12-08T14:50:36+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-12-08T14:50:36+08:00</lastmod>
-  </url><url>
     <loc>https://www.silent-cxl.top/algorithm/leetcode-1812/</loc>
-    <lastmod>2022-12-08T14:50:36+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
     <lastmod>2022-12-08T14:50:36+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/algorithm/leetcode-1775/</loc>
     <lastmod>2022-12-08T14:31:21+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/deploy/</loc>
-    <lastmod>2022-12-06T10:56:41+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
     <lastmod>2022-12-06T10:56:41+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/</loc>
@@ -84,9 +93,6 @@
     <lastmod>2022-11-30T11:04:47+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/golang-shuffle/</loc>
-    <lastmod>2022-11-29T14:39:24+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/golang/</loc>
     <lastmod>2022-11-29T14:39:24+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/hugo/</loc>

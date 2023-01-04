@@ -163,6 +163,18 @@ var _hmt = _hmt || [];
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>Golang Gorm 插入数据遇到重复时修改
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> golang gorm 代码如下 1func (m *User) BatchInsert(users []*User) (err error) { 2 if len(users) == 0 { 3 return nil 4 } 5 // 要修改的字段 6 updateColumns := []string{&#34;email&#34;} 7 return m.Table(m.TableName()).Clauses(clause.OnConflict{ 8 DoUpdates: clause.AssignmentColumns(updateColumns), 9 }).CreateInBatches(users, 500).Error 10} debug 生成的代码，当数据重复时，会修改 email 字段，而不是插入 1INSERT INTO `users`(...) VALUES(...) ON DUPLICATE KEY UPDATE `email`=VALUES(`email`) </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-04 19:26:22 +0800 CST'>一月 4, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Golang Gorm 插入数据遇到重复时修改" href="https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>Go 打乱数据排序
     </h2>
   </header>
