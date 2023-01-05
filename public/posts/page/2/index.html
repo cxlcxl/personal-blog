@@ -178,6 +178,18 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Go 打乱数据排序
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3 if len(slice) == 1 { 4 return 5 } 6 r := rand.New(rand.NewSource(time.Now().UnixNano())) 7 for len(slice) &gt; 0 { 8 n := len(slice) 9 randIndex := r.Intn(n) 10 slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11 slice = slice[:n-1] 12 } 13} </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/golang-shuffle/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>使用 Hugo 搭建自己的博客
     </h2>
   </header>
@@ -240,18 +252,6 @@ var _hmt = _hmt || [];
   </div>
   <footer class="entry-footer"><span title='2022-11-23 14:31:06 +0800 CST'>十一月 23, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to 进制转换" href="https://www.silent-cxl.top/posts/computer-conversion/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Vue3 Vite 使用基础配置
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>1import { defineConfig, loadEnv } from &#34;vite&#34; 2import vue from &#34;@vitejs/plugin-vue&#34; 3import path from &#34;path&#34; 4import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; 5 6// https://vitejs.dev/config/ 7export default defineConfig(({ command, mode }) =&gt; { 8 console.log(&#34;vite.config defineConfig&#34;, command, mode) 9 const env = loadEnv(mode, process.cwd(), &#34;&#34;) 10 return { 11 plugins: [ 12 vue(), 13 nodePolyfills({ 14 protocolImports: true, 15 }), 16 ], 17 resolve: { 18 alias: { 19 &#34;@&#34;: path....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

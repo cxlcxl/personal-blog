@@ -178,6 +178,18 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Git Pull 时报错：拒绝合并无关的历史
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> git 在拉代码时报一下错误 1➜ scripts git:(master) git pull origin master 2来自 .......[远程仓库地址] 3 * branch master -&gt; FETCH_HEAD 4致命错误：拒绝合并无关的历史 原因是仓库与本地版本不一致导致的，但确认代码是一致的，直接运行以下 git 命令 1git pull origin master --allow-unrelated-histories </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-05 17:02:46 +0800 CST'>一月 5, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Git Pull 时报错：拒绝合并无关的历史" href="https://www.silent-cxl.top/posts/git-pull-allow-unrelated-histories/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Golang Gorm 插入数据遇到重复时修改
     </h2>
   </header>
@@ -239,18 +251,6 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
   </div>
   <footer class="entry-footer"><span title='2022-11-30 11:04:47 +0800 CST'>十一月 30, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to 记录 Github Actions 实现代码提交自动部署" href="https://www.silent-cxl.top/posts/deploy-github-actions/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Go 打乱数据排序
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3 if len(slice) == 1 { 4 return 5 } 6 r := rand.New(rand.NewSource(time.Now().UnixNano())) 7 for len(slice) &gt; 0 { 8 n := len(slice) 9 randIndex := r.Intn(n) 10 slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11 slice = slice[:n-1] 12 } 13} </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/golang-shuffle/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
