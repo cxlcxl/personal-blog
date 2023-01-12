@@ -6,11 +6,11 @@
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Silent 代码搬运工</title>
+<title>Go-designs | Silent 代码搬运工</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Silent 代码搬运工">
+<meta name="description" content="Go-designs - Silent 代码搬运工">
 <meta name="author" content="silent">
-<link rel="canonical" href="https://www.silent-cxl.top/posts/">
+<link rel="canonical" href="https://www.silent-cxl.top/go-design/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
@@ -19,7 +19,7 @@
 <link rel="mask-icon" href="https://www.silent-cxl.top/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/go-design/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,15 +56,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Posts" />
+</noscript><meta property="og:title" content="Go-designs" />
 <meta property="og:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.silent-cxl.top/posts/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
+<meta property="og:url" content="https://www.silent-cxl.top/go-design/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="Go-designs"/>
 <meta name="twitter:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"/>
 
 
@@ -76,8 +76,8 @@
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "Posts",
-      "item": "https://www.silent-cxl.top/posts/"
+      "name": "Go-designs",
+      "item": "https://www.silent-cxl.top/go-design/"
     }
   ]
 }
@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
 <main class="main"> 
 <header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a></div>
   <h1>
-    Posts
+    Go-designs
     <a href="index.xml" title="RSS" aria-label="RSS">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" height="23">
@@ -178,89 +178,17 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Vue3 Vite 使用基础配置
+    <h2>Go 语言设计与实现阅读笔记：Defer
     </h2>
   </header>
   <div class="entry-content">
-    <p>1import { defineConfig, loadEnv } from &#34;vite&#34; 2import vue from &#34;@vitejs/plugin-vue&#34; 3import path from &#34;path&#34; 4import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; 5 6// https://vitejs.dev/config/ 7export default defineConfig(({ command, mode }) =&gt; { 8 console.log(&#34;vite.config defineConfig&#34;, command, mode) 9 const env = loadEnv(mode, process.cwd(), &#34;&#34;) 10 return { 11 plugins: [ 12 vue(), 13 nodePolyfills({ 14 protocolImports: true, 15 }), 16 ], 17 resolve: { 18 alias: { 19 &#34;@&#34;: path....</p>
+    <p>原文地址：defer
+什么是 defer defer：在函数返回前，会执行 defer 关键字所传入的函数。 提出问题 多个 defer 的运行顺序是什么 传值时 defer 执行结果是否符合预期 defer 原理分析 …..
+问题解释 后调用的 defer 函数会先执行： 后调用的 defer 函数会被追加到 Goroutine _defer 链表的最前面； 运行 runtime._defer 时是从前到后依次执行； 函数的参数会被预先计算； 调用 runtime.deferproc 函数创建新的延迟调用时就会立刻拷贝函数的参数，函数的参数不会等到真正执行时计算； </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
+  <footer class="entry-footer"><span title='2023-01-10 15:32:46 +0800 CST'>一月 10, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Go 语言设计与实现阅读笔记：Defer" href="https://www.silent-cxl.top/go-design/defer/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Vue3 使用 Vuex 做登录信息
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 &#43; 库。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
-目录结构：
-1|--public 2|--src 3... 4|----store # 新建 vuex 相关文件夹 5|------modules # 新建模块文件夹，存放 app.js,user.js 6|--------global.js 7|--------getters.js 8|--------app.js 9|--------user.js store 文件夹下创建 index.js 1import { createStore } from &#34;vuex&#34; 2 3import global from &#34;./modules/global.js&#34; 4import app from &#34;./modules/app.js&#34; // 应用基本数据 5import user from &#34;./modules/user.js&#34; // 登录信息 6import getters from &#34;./modules/getters.js&#34; 7 8export default createStore({ 9 // 公共模板直接在这里展开就可以 10 ...global, 11 modules: { 12 app, 13 user, 14 }, 15 getters, 16}) main....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 使用 Vuex 做登录信息" href="https://www.silent-cxl.top/posts/vue-vuex/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Vue3 页面登录拦截器
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>直接上代码
-1// intercept.js 2import NProgress from &#34;nprogress&#34; 3import &#34;nprogress/nprogress.css&#34; // progress bar style 4import store from &#34;@/store&#34; 5import router from &#34;./router&#34; 6import settings from &#34;./settings&#34; 7import { getToken } from &#34;@/utils/token&#34; 8import { ElMessage } from &#34;element-plus&#34; 9 10NProgress.configure({ showSpinner: false }) 11const excludeUris = [&#34;/login&#34;, &#34;/sso/callback&#34;] 12 13router.beforeEach(async (to, from, next) =&gt; { 14 NProgress.start() 15 // 顺便设置 icon title 16 document.title = to.meta.title 17 ? `${to.meta.title} - ${settings....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 页面登录拦截器" href="https://www.silent-cxl.top/posts/vue-login-permission/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>从远程仓库定时自动发版
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Golang 环境搭建
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>安装运行时遇到过的问题 问题：遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout
-解决，终端执行：go env -w GOPROXY=https://goproxy.cn mac 系统运行时：listen tcp :18081: bind: address already in use
-lsof -ti:18081 kill [port] 待续…</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 17:54:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Golang 环境搭建" href="https://www.silent-cxl.top/posts/golang-proxy/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Linux scp 文件管理
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> 1# 从服务器上下载文件 2scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] 3 4# 上传本地文件到服务器 5scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] 6 7# 从服务器下载整个目录 8scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] 9 10# 上传目录到服务器 11scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] 12 13# 如果用到非 22 端口则在 scp 后使用 -P 参数 </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="https://www.silent-cxl.top/posts/page/2/">
-      «&nbsp;上一页&nbsp;
-    </a>
-    <a class="next" href="https://www.silent-cxl.top/posts/page/4/">下一页&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">
