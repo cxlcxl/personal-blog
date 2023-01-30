@@ -43,10 +43,10 @@ name = "算法入门"
 url = "algorithm/"
 weight = 16
 
-[[languages.zh.menu.main]]
-name = "关于"
-url = "about/"
-weight = 20
+#[[languages.zh.menu.main]]
+#name = "关于"
+#url = "about/"
+#weight = 20
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
