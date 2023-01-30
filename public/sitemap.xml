@@ -2,17 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.silent-cxl.top/categories/</loc>
+    <lastmod>2023-01-30T14:57:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/mysql/</loc>
+    <lastmod>2023-01-30T14:57:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/mysql-character/</loc>
+    <lastmod>2023-01-30T14:57:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2023-01-30T14:57:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2023-01-30T14:57:01+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/go-design/defer/</loc>
     <lastmod>2023-01-10T15:32:46+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/go-design/</loc>
     <lastmod>2023-01-10T15:32:46+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
-    <lastmod>2023-01-10T15:32:46+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2023-01-05T17:02:46+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/git/</loc>
     <lastmod>2023-01-05T17:02:46+08:00</lastmod>
@@ -21,9 +30,6 @@
     <lastmod>2023-01-05T17:02:46+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/git-pull-allow-unrelated-histories/</loc>
-    <lastmod>2023-01-05T17:02:46+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
     <lastmod>2023-01-05T17:02:46+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/</loc>

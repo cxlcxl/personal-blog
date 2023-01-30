@@ -6,11 +6,11 @@
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Silent 代码搬运工</title>
+<title>mysql | Silent 代码搬运工</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Silent 代码搬运工">
+<meta name="description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流">
 <meta name="author" content="silent">
-<link rel="canonical" href="https://www.silent-cxl.top/posts/">
+<link rel="canonical" href="https://www.silent-cxl.top/categories/mysql/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
@@ -19,7 +19,7 @@
 <link rel="mask-icon" href="https://www.silent-cxl.top/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://www.silent-cxl.top/categories/mysql/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,32 +56,17 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Posts" />
+</noscript><meta property="og:title" content="mysql" />
 <meta property="og:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.silent-cxl.top/posts/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
+<meta property="og:url" content="https://www.silent-cxl.top/categories/mysql/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="mysql"/>
 <meta name="twitter:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://www.silent-cxl.top/posts/"
-    }
-  ]
-}
-</script><script>
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -162,9 +147,9 @@ var _hmt = _hmt || [];
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://www.silent-cxl.top/">主页</a>&nbsp;»&nbsp;<a href="https://www.silent-cxl.top/categories/">Categories</a></div>
   <h1>
-    Posts
+    mysql
     <a href="index.xml" title="RSS" aria-label="RSS">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" height="23">
@@ -176,94 +161,17 @@ var _hmt = _hmt || [];
   </h1>
 </header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Linux scp 文件管理
+    <h2>Mysql 修改数据库、表字符集
     </h2>
   </header>
   <div class="entry-content">
-    <p> 1# 从服务器上下载文件 2scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] 3 4# 上传本地文件到服务器 5scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] 6 7# 从服务器下载整个目录 8scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] 9 10# 上传目录到服务器 11scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] 12 13# 如果用到非 22 端口则在 scp 后使用 -P 参数 </p>
+    <p> 修改数据库字符集 1ALTER DATABASE hiads DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; 修改表字符集 1ALTER TABLE jobs CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; 修改字段的字符集 1ALTER TABLE oauth_access_tokens CHANGE scopes scopes VARCHAR(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
+  <footer class="entry-footer"><span title='2023-01-30 14:57:01 +0800 CST'>一月 30, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Mysql 修改数据库、表字符集" href="https://www.silent-cxl.top/posts/mysql-character/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Virtual 本地虚拟机网络配置
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
-配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
-1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>解决方式：
-无需设置 default-checked-keys 属性
-读取到接口数据后使用 this.$refs.tree.setCheckedNodes(***传入接口返回的节点 keys***) 设置默认； 提交前使用 this.$refs.tree.getCheckedKeys() 再次获取选中的节点并赋值 </p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>查看根分区大小 df -h
-1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
-1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Git 解决每次 git pull 需要输入账号密码
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>git bash 进入项目目录：
-1git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>golang air 热更新使用
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf mac 系统文件内容
-1# .air.conf 文件内容 2root = &#34;.&#34; 3tmp_dir = &#34;tmp&#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; 8# Binary file yields from `cmd`. 9bin = &#34;tmp/main&#34; 10# Customize binary. 11full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; 12# Watch these filename extensions. 13include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] 14# Ignore these filename extensions or directories....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="https://www.silent-cxl.top/posts/page/3/">
-      «&nbsp;上一页&nbsp;
-    </a>
-    <a class="next" href="https://www.silent-cxl.top/posts/page/5/">下一页&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">

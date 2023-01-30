@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Thu, 05 Jan 2023 17:02:46 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jan 2023 14:57:01 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql 修改数据库、表字符集</title>
+      <link>https://www.silent-cxl.top/posts/mysql-character/</link>
+      <pubDate>Mon, 30 Jan 2023 14:57:01 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/mysql-character/</guid>
+      <description>Mysql 修改数据库、表字符集</description>
+    </item>
+    
     <item>
       <title>Git Pull 时报错：拒绝合并无关的历史</title>
       <link>https://www.silent-cxl.top/posts/git-pull-allow-unrelated-histories/</link>

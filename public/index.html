@@ -194,6 +194,18 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Mysql 修改数据库、表字符集
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 修改数据库字符集 1ALTER DATABASE hiads DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; 修改表字符集 1ALTER TABLE jobs CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; 修改字段的字符集 1ALTER TABLE oauth_access_tokens CHANGE scopes scopes VARCHAR(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-30 14:57:01 +0800 CST'>一月 30, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Mysql 修改数据库、表字符集" href="https://www.silent-cxl.top/posts/mysql-character/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Git Pull 时报错：拒绝合并无关的历史
     </h2>
   </header>
@@ -255,18 +267,6 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
   </div>
   <footer class="entry-footer"><span title='2022-12-05 14:26:59 +0800 CST'>十二月 5, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Css 文字色彩动画" href="https://www.silent-cxl.top/posts/css-font-color-animation/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>记录 Github Actions 实现代码提交自动部署
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>先上 github-acitons 部署 yml 文件内容 1name: 部署到服务器 2on: 3 push: 4 branches: [ &#34;master&#34; ] # master 分支有提交自动部署 5 6permissions: write-all 7jobs: 8 deploy: 9 name: Deploy 10 runs-on: ubuntu-latest 11 environment: production 12 13 steps: 14 # 获取源码 master 分支，也可以写 tag 版本 15 - name: Checkout 16 uses: actions/checkout@master 17 18 # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 19 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 20 - name: 部署到服务器 21 uses: easingthemes/ssh-deploy@main 22 env: 23 SSH_PRIVATE_KEY: ${{ secrets....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-30 11:04:47 +0800 CST'>十一月 30, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 记录 Github Actions 实现代码提交自动部署" href="https://www.silent-cxl.top/posts/deploy-github-actions/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
