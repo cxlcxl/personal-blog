@@ -173,6 +173,18 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Js 日期处理
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1// 7 天前的日期「3600 * 1000 * 24 * 7 几天前都可以以此方式得到」 2const start = new Date() 3start.setTime(start.getTime() - 3600 * 1000 * 24 * 7) 4 5// 本月第一天 6const start = new Date(new Date().setDate(1)) 7// 由上 -1 天 可以取到上月最后一天 8start.setTime(start.getTime() - 3600 * 1000 * 24 * 1) 9 10// 延伸得到上月日期 11const end = new Date(new Date().setDate(1)) 12end.setTime(end.getTime() - 3600 * 1000 * 24 * 1) 13const s = new Date(end - 0) // 日期深拷贝 14const start = new Date(s....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-31 10:56:23 +0800 CST'>一月 31, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Js 日期处理" href="https://www.silent-cxl.top/posts/js-date/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Mysql 修改数据库、表字符集
     </h2>
   </header>
@@ -233,19 +245,6 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
   </div>
   <footer class="entry-footer"><span title='2022-12-06 10:54:37 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Docker Compose Port Is Already Allocated" href="https://www.silent-cxl.top/posts/docker-compose-port-is-already-allocated/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Css 文字色彩动画
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>记录一个遇到的文字色彩动画
-1.example { 2 display: block; 3 text-decoration: none; 4 background-image: -webkit-linear-gradient( 5 left, 6 #3498db, 7 #f47920 10%, 8 #d71345 20%, 9 #f7acbc 30%, 10 #ffd400 40%, 11 #3498db 50%, 12 #f47920 60%, 13 #d71345 70%, 14 #f7acbc 80%, 15 #ffd400 90%, 16 #3498db 17 ); 18 color: transparent; 19 -webkit-background-clip: text; 20 background-size: 200% 100%; 21 animation: slide 5s infinite linear; 22 font-size: 40px; 23} 24 25@keyframes slide { 26 0% { 27 background-position: 0 0; 28 } 29 100% { 30 background-position: -100% 0; 31 } 32} 原地址：图片裁剪</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-05 14:26:59 +0800 CST'>十二月 5, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Css 文字色彩动画" href="https://www.silent-cxl.top/posts/css-font-color-animation/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -173,6 +173,20 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Golang 环境搭建
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>安装运行时遇到过的问题 问题：遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout
+解决，终端执行：go env -w GOPROXY=https://goproxy.cn mac 系统运行时：listen tcp :18081: bind: address already in use
+lsof -ti:18081 kill [port] 待续…</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 17:54:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Golang 环境搭建" href="https://www.silent-cxl.top/posts/golang-proxy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Linux scp 文件管理
     </h2>
   </header>
@@ -236,19 +250,6 @@ var _hmt = _hmt || [];
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>golang air 热更新使用
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf mac 系统文件内容
-1# .air.conf 文件内容 2root = &#34;.&#34; 3tmp_dir = &#34;tmp&#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; 8# Binary file yields from `cmd`. 9bin = &#34;tmp/main&#34; 10# Customize binary. 11full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; 12# Watch these filename extensions. 13include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] 14# Ignore these filename extensions or directories....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
