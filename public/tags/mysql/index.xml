@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>mysql on Silent 代码搬运工</title>
-    <link>https://www.silent-cxl.top/categories/mysql/</link>
+    <link>https://www.silent-cxl.top/tags/mysql/</link>
     <description>Recent content in mysql on Silent 代码搬运工</description>
     <image>
       <url>https://www.silent-cxl.top/papermod-cover.png</url>
@@ -10,7 +10,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Mon, 06 Feb 2023 13:52:34 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Feb 2023 13:52:34 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mysql 设置数据库分区</title>
       <link>https://www.silent-cxl.top/posts/mysql-partition/</link>
@@ -18,15 +18,6 @@
       
       <guid>https://www.silent-cxl.top/posts/mysql-partition/</guid>
       <description>Mysql 设置数据库分区</description>
-    </item>
-    
-    <item>
-      <title>Mysql 修改数据库、表字符集</title>
-      <link>https://www.silent-cxl.top/posts/mysql-character/</link>
-      <pubDate>Mon, 30 Jan 2023 14:57:01 +0800</pubDate>
-      
-      <guid>https://www.silent-cxl.top/posts/mysql-character/</guid>
-      <description>Mysql 修改数据库、表字符集</description>
     </item>
     
   </channel>

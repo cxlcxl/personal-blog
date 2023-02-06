@@ -160,6 +160,18 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>从远程仓库定时自动发版
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Golang 环境搭建
     </h2>
   </header>
@@ -224,19 +236,6 @@ lsof -ti:18081 kill [port] 待续…</p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Git 解决每次 git pull 需要输入账号密码
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>git bash 进入项目目录：
-1git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
