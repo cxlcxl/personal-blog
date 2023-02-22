@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reviews on Silent 代码搬运工</title>
+    <link>https://www.silent-cxl.top/review/</link>
+    <description>Recent content in Reviews on Silent 代码搬运工</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备2022145969号-1</copyright>
+    <lastBuildDate>Wed, 22 Feb 2023 17:01:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Cache</title>
+      <link>https://www.silent-cxl.top/review/redis-cache/</link>
+      <pubDate>Wed, 22 Feb 2023 17:01:05 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/review/redis-cache/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
