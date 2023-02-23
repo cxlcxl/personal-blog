@@ -60,14 +60,12 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose version
 ```
-7. 配置 docker 镜像加速
+7. 配置 docker 镜像加速，文件地址 `/etc/docker/daemon.json`
 ```json
-// 文件地址 /etc/docker/daemon.json
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "log-driver": "json-file",
   "log-opts": {
-    // 限制 docker 日志的配置
     "max-size": "100m", "max-file": "10"
   },
   "insecure-registries": ["harbor.hongfu.com"],
