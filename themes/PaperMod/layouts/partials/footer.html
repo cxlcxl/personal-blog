@@ -10,6 +10,11 @@
   </div>
   <div>
     <span>
+        Email：{{ site.Params.email }} / Wechat：{{ site.Params.wechat }}
+    </span>
+  </div>
+  <div>
+    <span>
         {{- if site.Copyright }}
         <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">{{ site.Copyright | markdownify }}</a>
         {{- end }}

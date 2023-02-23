@@ -194,6 +194,32 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Centos 安装 docker
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Centos 安装 Docker 本机通过 Virtualbox 安装 Centos 虚拟机（需自行安装）后，安装 Docker： 如果安装使用的非 root 账号，需要加 sudo
+卸载旧版本，如未安装过旧版本可不执行 1yum remove docker \ 2 docker-client \ 3 docker-client-latest \ 4 docker-common \ 5 docker-latest \ 6 docker-latest-logrotate \ 7 docker-logrotate \ 8 docker-selinux \ 9 docker-engine-selinux \ 10 docker-engine 安装依赖包 1yum install -y yum-utils 添加 yum 软件源（不建议使用官方 Docker 安装源，下载很慢） 1yum-config-manager \ 2 --add-repo \ 3 https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 4 5 6sed -i &#39;s/download.docker.com/mirrors.aliyun.com\/docker-ce/g&#39; /etc/yum.repos.d/docker-ce.repo 安装 Docker 引擎 1yum install docker-ce docker-ce-cli containerd....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-02-23 18:26:48 +0800 CST'>二月 23, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Centos 安装 docker" href="https://www.silent-cxl.top/posts/centos-docker-install/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Virtual 虚拟机安装 Centos7
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么要使用虚拟机来搭建开发环境 对于新手即可以熟悉 Linux 使用，同时也可以减少或避免在 windows 系统上安装服务时出现的奇葩问题 还可以与测试正式服务器统一运行环境，减少开发时出现的“在我这都不会”问题 反正有很多好处就行了 软件准备 VirtualBox 本人版本 6.1 需要 6.1 版本的可以点此下载：
+Centos 本人版本 7.9「CentOS-7-x86_64-Minimal-2207-02.iso」</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-02-23 17:53:24 +0800 CST'>二月 23, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Virtual 虚拟机安装 Centos7" href="https://www.silent-cxl.top/posts/virtual/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Mysql 设置数据库分区
     </h2>
   </header>
@@ -239,32 +265,6 @@ var _hmt = _hmt || [];
   <footer class="entry-footer"><span title='2023-01-05 17:02:46 +0800 CST'>一月 5, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Git Pull 时报错：拒绝合并无关的历史" href="https://www.silent-cxl.top/posts/git-pull-allow-unrelated-histories/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Golang Gorm 插入数据遇到重复时修改
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> golang gorm 代码如下 1func (m *User) BatchInsert(users []*User) (err error) { 2 if len(users) == 0 { 3 return nil 4 } 5 // 要修改的字段 6 updateColumns := []string{&#34;email&#34;} 7 return m.Table(m.TableName()).Clauses(clause.OnConflict{ 8 DoUpdates: clause.AssignmentColumns(updateColumns), 9 }).CreateInBatches(users, 500).Error 10} debug 生成的代码，当数据重复时，会修改 email 字段，而不是插入 1INSERT INTO `users`(...) VALUES(...) ON DUPLICATE KEY UPDATE `email`=VALUES(`email`) </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-01-04 19:26:22 +0800 CST'>一月 4, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Golang Gorm 插入数据遇到重复时修改" href="https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>VirtualBox 虚拟机 Read-only file system
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下
-关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
-1VBoxManage getextradata YOURVMNAME enumerate 参考博文：https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-12-06 10:56:41 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to VirtualBox 虚拟机 Read-only file system" href="https://www.silent-cxl.top/posts/virtual-read-only-file-system/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="https://www.silent-cxl.top/page/2/">下一页&nbsp;&nbsp;»
@@ -280,6 +280,11 @@ var _hmt = _hmt || [];
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

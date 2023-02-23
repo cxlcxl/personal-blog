@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on Silent 代码搬运工</title>
+    <link>https://www.silent-cxl.top/categories/docker/</link>
+    <description>Recent content in docker on Silent 代码搬运工</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备2022145969号-1</copyright>
+    <lastBuildDate>Thu, 23 Feb 2023 18:26:48 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centos 安装 docker</title>
+      <link>https://www.silent-cxl.top/posts/centos-docker-install/</link>
+      <pubDate>Thu, 23 Feb 2023 18:26:48 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/centos-docker-install/</guid>
+      <description>Centos 安装 Docker 本机通过 Virtualbox 安装 Centos 虚拟机（需自行安装）后，安装 Docker： 如果安装使用的非 root 账号，需要加 sudo
+卸载旧版本，如未安装过旧版本可不执行 1yum remove docker \ 2 docker-client \ 3 docker-client-latest \ 4 docker-common \ 5 docker-latest \ 6 docker-latest-logrotate \ 7 docker-logrotate \ 8 docker-selinux \ 9 docker-engine-selinux \ 10 docker-engine 安装依赖包 1yum install -y yum-utils 添加 yum 软件源（不建议使用官方 Docker 安装源，下载很慢） 1yum-config-manager \ 2 --add-repo \ 3 https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 4 5 6sed -i &amp;#39;s/download.docker.com/mirrors.aliyun.com\/docker-ce/g&amp;#39; /etc/yum.repos.d/docker-ce.repo 安装 Docker 引擎 1yum install docker-ce docker-ce-cli containerd.</description>
+    </item>
+    
+  </channel>
+</rss>

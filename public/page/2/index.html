@@ -165,6 +165,32 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Golang Gorm 插入数据遇到重复时修改
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> golang gorm 代码如下 1func (m *User) BatchInsert(users []*User) (err error) { 2 if len(users) == 0 { 3 return nil 4 } 5 // 要修改的字段 6 updateColumns := []string{&#34;email&#34;} 7 return m.Table(m.TableName()).Clauses(clause.OnConflict{ 8 DoUpdates: clause.AssignmentColumns(updateColumns), 9 }).CreateInBatches(users, 500).Error 10} debug 生成的代码，当数据重复时，会修改 email 字段，而不是插入 1INSERT INTO `users`(...) VALUES(...) ON DUPLICATE KEY UPDATE `email`=VALUES(`email`) </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-04 19:26:22 +0800 CST'>一月 4, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Golang Gorm 插入数据遇到重复时修改" href="https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>VirtualBox 虚拟机 Read-only file system
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下
+关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
+1VBoxManage getextradata YOURVMNAME enumerate 参考博文：https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-12-06 10:56:41 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to VirtualBox 虚拟机 Read-only file system" href="https://www.silent-cxl.top/posts/virtual-read-only-file-system/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Docker Compose Port Is Already Allocated
     </h2>
   </header>
@@ -213,32 +239,6 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
   <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/golang-shuffle/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>使用 Hugo 搭建自己的博客
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Hugo 的安装 安装可查看 官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = &#34;PaperMod&#34; 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题
-创建你的内容 运行如下命令 1hugo new posts/first-post....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-24 20:48:28 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 使用 Hugo 搭建自己的博客" href="https://www.silent-cxl.top/posts/hugo-build-blog/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Hugo PaperMod 开启评论
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
-1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://www.silent-cxl.top/">
@@ -257,6 +257,11 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

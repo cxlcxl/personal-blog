@@ -2,17 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.silent-cxl.top/categories/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/centos/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/centos-docker-install/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/docker/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/virtual/</loc>
+    <lastmod>2023-02-23T17:53:24+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2023-02-23T17:53:24+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/review/redis-cache/</loc>
     <lastmod>2023-02-22T17:01:05+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/review/</loc>
     <lastmod>2023-02-22T17:01:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
-    <lastmod>2023-02-22T17:01:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2023-02-06T13:52:34+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/mysql/</loc>
     <lastmod>2023-02-06T13:52:34+08:00</lastmod>
@@ -21,9 +39,6 @@
     <lastmod>2023-02-06T13:52:34+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/mysql-partition/</loc>
-    <lastmod>2023-02-06T13:52:34+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
     <lastmod>2023-02-06T13:52:34+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/</loc>
@@ -78,9 +93,6 @@
     <lastmod>2022-12-06T10:56:41+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
-    <lastmod>2022-12-06T10:56:41+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2022-12-06T10:56:41+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/docker/</loc>

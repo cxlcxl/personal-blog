@@ -10,7 +10,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
-    <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 17:53:24 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtual 虚拟机安装 Centos7</title>
+      <link>https://www.silent-cxl.top/posts/virtual/</link>
+      <pubDate>Thu, 23 Feb 2023 17:53:24 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/virtual/</guid>
+      <description>为什么要使用虚拟机来搭建开发环境 对于新手即可以熟悉 Linux 使用，同时也可以减少或避免在 windows 系统上安装服务时出现的奇葩问题 还可以与测试正式服务器统一运行环境，减少开发时出现的“在我这都不会”问题 反正有很多好处就行了 软件准备 VirtualBox 本人版本 6.1 需要 6.1 版本的可以点此下载：
+Centos 本人版本 7.9「CentOS-7-x86_64-Minimal-2207-02.iso」</description>
+    </item>
+    
     <item>
       <title>VirtualBox 虚拟机 Read-only file system</title>
       <link>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</link>
