@@ -190,16 +190,17 @@ Centos 本人版本 7.9「CentOS-7-x86_64-Minimal-2207-02.iso」</p>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Virtual 本地虚拟机网络配置
+    <h2>Virtual 本地虚拟机网络配置与共享文件夹
     </h2>
   </header>
   <div class="entry-content">
-    <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
+    <p>网络 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
 配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
-1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 </p>
+1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 共享文件夹 配置文件地址：/etc/rc.local 或 /etc/rc.d/rc.local 在最后加一行
+1mount -t vboxsf [你 virtualbox 上绑定的共享文件夹名] /www </p>
   </div>
   <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
+  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置与共享文件夹" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
