@@ -1,7 +1,7 @@
 ---
 title: "Virtual 虚拟机安装 Centos7"
 date: 2023-02-23T17:53:24+08:00
-draft: false
+draft: true
 description: ""
 categories: ["虚拟机"]
 tags: [""]
