@@ -1,5 +1,5 @@
 baseURL = "https://www.silent-cxl.top/"
-title = "Silent 代码搬运工"
+title = "Silent 编程足迹"
 paginate = 6
 theme = "PaperMod"
 enableInlineShortcodes = true
