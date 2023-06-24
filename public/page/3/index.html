@@ -2,17 +2,17 @@
 <html lang="zh" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.106.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.108.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Silent 代码搬运工</title>
+<title>Silent 编程足迹</title>
 
 <meta name="description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.01a8e2511f5804beb8aa20a57ad0d9986d319d3976c759393fdf94363ec38069.css" integrity="sha256-AajiUR9YBL64qiCletDZmG0xnTl2x1k5P9&#43;UNj7DgGk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -58,7 +58,7 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Silent 代码搬运工" />
+</noscript><meta property="og:title" content="Silent 编程足迹" />
 <meta property="og:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.silent-cxl.top/" /><meta property="og:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
@@ -66,14 +66,14 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.silent-cxl.top/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Silent 代码搬运工"/>
+<meta name="twitter:title" content="Silent 编程足迹"/>
 <meta name="twitter:description" content="Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"/>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Silent 代码搬运工",
+  "name": "Silent 编程足迹",
   "url": "https://www.silent-cxl.top/",
   "description": "Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流",
   "thumbnailUrl": "https://www.silent-cxl.top/favicon.ico",
@@ -108,7 +108,7 @@ var _hmt = _hmt || [];
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 编程足迹 (Alt + H)">Silent 编程足迹</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -154,8 +154,8 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="关于">
-                    <span>关于</span>
+                <a href="https://www.silent-cxl.top/review/" title="复习资料">
+                    <span>复习资料</span>
                 </a>
             </li>
         </ul>
@@ -165,80 +165,80 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Vue3 页面登录拦截器
+    <h2>使用 Hugo 搭建自己的博客
     </h2>
   </header>
   <div class="entry-content">
-    <p>直接上代码
-1// intercept.js 2import NProgress from &#34;nprogress&#34; 3import &#34;nprogress/nprogress.css&#34; // progress bar style 4import store from &#34;@/store&#34; 5import router from &#34;./router&#34; 6import settings from &#34;./settings&#34; 7import { getToken } from &#34;@/utils/token&#34; 8import { ElMessage } from &#34;element-plus&#34; 9 10NProgress.configure({ showSpinner: false }) 11const excludeUris = [&#34;/login&#34;, &#34;/sso/callback&#34;] 12 13router.beforeEach(async (to, from, next) =&gt; { 14 NProgress.start() 15 // 顺便设置 icon title 16 document.title = to.meta.title 17 ? `${to.meta.title} - ${settings....</p>
+    <p>Hugo 的安装 安装可查看 官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = &#34;PaperMod&#34; 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题
+创建你的内容 运行如下命令 1hugo new posts/first-post....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 页面登录拦截器" href="https://www.silent-cxl.top/posts/vue-login-permission/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 20:48:28 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 使用 Hugo 搭建自己的博客" href="https://www.silent-cxl.top/posts/hugo-build-blog/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>从远程仓库定时自动发版
+    <h2>Hugo PaperMod 开启评论
     </h2>
   </header>
   <div class="entry-content">
-    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
+    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
+1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Golang 环境搭建
+    <h2>K8s 上 Go-Zero 服务本机手动部署记录
     </h2>
   </header>
   <div class="entry-content">
-    <p>遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout 解决，终端执行：go env -w GOPROXY=https://goproxy.cn
-待续…</p>
+    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&#34;&#34;] 16 resources: [&#34;endpoints&#34;] # endpoints 17 verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 17:54:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Golang 环境搭建" href="https://www.silent-cxl.top/posts/golang-proxy/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Linux scp 文件管理
+    <h2>Git 忽略文件使用
     </h2>
   </header>
   <div class="entry-content">
-    <p> 1# 从服务器上下载文件 2scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] 3 4# 上传本地文件到服务器 5scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] 6 7# 从服务器下载整个目录 8scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] 9 10# 上传目录到服务器 11scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] 12 13# 如果用到非 22 端口则在 scp 后使用 -P 参数 </p>
+    <p> 匹配中间文件夹 示例 .gitignore 内容：匹配 app 下的所有模块文件夹下 config 下以 .pro.yaml 结尾的文件
+1// app/user/config/databse.pro.yaml 2// app/goods/config/databse.pro.yaml 3// ... 4app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 1git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 16:31:51 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Linux scp 文件管理" href="https://www.silent-cxl.top/posts/linux-scp/"></a>
+  <footer class="entry-footer"><span title='2022-11-24 11:11:31 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Git 忽略文件使用" href="https://www.silent-cxl.top/posts/git-ignore-use/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Virtual 本地虚拟机网络配置
+    <h2>进制转换
     </h2>
   </header>
   <div class="entry-content">
-    <p> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
-配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
-1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 </p>
+    <p>世界上有 10 种人，懂二进制和不懂二进制的，实际上二进制只有 0 和 1，逢 2 进 1，所以 10 在二进制中并不是十进制的 10 而是十进制的 2。
+进制就是逢几进一，n 进制就是逢 n 进一。计算机只能识别二进制，人类最习惯使用的是十进制，而为了实际需要，又建立了八进制和十六进制。八进制就是逢八进一，十六进制就是逢十六进一。
+二进制转十进制 例二进制数：10010110，可转换如下
+1 1 0 0 1 0 1 1 0 // 二进制 21*2^7 &#43; 0*2^6 &#43; 0*2^5 &#43; 1*2^4 &#43; 0*2^3 &#43; 1*2^2 &#43; 1*2^1 &#43; 0*2^0 3128 &#43; 0 &#43; 0 &#43; 16 &#43; 0 &#43; 4 &#43; 2 &#43; 0 = 150 // 十进制 八进制转十进制 八进制：只有 0~7，逢 8 进 1...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:34:03 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Virtual 本地虚拟机网络配置" href="https://www.silent-cxl.top/posts/virtual-network/"></a>
+  <footer class="entry-footer"><span title='2022-11-23 14:31:06 +0800 CST'>十一月 23, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 进制转换" href="https://www.silent-cxl.top/posts/computer-conversion/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
+    <h2>Vue3 Vite 使用基础配置
     </h2>
   </header>
   <div class="entry-content">
-    <p>解决方式：
-无需设置 default-checked-keys 属性
-读取到接口数据后使用 this.$refs.tree.setCheckedNodes(***传入接口返回的节点 keys***) 设置默认； 提交前使用 this.$refs.tree.getCheckedKeys() 再次获取选中的节点并赋值 </p>
+    <p>1import { defineConfig, loadEnv } from &#34;vite&#34; 2import vue from &#34;@vitejs/plugin-vue&#34; 3import path from &#34;path&#34; 4import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; 5 6// https://vitejs.dev/config/ 7export default defineConfig(({ command, mode }) =&gt; { 8 console.log(&#34;vite.config defineConfig&#34;, command, mode) 9 const env = loadEnv(mode, process.cwd(), &#34;&#34;) 10 return { 11 plugins: [ 12 vue(), 13 nodePolyfills({ 14 protocolImports: true, 15 }), 16 ], 17 resolve: { 18 alias: { 19 &#34;@&#34;: path....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
+  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -253,11 +253,16 @@ var _hmt = _hmt || [];
     
 <footer class="footer">
   <div>
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
+    <span>&copy; 2023 <a href="https://www.silent-cxl.top/">Silent 编程足迹</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

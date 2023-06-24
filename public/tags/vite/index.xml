@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>vite on Silent 代码搬运工</title>
+    <title>vite on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/vite/</link>
-    <description>Recent content in vite on Silent 代码搬运工</description>
+    <description>Recent content in vite on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Tue, 22 Nov 2022 17:53:38 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/vite/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +17,7 @@
       <pubDate>Tue, 22 Nov 2022 17:53:38 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/vue-vite/</guid>
-      <description>1import { defineConfig, loadEnv } from &amp;#34;vite&amp;#34; 2import vue from &amp;#34;@vitejs/plugin-vue&amp;#34; 3import path from &amp;#34;path&amp;#34; 4import { nodePolyfills } from &amp;#34;vite-plugin-node-polyfills&amp;#34; 5 6// https://vitejs.dev/config/ 7export default defineConfig(({ command, mode }) =&amp;gt; { 8 console.log(&amp;#34;vite.config defineConfig&amp;#34;, command, mode) 9 const env = loadEnv(mode, process.cwd(), &amp;#34;&amp;#34;) 10 return { 11 plugins: [ 12 vue(), 13 nodePolyfills({ 14 protocolImports: true, 15 }), 16 ], 17 resolve: { 18 alias: { 19 &amp;#34;@&amp;#34;: path.</description>
+      <description>Vite 使用基础配置</description>
     </item>
     
   </channel>

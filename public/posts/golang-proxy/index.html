@@ -6,12 +6,12 @@
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Golang 环境搭建 | Silent 代码搬运工</title>
+<title>Golang 环境搭建 | Silent 编程足迹</title>
 <meta name="keywords" content="">
 <meta name="description" content="go 环境搭建">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/golang-proxy/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.01a8e2511f5804beb8aa20a57ad0d9986d319d3976c759393fdf94363ec38069.css" integrity="sha256-AajiUR9YBL64qiCletDZmG0xnTl2x1k5P9&#43;UNj7DgGk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -99,8 +99,8 @@
   "keywords": [
     
   ],
-  "articleBody": "遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout 解决，终端执行：go env -w GOPROXY=https://goproxy.cn\n待续…\n",
-  "wordCount" : "14",
+  "articleBody": "安装运行时遇到过的问题 问题：遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout\n解决，终端执行：go env -w GOPROXY=https://goproxy.cn mac 系统运行时：listen tcp :18081: bind: address already in use\nlsof -ti:18081 kill [port] 待续…\n",
+  "wordCount" : "28",
   "inLanguage": "zh",
   "datePublished": "2022-11-21T17:54:32+08:00",
   "dateModified": "2022-11-21T17:54:32+08:00",
@@ -114,7 +114,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Silent 代码搬运工",
+    "name": "Silent 编程足迹",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.silent-cxl.top/favicon.ico"
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 编程足迹 (Alt + H)">Silent 编程足迹</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -194,8 +194,8 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="关于">
-                    <span>关于</span>
+                <a href="https://www.silent-cxl.top/review/" title="复习资料">
+                    <span>复习资料</span>
                 </a>
             </li>
         </ul>
@@ -215,9 +215,37 @@ var _hmt = _hmt || [];
     <div class="post-meta"><span title='2022-11-21 17:54:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent&nbsp;|&nbsp;<a href="https://github.com/cxlcxl/personal-blog/blob/master/content/posts/golang-proxy.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
 
-  <div class="post-content"><p>遇到 <code>go install</code> 报错：<code>.... dial tcp 172.217.160.113:443: i/o timeout</code> 解决，终端执行：<code>go env -w GOPROXY=https://goproxy.cn</code></p>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%ae%89%e8%a3%85%e8%bf%90%e8%a1%8c%e6%97%b6%e9%81%87%e5%88%b0%e8%bf%87%e7%9a%84%e9%97%ae%e9%a2%98" aria-label="安装运行时遇到过的问题">安装运行时遇到过的问题</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h4 id="安装运行时遇到过的问题">安装运行时遇到过的问题<a hidden class="anchor" aria-hidden="true" href="#安装运行时遇到过的问题">#</a></h4>
+<ul>
+<li>
+<p>问题：遇到 <code>go install</code> 报错：<code>.... dial tcp 172.217.160.113:443: i/o timeout</code></p>
+<ul>
+<li>解决，终端执行：<code>go env -w GOPROXY=https://goproxy.cn</code></li>
+</ul>
+</li>
+<li>
+<p><code>mac</code> 系统运行时：<code>listen tcp :18081: bind: address already in use</code></p>
+<ul>
+<li><code>lsof -ti:18081</code></li>
+<li><code>kill [port]</code></li>
+</ul>
+</li>
+</ul>
 <p>待续&hellip;</p>
 
 
@@ -309,11 +337,16 @@ var _hmt = _hmt || [];
     
 <footer class="footer">
   <div>
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
+    <span>&copy; 2023 <a href="https://www.silent-cxl.top/">Silent 编程足迹</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

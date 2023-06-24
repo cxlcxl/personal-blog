@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>deploy on Silent 代码搬运工</title>
+    <title>deploy on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/deploy/</link>
-    <description>Recent content in deploy on Silent 代码搬运工</description>
+    <description>Recent content in deploy on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/deploy/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +17,7 @@
       <pubDate>Tue, 06 Dec 2022 10:56:41 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</guid>
-      <description>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下
-关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
-1VBoxManage getextradata YOURVMNAME enumerate 参考博文：https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</description>
+      <description>VirtualBox 虚拟机 Read-only file system</description>
     </item>
     
     <item>
@@ -24,9 +26,7 @@
       <pubDate>Tue, 06 Dec 2022 10:54:37 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/docker-compose-port-is-already-allocated/</guid>
-      <description>1ERROR: for local_nginx Cannot start service nginx: driver failed programming external connectivity on endpoint local_nginx (c3d788a28999dc7888524cd93d63a5dac3da0fe00d9c7d8a09e8bb815005b9f0): Bind for 0.0.0.0:8098 failed: port is already allocated 容器没有运行了，但是端口还在绑定占用
-解决：
-systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db systemctl restart docker.service </description>
+      <description>docker-compose up 报错：Bind for 0.0.0.0:8098 failed: port is already allocated</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db syste
       <pubDate>Wed, 30 Nov 2022 11:04:47 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/deploy-github-actions/</guid>
-      <description>先上 github-acitons 部署 yml 文件内容 1name: 部署到服务器 2on: 3 push: 4 branches: [ &amp;#34;master&amp;#34; ] # master 分支有提交自动部署 5 6permissions: write-all 7jobs: 8 deploy: 9 name: Deploy 10 runs-on: ubuntu-latest 11 environment: production 12 13 steps: 14 # 获取源码 master 分支，也可以写 tag 版本 15 - name: Checkout 16 uses: actions/checkout@master 17 18 # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 19 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 20 - name: 部署到服务器 21 uses: easingthemes/ssh-deploy@main 22 env: 23 SSH_PRIVATE_KEY: ${{ secrets.</description>
+      <description>使用 github actions 实现代码提交自动部署</description>
     </item>
     
   </channel>

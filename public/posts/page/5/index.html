@@ -6,12 +6,12 @@
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Silent 代码搬运工</title>
+<title>Posts | Silent 编程足迹</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Silent 代码搬运工">
+<meta name="description" content="Posts - Silent 编程足迹">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.01a8e2511f5804beb8aa20a57ad0d9986d319d3976c759393fdf94363ec38069.css" integrity="sha256-AajiUR9YBL64qiCletDZmG0xnTl2x1k5P9&#43;UNj7DgGk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -108,7 +108,7 @@ var _hmt = _hmt || [];
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 编程足迹 (Alt + H)">Silent 编程足迹</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -154,8 +154,8 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="关于">
-                    <span>关于</span>
+                <a href="https://www.silent-cxl.top/review/" title="复习资料">
+                    <span>复习资料</span>
                 </a>
             </li>
         </ul>
@@ -178,19 +178,89 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>K8s - 系统初始化
+    <h2>Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题
     </h2>
   </header>
   <div class="entry-content">
-    <p>设置系统主机名 1hostnamectl set-hostname k8s-master01 安装依赖包 1yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables 1systemctl stop firewalld &amp;&amp; systemctl disable firewalld 2yum -y install iptables-services &amp;&amp; systemctl start iptables &amp;&amp; systemctl enable iptables &amp;&amp; iptables -F &amp;&amp; service iptables save 关闭 SELINUX 1swapoff -a &amp;&amp; sed -i &#39;/ swap / s/^\(.*\)$/#\1/g&#39; /etc/fstab 2setenforce 0 &amp;&amp; sed -i &#39;s/^SELINUX=.*/SELINUX=disabled/&#39; /etc/selinux/config 调整内核参数 1cat &gt; kubernetes....</p>
+    <p>解决方式：
+无需设置 default-checked-keys 属性
+读取到接口数据后使用 this.$refs.tree.setCheckedNodes(***传入接口返回的节点 keys***) 设置默认； 提交前使用 this.$refs.tree.getCheckedKeys() 再次获取选中的节点并赋值 </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-19 10:25:27 +0800 CST'>十一月 19, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
-  <a class="entry-link" aria-label="post link to K8s - 系统初始化" href="https://www.silent-cxl.top/posts/k8s-1-init/"></a>
+  <footer class="entry-footer"><span title='2022-11-21 15:31:53 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue el-tree 的 default-checked-keys 属性默认选中状态bug问题" href="https://www.silent-cxl.top/posts/vue-element-tree-checked-bug/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>查看根分区大小 df -h
+1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
+1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:26:19 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Virtual 虚拟机扩容（/dev/mapper/centos-root 空间不足）" href="https://www.silent-cxl.top/posts/virtual-space-not-enough/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Git 解决每次 git pull 需要输入账号密码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>git bash 进入项目目录：
+1git config --global credential.helper store 输入以上命令后，重新拉取代码再次输入账号密码，输入后会记住，以后拉代码不需要再输入。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 15:23:32 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Git 解决每次 git pull 需要输入账号密码" href="https://www.silent-cxl.top/posts/git-pull-repeat-enter-pass/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>golang air 热更新使用
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf mac 系统文件内容
+1# .air.conf 文件内容 2root = &#34;.&#34; 3tmp_dir = &#34;tmp&#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &#34;go build -o ./tmp/main ./web/main.go&#34; 8# Binary file yields from `cmd`. 9bin = &#34;tmp/main&#34; 10# Customize binary. 11full_bin = &#34;APP_ENV=dev APP_USER=air ./tmp/main&#34; 12# Watch these filename extensions. 13include_ext = [&#34;go&#34;, &#34;tpl&#34;, &#34;tmpl&#34;, &#34;html&#34;] 14# Ignore these filename extensions or directories....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 11:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
+  <a class="entry-link" aria-label="post link to golang air 热更新使用" href="https://www.silent-cxl.top/posts/golang-air/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>go-zero goctl 使用 proto 引入其他 proto 文件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>编写 proto 文件 1// role.proto 文件 2syntax = &#34;proto3&#34;; 3 4option go_package = &#34;./marketing&#34;; 5 6package marketing; 7 8message RoleCreateReq { 9 string role_name = 1; 10} 1// user.proto 文件 2syntax = &#34;proto3&#34;; 3 4option go_package = &#34;./rbac&#34;; 5 6package rbac; 7import &#34;pb/role.proto&#34;; // 以执行 goctl 命令为起始路径 8 9message UserCreateReq { 10 string username = 1; 11 string email = 2; 12} 13 14message BaseResp { 15 int64 code = 1; 16} 17 18service RbacCenter{ 19 // RPC 服务 20 rpc RoleCreate(RoleCreateReq) returns(BaseResp); 21 22 rpc UserCreate(UserCreateReq) returns(BaseResp); 23} 两个文件放在同一目录内...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Silent</footer>
+  <a class="entry-link" aria-label="post link to go-zero goctl 使用 proto 引入其他 proto 文件" href="https://www.silent-cxl.top/posts/gozero-import-other-proto/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>K8s - 资源清单
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>资源清单格式 1apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) 2kind: #资源类别 3metadata： #资源元数据 4 name 5 namespace 6 lables 7 annotations # 主要目的是方便用户阅读查找 8spec: # 期望的状态（disired state） 9status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
+1[root@k8s-master01 ~]# kubectl api-versions 2admissionregistration.k8s.io/v1beta1 3apiextensions.k8s.io/v1beta1 4apiregistration.k8s.io/v1 5apiregistration.k8s.io/v1beta1 6apps/v1 7......(以下省略) 获取资源的 apiVersion 版本信息
+1[root@k8s-master01 ~]# kubectl explain pod 2KIND: Pod 3VERSION: v1 4.....(以下省略) 5 6[root@k8s-master01 ~]# kubectl explain Ingress 7KIND: Ingress 8VERSION: extensions/v1beta1 获取字段设置帮助文档...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-21 10:25:27 +0800 CST'>十一月 21, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Silent</footer>
+  <a class="entry-link" aria-label="post link to K8s - 资源清单" href="https://www.silent-cxl.top/posts/k8s-3-list/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://www.silent-cxl.top/posts/page/4/">
       «&nbsp;上一页&nbsp;
+    </a>
+    <a class="next" href="https://www.silent-cxl.top/posts/page/6/">下一页&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
@@ -198,11 +268,16 @@ var _hmt = _hmt || [];
     
 <footer class="footer">
   <div>
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
+    <span>&copy; 2023 <a href="https://www.silent-cxl.top/">Silent 编程足迹</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

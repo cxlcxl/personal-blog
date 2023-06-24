@@ -6,12 +6,12 @@
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Silent 代码搬运工</title>
+<title>Posts | Silent 编程足迹</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Silent 代码搬运工">
+<meta name="description" content="Posts - Silent 编程足迹">
 <meta name="author" content="silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.01a8e2511f5804beb8aa20a57ad0d9986d319d3976c759393fdf94363ec38069.css" integrity="sha256-AajiUR9YBL64qiCletDZmG0xnTl2x1k5P9&#43;UNj7DgGk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -108,7 +108,7 @@ var _hmt = _hmt || [];
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 编程足迹 (Alt + H)">Silent 编程足迹</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -154,8 +154,8 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="关于">
-                    <span>关于</span>
+                <a href="https://www.silent-cxl.top/review/" title="复习资料">
+                    <span>复习资料</span>
                 </a>
             </li>
         </ul>
@@ -178,81 +178,79 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Hugo PaperMod 开启评论
+    <h2>Golang Gorm 插入数据遇到重复时修改
     </h2>
   </header>
   <div class="entry-content">
-    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
-1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
+    <p> golang gorm 代码如下 1func (m *User) BatchInsert(users []*User) (err error) { 2 if len(users) == 0 { 3 return nil 4 } 5 // 要修改的字段 6 updateColumns := []string{&#34;email&#34;} 7 return m.Table(m.TableName()).Clauses(clause.OnConflict{ 8 DoUpdates: clause.AssignmentColumns(updateColumns), 9 }).CreateInBatches(users, 500).Error 10} debug 生成的代码，当数据重复时，会修改 email 字段，而不是插入 1INSERT INTO `users`(...) VALUES(...) ON DUPLICATE KEY UPDATE `email`=VALUES(`email`) </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
+  <footer class="entry-footer"><span title='2023-01-04 19:26:22 +0800 CST'>一月 4, 2023</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Golang Gorm 插入数据遇到重复时修改" href="https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>K8s 上 Go-Zero 服务本机手动部署记录
+    <h2>VirtualBox 虚拟机 Read-only file system
     </h2>
   </header>
   <div class="entry-content">
-    <p>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&#34;&#34;] 16 resources: [&#34;endpoints&#34;] # endpoints 17 verbs: [&#34;get&#34;,&#34;list&#34;,&#34;watch&#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth....</p>
+    <p>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下
+关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
+1VBoxManage getextradata YOURVMNAME enumerate 参考博文：https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-24 15:42:05 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to K8s 上 Go-Zero 服务本机手动部署记录" href="https://www.silent-cxl.top/posts/k8s-go-zero-deploy/"></a>
+  <footer class="entry-footer"><span title='2022-12-06 10:56:41 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to VirtualBox 虚拟机 Read-only file system" href="https://www.silent-cxl.top/posts/virtual-read-only-file-system/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Git 忽略文件使用
+    <h2>Docker Compose Port Is Already Allocated
     </h2>
   </header>
   <div class="entry-content">
-    <p> 匹配中间文件夹 示例 .gitignore 内容：匹配 app 下的所有模块文件夹下 config 下以 .pro.yaml 结尾的文件
-1// app/user/config/databse.pro.yaml 2// app/goods/config/databse.pro.yaml 3// ... 4app/**/config/*.pro.yaml 忽略已被提交到远程仓库的文件 先移除本地 git 缓存 1git rm --cached [要忽略的文件路径] 补充 .gitignore 文件内容即可 </p>
+    <p>1ERROR: for local_nginx Cannot start service nginx: driver failed programming external connectivity on endpoint local_nginx (c3d788a28999dc7888524cd93d63a5dac3da0fe00d9c7d8a09e8bb815005b9f0): Bind for 0.0.0.0:8098 failed: port is already allocated 容器没有运行了，但是端口还在绑定占用
+解决：
+systemctl stop docker.service rm /var/lib/docker/network/files/local-kv.db systemctl restart docker.service </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-24 11:11:31 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Git 忽略文件使用" href="https://www.silent-cxl.top/posts/git-ignore-use/"></a>
+  <footer class="entry-footer"><span title='2022-12-06 10:54:37 +0800 CST'>十二月 6, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Docker Compose Port Is Already Allocated" href="https://www.silent-cxl.top/posts/docker-compose-port-is-already-allocated/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>进制转换
+    <h2>Css 文字色彩动画
     </h2>
   </header>
   <div class="entry-content">
-    <p>世界上有 10 种人，懂二进制和不懂二进制的，实际上二进制只有 0 和 1，逢 2 进 1，所以 10 在二进制中并不是十进制的 10 而是十进制的 2。
-进制就是逢几进一，n 进制就是逢 n 进一。计算机只能识别二进制，人类最习惯使用的是十进制，而为了实际需要，又建立了八进制和十六进制。八进制就是逢八进一，十六进制就是逢十六进一。
-二进制转十进制 例二进制数：10010110，可转换如下
-1 1 0 0 1 0 1 1 0 // 二进制 21*2^7 &#43; 0*2^6 &#43; 0*2^5 &#43; 1*2^4 &#43; 0*2^3 &#43; 1*2^2 &#43; 1*2^1 &#43; 0*2^0 3128 &#43; 0 &#43; 0 &#43; 16 &#43; 0 &#43; 4 &#43; 2 &#43; 0 = 150 // 十进制 八进制转十进制 八进制：只有 0~7，逢 8 进 1...</p>
+    <p>记录一个遇到的文字色彩动画
+1.example { 2 display: block; 3 text-decoration: none; 4 background-image: -webkit-linear-gradient( 5 left, 6 #3498db, 7 #f47920 10%, 8 #d71345 20%, 9 #f7acbc 30%, 10 #ffd400 40%, 11 #3498db 50%, 12 #f47920 60%, 13 #d71345 70%, 14 #f7acbc 80%, 15 #ffd400 90%, 16 #3498db 17 ); 18 color: transparent; 19 -webkit-background-clip: text; 20 background-size: 200% 100%; 21 animation: slide 5s infinite linear; 22 font-size: 40px; 23} 24 25@keyframes slide { 26 0% { 27 background-position: 0 0; 28 } 29 100% { 30 background-position: -100% 0; 31 } 32} 原地址：图片裁剪</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-23 14:31:06 +0800 CST'>十一月 23, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 进制转换" href="https://www.silent-cxl.top/posts/computer-conversion/"></a>
+  <footer class="entry-footer"><span title='2022-12-05 14:26:59 +0800 CST'>十二月 5, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Css 文字色彩动画" href="https://www.silent-cxl.top/posts/css-font-color-animation/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Vue3 Vite 使用基础配置
+    <h2>记录 Github Actions 实现代码提交自动部署
     </h2>
   </header>
   <div class="entry-content">
-    <p>1import { defineConfig, loadEnv } from &#34;vite&#34; 2import vue from &#34;@vitejs/plugin-vue&#34; 3import path from &#34;path&#34; 4import { nodePolyfills } from &#34;vite-plugin-node-polyfills&#34; 5 6// https://vitejs.dev/config/ 7export default defineConfig(({ command, mode }) =&gt; { 8 console.log(&#34;vite.config defineConfig&#34;, command, mode) 9 const env = loadEnv(mode, process.cwd(), &#34;&#34;) 10 return { 11 plugins: [ 12 vue(), 13 nodePolyfills({ 14 protocolImports: true, 15 }), 16 ], 17 resolve: { 18 alias: { 19 &#34;@&#34;: path....</p>
+    <p>先上 github-acitons 部署 yml 文件内容 1name: 部署到服务器 2on: 3 push: 4 branches: [ &#34;master&#34; ] # master 分支有提交自动部署 5 6permissions: write-all 7jobs: 8 deploy: 9 name: Deploy 10 runs-on: ubuntu-latest 11 environment: production 12 13 steps: 14 # 获取源码 master 分支，也可以写 tag 版本 15 - name: Checkout 16 uses: actions/checkout@master 17 18 # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 19 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 20 - name: 部署到服务器 21 uses: easingthemes/ssh-deploy@main 22 env: 23 SSH_PRIVATE_KEY: ${{ secrets....</p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
+  <footer class="entry-footer"><span title='2022-11-30 11:04:47 +0800 CST'>十一月 30, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 记录 Github Actions 实现代码提交自动部署" href="https://www.silent-cxl.top/posts/deploy-github-actions/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Vue3 使用 Vuex 做登录信息
+    <h2>Go 打乱数据排序
     </h2>
   </header>
   <div class="entry-content">
-    <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 &#43; 库。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
-目录结构：
-1|--public 2|--src 3... 4|----store # 新建 vuex 相关文件夹 5|------modules # 新建模块文件夹，存放 app.js,user.js 6|--------global.js 7|--------getters.js 8|--------app.js 9|--------user.js store 文件夹下创建 index.js 1import { createStore } from &#34;vuex&#34; 2 3import global from &#34;./modules/global.js&#34; 4import app from &#34;./modules/app.js&#34; // 应用基本数据 5import user from &#34;./modules/user.js&#34; // 登录信息 6import getters from &#34;./modules/getters.js&#34; 7 8export default createStore({ 9 // 公共模板直接在这里展开就可以 10 ...global, 11 modules: { 12 app, 13 user, 14 }, 15 getters, 16}) main....</p>
+    <p> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3 if len(slice) == 1 { 4 return 5 } 6 r := rand.New(rand.NewSource(time.Now().UnixNano())) 7 for len(slice) &gt; 0 { 8 n := len(slice) 9 randIndex := r.Intn(n) 10 slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11 slice = slice[:n-1] 12 } 13} </p>
   </div>
-  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Vue3 使用 Vuex 做登录信息" href="https://www.silent-cxl.top/posts/vue-vuex/"></a>
+  <footer class="entry-footer"><span title='2022-11-29 14:39:24 +0800 CST'>十一月 29, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Go 打乱数据排序" href="https://www.silent-cxl.top/posts/golang-shuffle/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -267,11 +265,16 @@ var _hmt = _hmt || [];
     
 <footer class="footer">
   <div>
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
+    <span>&copy; 2023 <a href="https://www.silent-cxl.top/">Silent 编程足迹</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

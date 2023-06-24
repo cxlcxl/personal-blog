@@ -2,31 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.silent-cxl.top/categories/</loc>
+    <lastmod>2023-03-13T10:51:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/chrome/</loc>
+    <lastmod>2023-03-13T10:51:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/chrome-sync/</loc>
+    <lastmod>2023-03-13T10:51:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/</loc>
+    <lastmod>2023-03-13T10:51:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/</loc>
+    <lastmod>2023-03-13T10:51:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/centos/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/centos-docker-install/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/docker/</loc>
+    <lastmod>2023-02-23T18:26:48+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/review/redis-cache/</loc>
+    <lastmod>2023-02-22T17:01:05+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/review/</loc>
+    <lastmod>2023-02-22T17:01:05+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/mysql/</loc>
+    <lastmod>2023-02-06T13:52:34+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/mysql/</loc>
+    <lastmod>2023-02-06T13:52:34+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/mysql-partition/</loc>
+    <lastmod>2023-02-06T13:52:34+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/</loc>
+    <lastmod>2023-02-06T13:52:34+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/js-date/</loc>
+    <lastmod>2023-01-31T10:56:23+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/mysql-character/</loc>
+    <lastmod>2023-01-30T14:57:01+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/go-design/defer/</loc>
+    <lastmod>2023-01-10T15:32:46+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/go-design/</loc>
+    <lastmod>2023-01-10T15:32:46+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/tags/git/</loc>
+    <lastmod>2023-01-05T17:02:46+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/git/</loc>
+    <lastmod>2023-01-05T17:02:46+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/git-pull-allow-unrelated-histories/</loc>
+    <lastmod>2023-01-05T17:02:46+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/golang/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/posts/golang-gorm-on-duplicate-key-update/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
+    <loc>https://www.silent-cxl.top/categories/gorm/</loc>
+    <lastmod>2023-01-04T19:26:22+08:00</lastmod>
+  </url><url>
     <loc>https://www.silent-cxl.top/categories/algorithm/</loc>
     <lastmod>2022-12-08T14:50:36+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/algorithm/</loc>
     <lastmod>2022-12-08T14:50:36+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/categories/</loc>
-    <lastmod>2022-12-08T14:50:36+08:00</lastmod>
-  </url><url>
     <loc>https://www.silent-cxl.top/algorithm/leetcode-1812/</loc>
-    <lastmod>2022-12-08T14:50:36+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/</loc>
     <lastmod>2022-12-08T14:50:36+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/algorithm/leetcode-1775/</loc>
     <lastmod>2022-12-08T14:31:21+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/tags/deploy/</loc>
-    <lastmod>2022-12-06T10:56:41+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/posts/</loc>
-    <lastmod>2022-12-06T10:56:41+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/tags/</loc>
     <lastmod>2022-12-06T10:56:41+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</loc>
@@ -86,9 +146,6 @@
     <loc>https://www.silent-cxl.top/posts/golang-shuffle/</loc>
     <lastmod>2022-11-29T14:39:24+08:00</lastmod>
   </url><url>
-    <loc>https://www.silent-cxl.top/categories/golang/</loc>
-    <lastmod>2022-11-29T14:39:24+08:00</lastmod>
-  </url><url>
     <loc>https://www.silent-cxl.top/tags/hugo/</loc>
     <lastmod>2022-11-24T20:48:28+08:00</lastmod>
   </url><url>
@@ -127,12 +184,6 @@
   </url><url>
     <loc>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</loc>
     <lastmod>2022-11-24T15:42:05+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/tags/git/</loc>
-    <lastmod>2022-11-24T11:11:31+08:00</lastmod>
-  </url><url>
-    <loc>https://www.silent-cxl.top/categories/git/</loc>
-    <lastmod>2022-11-24T11:11:31+08:00</lastmod>
   </url><url>
     <loc>https://www.silent-cxl.top/posts/git-ignore-use/</loc>
     <lastmod>2022-11-24T11:11:31+08:00</lastmod>

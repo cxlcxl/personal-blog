@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>chrome on Silent 编程足迹</title>
+    <link>https://www.silent-cxl.top/categories/chrome/</link>
+    <description>Recent content in chrome on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备2022145969号-1</copyright>
+    <lastBuildDate>Mon, 13 Mar 2023 10:51:54 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome浏览器书签立即同步</title>
+      <link>https://www.silent-cxl.top/posts/chrome-sync/</link>
+      <pubDate>Mon, 13 Mar 2023 10:51:54 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/posts/chrome-sync/</guid>
+      <description>地址栏输入：chrome://sync-internals chrome://sync 点 Trigger GetUpdates 或
+地址栏输入：chrome://sync-internals 中间那列中下方，点击“Stop Sync (Keep Data)”，之后点击“Request Start” 两个设备上的Chrome都进行一次这个操作 来源：Chrome浏览器书签同步不及时怎么办？</description>
+    </item>
+    
+  </channel>
+</rss>

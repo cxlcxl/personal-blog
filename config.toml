@@ -1,5 +1,5 @@
 baseURL = "https://www.silent-cxl.top/"
-title = "Silent 代码搬运工"
+title = "Silent 编程足迹"
 paginate = 6
 theme = "PaperMod"
 enableInlineShortcodes = true
@@ -44,9 +44,14 @@ url = "algorithm/"
 weight = 16
 
 [[languages.zh.menu.main]]
-name = "关于"
-url = "about/"
+name = "复习资料"
+url = "review/"
 weight = 20
+
+#[[languages.zh.menu.main]]
+#name = "关于"
+#url = "about/"
+#weight = 20
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
@@ -55,6 +60,8 @@ home = [ "HTML", "RSS", "JSON" ]
 env = "production"
 description = "Blog 包含 PHP、Golang 等语言，用作记录问题、随笔、学习笔记等，欢迎互相交流"
 author = "silent"
+email = "silent.cxl@gmail.com"
+wechat = "Silent-Cxl"
 defaultTheme = "auto"
 ShowShareButtons = true
 ShowReadingTime = true

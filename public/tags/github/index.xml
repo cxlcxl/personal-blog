@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>github on Silent 代码搬运工</title>
+    <title>github on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/github/</link>
-    <description>Recent content in github on Silent 代码搬运工</description>
+    <description>Recent content in github on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Wed, 30 Nov 2022 11:04:47 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/github/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +17,7 @@
       <pubDate>Wed, 30 Nov 2022 11:04:47 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/deploy-github-actions/</guid>
-      <description>先上 github-acitons 部署 yml 文件内容 1name: 部署到服务器 2on: 3 push: 4 branches: [ &amp;#34;master&amp;#34; ] # master 分支有提交自动部署 5 6permissions: write-all 7jobs: 8 deploy: 9 name: Deploy 10 runs-on: ubuntu-latest 11 environment: production 12 13 steps: 14 # 获取源码 master 分支，也可以写 tag 版本 15 - name: Checkout 16 uses: actions/checkout@master 17 18 # 使用到的这个 easingthemes/ssh-deploy actions，main 表示主分支 19 # 可以直接仓库搜索到：easingthemes/ssh-deploy，有介绍下面的配置项 20 - name: 部署到服务器 21 uses: easingthemes/ssh-deploy@main 22 env: 23 SSH_PRIVATE_KEY: ${{ secrets.</description>
+      <description>使用 github actions 实现代码提交自动部署</description>
     </item>
     
   </channel>

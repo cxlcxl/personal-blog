@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>proto on Silent 代码搬运工</title>
+    <title>proto on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/proto/</link>
-    <description>Recent content in proto on Silent 代码搬运工</description>
+    <description>Recent content in proto on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Mon, 21 Nov 2022 10:25:27 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/proto/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +17,7 @@
       <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/gozero-import-other-proto/</guid>
-      <description>编写 proto 文件 1// role.proto 文件 2syntax = &amp;#34;proto3&amp;#34;; 3 4option go_package = &amp;#34;./marketing&amp;#34;; 5 6package marketing; 7 8message RoleCreateReq { 9 string role_name = 1; 10} 1// user.proto 文件 2syntax = &amp;#34;proto3&amp;#34;; 3 4option go_package = &amp;#34;./rbac&amp;#34;; 5 6package rbac; 7import &amp;#34;pb/role.proto&amp;#34;; // 以执行 goctl 命令为起始路径 8 9message UserCreateReq { 10 string username = 1; 11 string email = 2; 12} 13 14message BaseResp { 15 int64 code = 1; 16} 17 18service RbacCenter{ 19 // RPC 服务 20 rpc RoleCreate(RoleCreateReq) returns(BaseResp); 21 22 rpc UserCreate(UserCreateReq) returns(BaseResp); 23} 两个文件放在同一目录内</description>
+      <description>goctl 使用 proto 引入其他 proto 文件</description>
     </item>
     
   </channel>

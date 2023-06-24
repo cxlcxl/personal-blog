@@ -6,12 +6,12 @@
 <meta name="baidu-site-verification" content="code-ThYHS4VGvv" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>golang air 热更新使用 | Silent 代码搬运工</title>
+<title>golang air 热更新使用 | Silent 编程足迹</title>
 <meta name="keywords" content="golang">
 <meta name="description" content="air 热更新使用">
 <meta name="author" content="Silent">
 <link rel="canonical" href="https://www.silent-cxl.top/posts/golang-air/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3800fdab38dbe8cbac088f7404d842e98474373d28df05fb1690d199e9384a26.css" integrity="sha256-OAD9qzjb6MusCI90BNhC6YR0Nz0o3wX7FpDRmek4SiY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.01a8e2511f5804beb8aa20a57ad0d9986d319d3976c759393fdf94363ec38069.css" integrity="sha256-AajiUR9YBL64qiCletDZmG0xnTl2x1k5P9&#43;UNj7DgGk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.silent-cxl.top/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.silent-cxl.top/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.silent-cxl.top/favicon-32x32.png">
@@ -99,8 +99,8 @@
   "keywords": [
     "golang"
   ],
-  "articleBody": " 首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf 1# .air.conf 文件内容 2root = \".\" 3tmp_dir = \"tmp\" 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = \"go build -o ./tmp/main ./web/main.go\" 8# Binary file yields from `cmd`. 9bin = \"tmp/main\" 10# Customize binary. 11full_bin = \"APP_ENV=dev APP_USER=air ./tmp/main\" 12# Watch these filename extensions. 13include_ext = [\"go\", \"tpl\", \"tmpl\", \"html\"] 14# Ignore these filename extensions or directories. 15exclude_dir = [\"storage\", \"web/storage\"] 16# Watch these directories if you specified. 17include_dir = [] 18# Exclude files. 19exclude_file = [] 20# This log file places in your tmp_dir. 21log = \"air.log\" 22# It's not necessary to trigger build each time file changes if it's too frequent. 23delay = 1000 # ms 24# Stop running old binary when build errors occur. 25stop_on_error = true 26# Send Interrupt signal before killing process (windows does not support this feature) 27send_interrupt = false 28# Delay after sending Interrupt signal 29kill_delay = 500 # ms 30 31[log] 32# Show log time 33time = false 34 35[color] 36# Customize each part's color. If no color found, use the raw app log. 37main = \"magenta\" 38watcher = \"cyan\" 39build = \"yellow\" 40runner = \"green\" 41 42[misc] 43# Delete tmp directory on exit 44clean_on_exit = true 运行命令：air 或 air -d ",
-  "wordCount" : "215",
+  "articleBody": " 首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf mac 系统文件内容\n1# .air.conf 文件内容 2root = \".\" 3tmp_dir = \"tmp\" 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = \"go build -o ./tmp/main ./web/main.go\" 8# Binary file yields from `cmd`. 9bin = \"tmp/main\" 10# Customize binary. 11full_bin = \"APP_ENV=dev APP_USER=air ./tmp/main\" 12# Watch these filename extensions. 13include_ext = [\"go\", \"tpl\", \"tmpl\", \"html\"] 14# Ignore these filename extensions or directories. 15exclude_dir = [\"storage\", \"web/storage\"] 16# Watch these directories if you specified. 17include_dir = [] 18# Exclude files. 19exclude_file = [] 20# This log file places in your tmp_dir. 21log = \"air.log\" 22# It's not necessary to trigger build each time file changes if it's too frequent. 23delay = 1000 # ms 24# Stop running old binary when build errors occur. 25stop_on_error = true 26# Send Interrupt signal before killing process (windows does not support this feature) 27send_interrupt = false 28# Delay after sending Interrupt signal 29kill_delay = 500 # ms 30 31[log] 32# Show log time 33time = false 34 35[color] 36# Customize each part's color. If no color found, use the raw app log. 37main = \"magenta\" 38watcher = \"cyan\" 39build = \"yellow\" 40runner = \"green\" 41 42[misc] 43# Delete tmp directory on exit 44clean_on_exit = true windows 系统文件内容\n1# 工作目录 2# 使用 . 或绝对路径，请注意 `tmp_dir` 目录必须在 `root` 目录下 3root = \".\" 4tmp_dir = \"tmp\" 5 6[build] 7# 只需要写你平常编译使用的shell命令。你也可以使用 `make` 8cmd = \"go build -o ./tmp/main.exe ./public/main.go\" 9# 由`cmd`命令得到的二进制文件名 10bin = \"tmp/main.exe\" 11# 自定义的二进制，可以添加额外的编译标识例如添加 GIN_MODE=release 12# full_bin = \"SET APP_ENV=dev \u0026 SET APP_USER=air \u0026 ./tmp/main.exe\" 13full_bin = \"./tmp/main.exe\" 14# 监听以下文件扩展名的文件. 15include_ext = [\"go\", \"tpl\", \"tmpl\", \"html\"] 16# 忽略这些文件扩展名或目录 17exclude_dir = [\"storage\", \"public/storage\", \"tmp\"] 18# 监听以下指定目录的文件 19include_dir = [] 20# 排除以下文件 21exclude_file = [] 22# 如果文件更改过于频繁，则没有必要在每次更改时都触发构建。可以设置触发构建的延迟时间 23delay = 1000 # ms 24# 发生构建错误时，停止运行旧的二进制文件。 25stop_on_error = true 26# air的日志文件名，该日志文件放置在你的`tmp_dir`中 27log = \"air_errors.log\" 28 29[log] 30# 显示日志时间 31time = true 32 33[color] 34# 自定义每个部分显示的颜色。如果找不到颜色，使用原始的应用程序日志。 35main = \"magenta\" 36watcher = \"cyan\" 37build = \"yellow\" 38runner = \"green\" 39 40[misc] 41# 退出时删除tmp目录 42clean_on_exit = true 运行命令：air 或 air -d ",
+  "wordCount" : "340",
   "inLanguage": "zh",
   "datePublished": "2022-11-21T11:25:27+08:00",
   "dateModified": "2022-11-21T11:25:27+08:00",
@@ -114,7 +114,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Silent 代码搬运工",
+    "name": "Silent 编程足迹",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.silent-cxl.top/favicon.ico"
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 代码搬运工 (Alt + H)">Silent 代码搬运工</a>
+            <a href="https://www.silent-cxl.top/" accesskey="h" title="Silent 编程足迹 (Alt + H)">Silent 编程足迹</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -194,8 +194,8 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
-                <a href="https://www.silent-cxl.top/about/" title="关于">
-                    <span>关于</span>
+                <a href="https://www.silent-cxl.top/review/" title="复习资料">
+                    <span>复习资料</span>
                 </a>
             </li>
         </ul>
@@ -221,51 +221,99 @@ var _hmt = _hmt || [];
 <li>首先安装 air 运行命令：<code>go install github.com/cosmtrek/air@latest</code></li>
 <li>项目根目录创建 air 配置文件：<code>.air.conf</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># .air.conf 文件内容
-</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c1"></span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;.&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w"></span><span class="n">tmp_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;tmp&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w"></span><span class="p">[</span><span class="n">build</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w"></span><span class="c1"># Just plain old shell command. You could use `make` as well.
-</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"></span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;go build -o ./tmp/main ./web/main.go&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w"></span><span class="c1"># Binary file yields from `cmd`.
-</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"></span><span class="n">bin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;tmp/main&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w"></span><span class="c1"># Customize binary.
-</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"></span><span class="n">full_bin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;APP_ENV=dev APP_USER=air ./tmp/main&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w"></span><span class="c1"># Watch these filename extensions.
-</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c1"></span><span class="n">include_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;go&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;tpl&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;tmpl&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;html&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w"></span><span class="c1"># Ignore these filename extensions or directories.
-</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="c1"></span><span class="n">exclude_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;storage&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;web/storage&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w"></span><span class="c1"># Watch these directories if you specified.
-</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="c1"></span><span class="n">include_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="w"></span><span class="c1"># Exclude files.
-</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="c1"></span><span class="n">exclude_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="w"></span><span class="c1"># This log file places in your tmp_dir.
-</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="c1"></span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;air.log&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="w"></span><span class="c1"># It&#39;s not necessary to trigger build each time file changes if it&#39;s too frequent.
-</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="c1"></span><span class="n">delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="c1"># ms
-</span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c1"># Stop running old binary when build errors occur.
-</span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="c1"></span><span class="n">stop_on_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span><span class="w">
-</span></span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="w"></span><span class="c1"># Send Interrupt signal before killing process (windows does not support this feature)
-</span></span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="c1"></span><span class="n">send_interrupt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">false</span><span class="w">
-</span></span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="w"></span><span class="c1"># Delay after sending Interrupt signal
-</span></span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="c1"></span><span class="n">kill_delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="w"> </span><span class="c1"># ms
-</span></span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="c1"></span><span class="w">
-</span></span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="w"></span><span class="p">[</span><span class="n">log</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="w"></span><span class="c1"># Show log time
-</span></span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="c1"></span><span class="kt">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">false</span><span class="w">
-</span></span></span><span class="line"><span class="ln">34</span><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="w"></span><span class="p">[</span><span class="n">color</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="w"></span><span class="c1"># Customize each part&#39;s color. If no color found, use the raw app log.
-</span></span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="c1"></span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;magenta&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="w"></span><span class="n">watcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;cyan&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="w"></span><span class="n">build</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;yellow&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="w"></span><span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;green&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">41</span><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="w"></span><span class="p">[</span><span class="n">misc</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="ln">43</span><span class="cl"><span class="w"></span><span class="c1"># Delete tmp directory on exit
-</span></span></span><span class="line"><span class="ln">44</span><span class="cl"><span class="c1"></span><span class="n">clean_on_exit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span><span class="w">
-</span></span></span></code></pre></div><ol start="3">
+<blockquote>
+<p>mac 系统文件内容</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c"># .air.conf 文件内容</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nx">root</span> <span class="p">=</span> <span class="s2">&#34;.&#34;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nx">tmp_dir</span> <span class="p">=</span> <span class="s2">&#34;tmp&#34;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="c"># Just plain old shell command. You could use `make` as well.</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nx">cmd</span> <span class="p">=</span> <span class="s2">&#34;go build -o ./tmp/main ./web/main.go&#34;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c"># Binary file yields from `cmd`.</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nx">bin</span> <span class="p">=</span> <span class="s2">&#34;tmp/main&#34;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c"># Customize binary.</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nx">full_bin</span> <span class="p">=</span> <span class="s2">&#34;APP_ENV=dev APP_USER=air ./tmp/main&#34;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c"># Watch these filename extensions.</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="nx">include_ext</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;go&#34;</span><span class="p">,</span> <span class="s2">&#34;tpl&#34;</span><span class="p">,</span> <span class="s2">&#34;tmpl&#34;</span><span class="p">,</span> <span class="s2">&#34;html&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="c"># Ignore these filename extensions or directories.</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="nx">exclude_dir</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;storage&#34;</span><span class="p">,</span> <span class="s2">&#34;web/storage&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="c"># Watch these directories if you specified.</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="nx">include_dir</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c"># Exclude files.</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="nx">exclude_file</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="c"># This log file places in your tmp_dir.</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="nx">log</span> <span class="p">=</span> <span class="s2">&#34;air.log&#34;</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="c"># It&#39;s not necessary to trigger build each time file changes if it&#39;s too frequent.</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="nx">delay</span> <span class="p">=</span> <span class="mi">1000</span> <span class="c"># ms</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c"># Stop running old binary when build errors occur.</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="nx">stop_on_error</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="c"># Send Interrupt signal before killing process (windows does not support this feature)</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="nx">send_interrupt</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="c"># Delay after sending Interrupt signal</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="nx">kill_delay</span> <span class="p">=</span> <span class="mi">500</span> <span class="c"># ms</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">
+</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="p">[</span><span class="nx">log</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="c"># Show log time</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="nx">time</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">
+</span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="p">[</span><span class="nx">color</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="c"># Customize each part&#39;s color. If no color found, use the raw app log.</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="nx">main</span> <span class="p">=</span> <span class="s2">&#34;magenta&#34;</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="nx">watcher</span> <span class="p">=</span> <span class="s2">&#34;cyan&#34;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="nx">build</span> <span class="p">=</span> <span class="s2">&#34;yellow&#34;</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="nx">runner</span> <span class="p">=</span> <span class="s2">&#34;green&#34;</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl">
+</span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="p">[</span><span class="nx">misc</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl"><span class="c"># Delete tmp directory on exit</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl"><span class="nx">clean_on_exit</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><blockquote>
+<p>windows 系统文件内容</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c"># 工作目录</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c"># 使用 . 或绝对路径，请注意 `tmp_dir` 目录必须在 `root` 目录下</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nx">root</span> <span class="p">=</span> <span class="s2">&#34;.&#34;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nx">tmp_dir</span> <span class="p">=</span> <span class="s2">&#34;tmp&#34;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c"># 只需要写你平常编译使用的shell命令。你也可以使用 `make`</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="nx">cmd</span> <span class="p">=</span> <span class="s2">&#34;go build -o ./tmp/main.exe ./public/main.go&#34;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c"># 由`cmd`命令得到的二进制文件名</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nx">bin</span> <span class="p">=</span> <span class="s2">&#34;tmp/main.exe&#34;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c"># 自定义的二进制，可以添加额外的编译标识例如添加 GIN_MODE=release</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c"># full_bin = &#34;SET APP_ENV=dev &amp; SET APP_USER=air &amp; ./tmp/main.exe&#34;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="nx">full_bin</span> <span class="p">=</span> <span class="s2">&#34;./tmp/main.exe&#34;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="c"># 监听以下文件扩展名的文件.</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="nx">include_ext</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;go&#34;</span><span class="p">,</span> <span class="s2">&#34;tpl&#34;</span><span class="p">,</span> <span class="s2">&#34;tmpl&#34;</span><span class="p">,</span> <span class="s2">&#34;html&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="c"># 忽略这些文件扩展名或目录</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="nx">exclude_dir</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;storage&#34;</span><span class="p">,</span> <span class="s2">&#34;public/storage&#34;</span><span class="p">,</span> <span class="s2">&#34;tmp&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c"># 监听以下指定目录的文件</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="nx">include_dir</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="c"># 排除以下文件</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="nx">exclude_file</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="c"># 如果文件更改过于频繁，则没有必要在每次更改时都触发构建。可以设置触发构建的延迟时间</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="nx">delay</span> <span class="p">=</span> <span class="mi">1000</span> <span class="c"># ms</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c"># 发生构建错误时，停止运行旧的二进制文件。</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="nx">stop_on_error</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="c"># air的日志文件名，该日志文件放置在你的`tmp_dir`中</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="nx">log</span> <span class="p">=</span> <span class="s2">&#34;air_errors.log&#34;</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">
+</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="p">[</span><span class="nx">log</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="c"># 显示日志时间</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="nx">time</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">
+</span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="p">[</span><span class="nx">color</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl"><span class="c"># 自定义每个部分显示的颜色。如果找不到颜色，使用原始的应用程序日志。</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="nx">main</span> <span class="p">=</span> <span class="s2">&#34;magenta&#34;</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="nx">watcher</span> <span class="p">=</span> <span class="s2">&#34;cyan&#34;</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="nx">build</span> <span class="p">=</span> <span class="s2">&#34;yellow&#34;</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="nx">runner</span> <span class="p">=</span> <span class="s2">&#34;green&#34;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl">
+</span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="p">[</span><span class="nx">misc</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl"><span class="c"># 退出时删除tmp目录</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="nx">clean_on_exit</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><ol start="3">
 <li>运行命令：<code>air</code> 或 <code>air -d</code></li>
 </ol>
 
@@ -359,11 +407,16 @@ var _hmt = _hmt || [];
     
 <footer class="footer">
   <div>
-    <span>&copy; 2022 <a href="https://www.silent-cxl.top/">Silent 代码搬运工</a></span>
+    <span>&copy; 2023 <a href="https://www.silent-cxl.top/">Silent 编程足迹</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  </div>
+  <div>
+    <span>
+        Email：silent.cxl@gmail.com / Wechat：Silent-Cxl
     </span>
   </div>
   <div>

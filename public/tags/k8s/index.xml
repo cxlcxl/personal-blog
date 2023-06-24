@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>k8s on Silent 代码搬运工</title>
+    <title>k8s on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/k8s/</link>
-    <description>Recent content in k8s on Silent 代码搬运工</description>
+    <description>Recent content in k8s on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Thu, 24 Nov 2022 15:42:05 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +17,7 @@
       <pubDate>Thu, 24 Nov 2022 15:42:05 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/k8s-go-zero-deploy/</guid>
-      <description>创建命名空间 如果在default命名空间上可以跳过此步骤 1kubectl create ns bs 2 3// 可以查看刚刚创建的 namespace 4kubectl get ns 创建 k8s 账号权限 创建 ads-test-auth.yaml 配置文件如下 1#创建账号 2apiVersion: v1 3kind: ServiceAccount 4metadata: 5 namespace: bs 6 name: ads-test 7 8--- 9#创建角色对应操作 10apiVersion: rbac.authorization.k8s.io/v1 11kind: ClusterRole 12metadata: 13 name: discovery-ads-test 14rules: 15- apiGroups: [&amp;#34;&amp;#34;] 16 resources: [&amp;#34;endpoints&amp;#34;] # endpoints 17 verbs: [&amp;#34;get&amp;#34;,&amp;#34;list&amp;#34;,&amp;#34;watch&amp;#34;] 18 19--- 20#给账号绑定角色 21apiVersion: rbac.authorization.k8s.io/v1 22kind: ClusterRoleBinding 23metadata: 24 name: find-ads-test-discovery-ads-test 25roleRef: 26 apiGroup: rbac.authorization.k8s.io 27 kind: ClusterRole 28 name: discovery-ads-test 29subjects: 30- kind: ServiceAccount 31 name: ads-test 32 namespace: bs 运行 kubectl apply -f ads-test-auth.</description>
+      <description>K8s 上 Go-Zero 服务本机手动部署记录</description>
     </item>
     
     <item>
@@ -22,9 +26,7 @@
       <pubDate>Mon, 21 Nov 2022 10:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/k8s-3-list/</guid>
-      <description>资源清单格式 1apiVersion: group/apiversion # 如果没有给定 group 名称，那么默认为 core，可以使用 kubectl api-versions # 获取当前 k8s 版本上所有的 apiVersion 版本信息( 每个版本可能不同 ) 2kind: #资源类别 3metadata： #资源元数据 4 name 5 namespace 6 lables 7 annotations # 主要目的是方便用户阅读查找 8spec: # 期望的状态（disired state） 9status：# 当前状态，本字段有 Kubernetes 自身维护，用户不能去定义 资源清单的常用命令 获取 apiversion 版本信息
-1[root@k8s-master01 ~]# kubectl api-versions 2admissionregistration.k8s.io/v1beta1 3apiextensions.k8s.io/v1beta1 4apiregistration.k8s.io/v1 5apiregistration.k8s.io/v1beta1 6apps/v1 7......(以下省略) 获取资源的 apiVersion 版本信息
-1[root@k8s-master01 ~]# kubectl explain pod 2KIND: Pod 3VERSION: v1 4.....(以下省略) 5 6[root@k8s-master01 ~]# kubectl explain Ingress 7KIND: Ingress 8VERSION: extensions/v1beta1 获取字段设置帮助文档</description>
+      <description>k8s 资源清单</description>
     </item>
     
     <item>
@@ -33,8 +35,7 @@
       <pubDate>Sun, 20 Nov 2022 10:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/k8s-2-install/</guid>
-      <description>kube-proxy开启ipvs的前置条件 1modprobe br_netfilter 2 3cat &amp;gt; /etc/sysconfig/modules/ipvs.modules &amp;lt;&amp;lt;EOF 4#!/bin/bash 5modprobe -- ip_vs 6modprobe -- ip_vs_rr 7modprobe -- ip_vs_wrr 8modprobe -- ip_vs_sh 9modprobe -- nf_conntrack_ipv4 10EOF 11 12chmod 755 /etc/sysconfig/modules/ipvs.modules &amp;amp;&amp;amp; bash /etc/sysconfig/modules/ipvs.modules &amp;amp;&amp;amp; lsmod | grep -e ip_vs -e nf_conntrack_ipv4 如果报错：modprobe: FATAL: Module nf_conntrack_ipv4 not found. 内核高版本的 nf_conntrack_ipv4 已被 nf_conntrack 替换，将以上的 nf_conntrack_ipv4 改为 nf_conntrack 重新执行。
-安装 Docker 软件 1yum install -y yum-utils device-mapper-persistent-data lvm2 # docker 依赖包 2 3# docker 镜像源 4yum-config-manager \ 5 --add-repo \ 6 http://mirrors.</description>
+      <description>k8s Kubeadm 部署安装</description>
     </item>
     
     <item>
@@ -43,7 +44,7 @@
       <pubDate>Sat, 19 Nov 2022 10:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/k8s-1-init/</guid>
-      <description>设置系统主机名 1hostnamectl set-hostname k8s-master01 安装依赖包 1yum install -y conntrack ntpdate ntp ipvsadm ipset iptables curl sysstat libseccomp wget vim net-tools git 设置 Iptables 1systemctl stop firewalld &amp;amp;&amp;amp; systemctl disable firewalld 2yum -y install iptables-services &amp;amp;&amp;amp; systemctl start iptables &amp;amp;&amp;amp; systemctl enable iptables &amp;amp;&amp;amp; iptables -F &amp;amp;&amp;amp; service iptables save 关闭 SELINUX 1swapoff -a &amp;amp;&amp;amp; sed -i &amp;#39;/ swap / s/^\(.*\)$/#\1/g&amp;#39; /etc/fstab 2setenforce 0 &amp;amp;&amp;amp; sed -i &amp;#39;s/^SELINUX=.*/SELINUX=disabled/&amp;#39; /etc/selinux/config 调整内核参数 1cat &amp;gt; kubernetes.</description>
+      <description>k8s 搭建环境系统初始化</description>
     </item>
     
   </channel>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>PaperMod on Silent 代码搬运工</title>
+    <title>PaperMod on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/papermod/</link>
-    <description>Recent content in PaperMod on Silent 代码搬运工</description>
+    <description>Recent content in PaperMod on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Thu, 24 Nov 2022 20:29:38 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/papermod/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +17,7 @@
       <pubDate>Thu, 24 Nov 2022 20:29:38 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/hugo-supprt-comments/</guid>
-      <description>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
-1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &amp;#34;cxlcxl/comments-for-hugo&amp;#34; # 改成自己的配置 8 issueTerm = &amp;#34;pathname&amp;#34; 9 theme = &amp;#34;github-light&amp;#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &amp;#34;cxlcxl/comments-for-hugo&amp;#34; # 改成自己的配置 15 repoId = &amp;#34;&amp;#34; 16 category = &amp;#34;&amp;#34; 17 categoryId = &amp;#34;&amp;#34; 18 mapping = &amp;#34;pathname&amp;#34; 19 theme = &amp;#34;light_protanopia&amp;#34; 20 lang = &amp;#34;zh-CN&amp;#34; 21 crossorigin = &amp;#34;anonymous&amp;#34; comments.</description>
+      <description>Hugo PaperMod 开启评论</description>
     </item>
     
   </channel>

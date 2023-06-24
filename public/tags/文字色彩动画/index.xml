@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>文字色彩动画 on Silent 代码搬运工</title>
+    <title>文字色彩动画 on Silent 编程足迹</title>
     <link>https://www.silent-cxl.top/tags/%E6%96%87%E5%AD%97%E8%89%B2%E5%BD%A9%E5%8A%A8%E7%94%BB/</link>
-    <description>Recent content in 文字色彩动画 on Silent 代码搬运工</description>
+    <description>Recent content in 文字色彩动画 on Silent 编程足迹</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Mon, 05 Dec 2022 14:26:59 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/%E6%96%87%E5%AD%97%E8%89%B2%E5%BD%A9%E5%8A%A8%E7%94%BB/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +17,7 @@
       <pubDate>Mon, 05 Dec 2022 14:26:59 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/css-font-color-animation/</guid>
-      <description>记录一个遇到的文字色彩动画
-1.example { 2 display: block; 3 text-decoration: none; 4 background-image: -webkit-linear-gradient( 5 left, 6 #3498db, 7 #f47920 10%, 8 #d71345 20%, 9 #f7acbc 30%, 10 #ffd400 40%, 11 #3498db 50%, 12 #f47920 60%, 13 #d71345 70%, 14 #f7acbc 80%, 15 #ffd400 90%, 16 #3498db 17 ); 18 color: transparent; 19 -webkit-background-clip: text; 20 background-size: 200% 100%; 21 animation: slide 5s infinite linear; 22 font-size: 40px; 23} 24 25@keyframes slide { 26 0% { 27 background-position: 0 0; 28 } 29 100% { 30 background-position: -100% 0; 31 } 32} 原地址：图片裁剪</description>
+      <description>Css 文字色彩动画</description>
     </item>
     
   </channel>

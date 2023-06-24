@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://www.silent-cxl.top/sitemap.xml

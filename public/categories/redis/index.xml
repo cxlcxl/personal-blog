@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>redis on Silent 代码搬运工</title>
+    <link>https://www.silent-cxl.top/categories/redis/</link>
+    <description>Recent content in redis on Silent 代码搬运工</description>
+    <image>
+      <url>https://www.silent-cxl.top/papermod-cover.png</url>
+      <link>https://www.silent-cxl.top/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>粤ICP备2022145969号-1</copyright>
+    <lastBuildDate>Tue, 28 Feb 2023 11:50:21 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis 数据持久化</title>
+      <link>https://www.silent-cxl.top/review/redis-persistence/</link>
+      <pubDate>Tue, 28 Feb 2023 11:50:21 +0800</pubDate>
+      
+      <guid>https://www.silent-cxl.top/review/redis-persistence/</guid>
+      <description>Redis 是内存数据库，数据一般存储在内存中，但是为了数据安全性「进程退出时内存中的数据丢失」，所以需要将内存中的数据持久化到磁盘中，出现进程退出再重启 Redis 服务时可以从磁盘中重新加载持久化的数据。</description>
+    </item>
+    
+  </channel>
+</rss>
