@@ -1,6 +1,6 @@
 baseURL = "https://www.silent-cxl.top/"
 title = "Silent 编程足迹"
-paginate = 6
+paginate = 7
 theme = "PaperMod"
 enableInlineShortcodes = true
 enableRobotsTXT = true

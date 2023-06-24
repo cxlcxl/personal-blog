@@ -165,32 +165,6 @@ var _hmt = _hmt || [];
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>使用 Hugo 搭建自己的博客
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Hugo 的安装 安装可查看 官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = &#34;PaperMod&#34; 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题
-创建你的内容 运行如下命令 1hugo new posts/first-post....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-24 20:48:28 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to 使用 Hugo 搭建自己的博客" href="https://www.silent-cxl.top/posts/hugo-build-blog/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Hugo PaperMod 开启评论
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
-1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 8 issueTerm = &#34;pathname&#34; 9 theme = &#34;github-light&#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &#34;cxlcxl/comments-for-hugo&#34; # 改成自己的配置 15 repoId = &#34;&#34; 16 category = &#34;&#34; 17 categoryId = &#34;&#34; 18 mapping = &#34;pathname&#34; 19 theme = &#34;light_protanopia&#34; 20 lang = &#34;zh-CN&#34; 21 crossorigin = &#34;anonymous&#34; comments....</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-11-24 20:29:38 +0800 CST'>十一月 24, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
-  <a class="entry-link" aria-label="post link to Hugo PaperMod 开启评论" href="https://www.silent-cxl.top/posts/hugo-supprt-comments/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2>K8s 上 Go-Zero 服务本机手动部署记录
     </h2>
   </header>
@@ -239,6 +213,45 @@ var _hmt = _hmt || [];
   </div>
   <footer class="entry-footer"><span title='2022-11-22 17:53:38 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
   <a class="entry-link" aria-label="post link to Vue3 Vite 使用基础配置" href="https://www.silent-cxl.top/posts/vue-vite/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Vue3 使用 Vuex 做登录信息
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 &#43; 库。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+目录结构：
+1|--public 2|--src 3... 4|----store # 新建 vuex 相关文件夹 5|------modules # 新建模块文件夹，存放 app.js,user.js 6|--------global.js 7|--------getters.js 8|--------app.js 9|--------user.js store 文件夹下创建 index.js 1import { createStore } from &#34;vuex&#34; 2 3import global from &#34;./modules/global.js&#34; 4import app from &#34;./modules/app.js&#34; // 应用基本数据 5import user from &#34;./modules/user.js&#34; // 登录信息 6import getters from &#34;./modules/getters.js&#34; 7 8export default createStore({ 9 // 公共模板直接在这里展开就可以 10 ...global, 11 modules: { 12 app, 13 user, 14 }, 15 getters, 16}) main....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 使用 Vuex 做登录信息" href="https://www.silent-cxl.top/posts/vue-vuex/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Vue3 页面登录拦截器
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>直接上代码
+1// intercept.js 2import NProgress from &#34;nprogress&#34; 3import &#34;nprogress/nprogress.css&#34; // progress bar style 4import store from &#34;@/store&#34; 5import router from &#34;./router&#34; 6import settings from &#34;./settings&#34; 7import { getToken } from &#34;@/utils/token&#34; 8import { ElMessage } from &#34;element-plus&#34; 9 10NProgress.configure({ showSpinner: false }) 11const excludeUris = [&#34;/login&#34;, &#34;/sso/callback&#34;] 12 13router.beforeEach(async (to, from, next) =&gt; { 14 NProgress.start() 15 // 顺便设置 icon title 16 document.title = to.meta.title 17 ? `${to.meta.title} - ${settings....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 17:26:30 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to Vue3 页面登录拦截器" href="https://www.silent-cxl.top/posts/vue-login-permission/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>从远程仓库定时自动发版
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date &#43;%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &#34;site-*-.tar.gz&#34; 名称模糊匹配 25find $BAKDIR -type f -mtime &#43;$DAYS -exec rm -f {} \; 26 27echo &#34;complete!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-11-22 14:15:52 +0800 CST'>十一月 22, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;silent</footer>
+  <a class="entry-link" aria-label="post link to 从远程仓库定时自动发版" href="https://www.silent-cxl.top/posts/other-git-auto-publish/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
