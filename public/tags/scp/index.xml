@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>scp on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/tags/scp/</link>
     <description>Recent content in scp on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Mon, 21 Nov 2022 16:31:51 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/scp/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,7 @@
       <pubDate>Mon, 21 Nov 2022 16:31:51 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/linux-scp/</guid>
-      <description>scp 文件管理</description>
+      <description> 1# 从服务器上下载文件 2scp [服务器用户名]@[服务器IP]:[服务器文件] [本地目录] 3 4# 上传本地文件到服务器 5scp [本地文件] [服务器用户名]@[服务器IP]:[服务器目录] 6 7# 从服务器下载整个目录 8scp -r [服务器用户名]@[服务器IP]:[服务器目录] [本地目录] 9 10# 上传目录到服务器 11scp -r [本地目录] [服务器用户名]@[服务器IP]:[服务器目录] 12 13# 如果用到非 22 端口则在 scp 后使用 -P 参数 </description>
     </item>
     
   </channel>

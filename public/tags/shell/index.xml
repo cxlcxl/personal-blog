@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/tags/shell/</link>
     <description>Recent content in shell on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Tue, 22 Nov 2022 14:15:52 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/shell/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,7 @@
       <pubDate>Tue, 22 Nov 2022 14:15:52 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/other-git-auto-publish/</guid>
-      <description>从远程仓库定时自动发版</description>
+      <description>添加脚本文件到你期望存放的地址 1#!/bin/bash 2SITEDIR=/www/projects/site 3BAKDIR=/www/baks 4DAYS=7 5DATE=`date +%Y%m%d` 6REMOTE=`gitee/github/gitlab 仓库地址` 7 8# -c 压缩 9# -x 解压 10# -z 支持gzip解压文件 11# -v 显示操作过程 12# -f 使用档名，请留意，在f之后要立即接档名！不要再加参数！ 13tar -zcvf $BAKDIR/site-$DATE-bak.tar.gz $SITEDIR 14cd /www/projects/ 15rm -rf site 16 17git clone $REMOTE site 18 19# 删除过期备份文件 20# $bakdir find 备份文件的地址 21#-type f 类型为普通文件 22#-mtime 7 天之前的文件 23#-exec rm -f 静默删除匹配出来的文件 24# 还可以 -name &amp;#34;site-*-.tar.gz&amp;#34; 名称模糊匹配 25find $BAKDIR -type f -mtime +$DAYS -exec rm -f {} \; 26 27echo &amp;#34;complete!</description>
     </item>
     
   </channel>

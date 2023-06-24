@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/categories/golang/</link>
     <description>Recent content in golang on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Tue, 29 Nov 2022 14:39:24 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/golang/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,7 @@
       <pubDate>Tue, 29 Nov 2022 14:39:24 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/golang-shuffle/</guid>
-      <description>打乱数据排序</description>
+      <description> 1// func shuffle[T any](slice []T) { // go1.18 及以上 2func shuffle(slice []int64) { 3 if len(slice) == 1 { 4 return 5 } 6 r := rand.New(rand.NewSource(time.Now().UnixNano())) 7 for len(slice) &amp;gt; 0 { 8 n := len(slice) 9 randIndex := r.Intn(n) 10 slice[n-1], slice[randIndex] = slice[randIndex], slice[n-1] 11 slice = slice[:n-1] 12 } 13} </description>
     </item>
     
     <item>
@@ -26,7 +22,8 @@
       <pubDate>Mon, 21 Nov 2022 17:54:32 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/golang-proxy/</guid>
-      <description>go 环境搭建</description>
+      <description>遇到 go install 报错：.... dial tcp 172.217.160.113:443: i/o timeout 解决，终端执行：go env -w GOPROXY=https://goproxy.cn
+待续&amp;hellip;</description>
     </item>
     
     <item>
@@ -35,7 +32,8 @@
       <pubDate>Mon, 21 Nov 2022 11:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/golang-air/</guid>
-      <description>air 热更新使用</description>
+      <description>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf mac 系统文件内容
+1# .air.conf 文件内容 2root = &amp;#34;.&amp;#34; 3tmp_dir = &amp;#34;tmp&amp;#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &amp;#34;go build -o ./tmp/main ./web/main.go&amp;#34; 8# Binary file yields from `cmd`. 9bin = &amp;#34;tmp/main&amp;#34; 10# Customize binary. 11full_bin = &amp;#34;APP_ENV=dev APP_USER=air ./tmp/main&amp;#34; 12# Watch these filename extensions. 13include_ext = [&amp;#34;go&amp;#34;, &amp;#34;tpl&amp;#34;, &amp;#34;tmpl&amp;#34;, &amp;#34;html&amp;#34;] 14# Ignore these filename extensions or directories.</description>
     </item>
     
   </channel>

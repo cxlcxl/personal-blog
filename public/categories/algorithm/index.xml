@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>algorithm on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/categories/algorithm/</link>
     <description>Recent content in algorithm on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Thu, 08 Dec 2022 14:50:36 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,7 @@
       <pubDate>Thu, 08 Dec 2022 14:50:36 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/algorithm/leetcode-1812/</guid>
-      <description> 给你一个坐标 coordinates ，它是一个字符串，表示国际象棋棋盘中一个格子的坐标。下图是国际象棋棋盘示意图。 - 如果所给格子的颜色是白色，请你返回 true，如果是黑色，请返回 false 。 - 给定坐标一定代表国际象棋棋盘上一个存在的格子。坐标第一个字符是字母，第二个字符是数字。 示例 1： 1输入：coordinates = &amp;#34;a1&amp;#34; 2输出：false 3解释：如上图棋盘所示，&amp;#34;a1&amp;#34; 坐标的格子是黑色的，所以返回 false 。 go 题解
+      <description> 给你一个坐标 coordinates ，它是一个字符串，表示国际象棋棋盘中一个格子的坐标。下图是国际象棋棋盘示意图。 - 如果所给格子的颜色是白色，请你返回 true，如果是黑色，请返回 false 。- 给定坐标一定代表国际象棋棋盘上一个存在的格子。坐标第一个字符是字母，第二个字符是数字。示例 1： 1输入：coordinates = &amp;#34;a1&amp;#34; 2输出：false 3解释：如上图棋盘所示，&amp;#34;a1&amp;#34; 坐标的格子是黑色的，所以返回 false 。 go 题解
 1func squareIsWhite(coordinates string) bool { 2 // a-h 的字母转换 byte 为 ascii 数字，转换单双，一个单一个双才是白色 3 return (coordinates[0]%2)^(coordinates[1]%2) == 1 4} </description>
     </item>
     
@@ -36,7 +32,8 @@
       <pubDate>Wed, 30 Nov 2022 18:02:12 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/algorithm/longest-substring/</guid>
-      <description>最长无重复子串</description>
+      <description>无重复字符的最长子串 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+示例 1 输入: s = &amp;ldquo;abcabcbb&amp;rdquo; 输出: 3 解释: 因为无重复字符的最长子串是 &amp;ldquo;abc&amp;rdquo;，所以其长度为 3。 示例 2 输入: s = &amp;ldquo;bbbbb&amp;rdquo; 输出: 1 解释: 因为无重复字符的最长子串是 &amp;ldquo;b&amp;rdquo;，所以其长度为 1。 示例 3 输入: s = &amp;ldquo;pwwkew&amp;rdquo; 输出: 3 解释: 因为无重复字符的最长子串是 &amp;ldquo;wke&amp;rdquo;，所以其长度为 3。 解题 1// 题解 1 2func lengthOfLongestSubstring1(str string) int { 3 maxLen := 0 4 hasStrings := make([]string, 0) 5 for i := 0; i &amp;lt; len(str); i++ { 6 current := str[i : i+1] 7 if key := stringInArray(hasStrings, current); key !</description>
     </item>
     
     <item>
@@ -45,7 +42,9 @@
       <pubDate>Wed, 30 Nov 2022 14:12:36 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/algorithm/tree/</guid>
-      <description>递归树</description>
+      <description>在计算机科学中，树（英语：tree）是一种抽象数据类型（ADT）或是实现这种抽象数据类型的数据结构，用来模拟具有树状结构性质的数据集合。它是由n（n&amp;gt;0）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。它具有以下的特点：
+每个节点都只有有限个子节点或无子节点； 没有父节点的节点称为根节点； 一个非根节点有且只有一个父节点； 了根节点外，每个子节点可以分为多个不相交的子树； 里面没有环路(cycle) go 语言递归树代码
+1package main 2 3import ( 4 &amp;#34;fmt&amp;#34; 5) 6 7type tree struct { 8 id int 9 pid int 10 node string 11 sub []tree 12} 13 14func main() { 15 t := []tree{ 16 {1, 0, &amp;#34;a&amp;#34;, nil}, 17 {2, 0, &amp;#34;b&amp;#34;, nil}, 18 {3, 1, &amp;#34;a1&amp;#34;, nil}, 19 {4, 1, &amp;#34;a2&amp;#34;, nil}, 20 {5, 1, &amp;#34;a3&amp;#34;, nil}, 21 {6, 3, &amp;#34;a11&amp;#34;, nil}, 22 {7, 3, &amp;#34;a12&amp;#34;, nil}, 23 {8, 4, &amp;#34;a21&amp;#34;, nil}, 24 {9, 2, &amp;#34;b1&amp;#34;, nil}, 25 {10, 2, &amp;#34;b2&amp;#34;, nil}, 26 {11, 10, &amp;#34;b21&amp;#34;, nil}, 27 } 28 fmt.</description>
     </item>
     
     <item>
@@ -54,7 +53,11 @@
       <pubDate>Wed, 30 Nov 2022 13:52:28 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/algorithm/fibonacci/</guid>
-      <description>斐波那契数列</description>
+      <description> 斐波那契数（意大利语：Successione di Fibonacci），又译为菲波拿契数、菲波那西数、斐氏数、黄金分割数。所形成的数列称为斐波那契数列（意大利语：Successione di Fibonacci），又译为菲波拿契数列、菲波那西数列、斐氏数列、黄金分割数列。
+在数学上，斐波那契数是以递归的方法来定义：
+F0 = 0 F1 = 1 Fn = Fn-1 + Fn-2 用文字来说，就是斐波那契数列由0和1开始，之后的斐波那契数就是由之前的两数相加而得出。
+1、 1、 2、 3、 5、 8、 13、 21、 34、 55、 89、 144、 233、 377、 610、 987&amp;hellip;&amp;hellip; 特别指出：0不是第一项，而是第零项。
+1func fibonacci(n int) int { 2 if n &amp;lt; 3 { 3 return 1 4 } 5 return fibonacci(n-1) + fibonacci(n-2) 6} 7# fibonacci(5) </description>
     </item>
     
   </channel>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>虚拟机 on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
     <description>Recent content in 虚拟机 on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Tue, 06 Dec 2022 10:56:41 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,9 @@
       <pubDate>Tue, 06 Dec 2022 10:56:41 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/virtual-read-only-file-system/</guid>
-      <description>VirtualBox 虚拟机 Read-only file system</description>
+      <description>在虚拟机中创建软连接时报错 Read-only file system，修改方法如下
+关闭虚拟机 用管理员身份启用cmd，进入到虚拟机安装目录(C:\Program Files\Oracle\VirtualBox) 运行以下命令 1VBoxManage setextradata YOURVMNAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/YOURSHAREFOLDERNAME 1 YOURVMNAME ：虚拟机中系统名称 YOURSHAREFOLDERNAME ：虚拟机本地共享文件夹名称(不用带路径) 查看是否配置成功
+1VBoxManage getextradata YOURVMNAME enumerate 参考博文：https://ahtik.com/fixing-your-virtualbox-shared-folder-symlink-error/</description>
     </item>
     
     <item>
@@ -26,7 +24,9 @@
       <pubDate>Mon, 21 Nov 2022 15:34:03 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/virtual-network/</guid>
-      <description>本地虚拟机网络配置</description>
+      <description> 虚拟机版本：CentOS Linux release 7.9.2009 (Core)
+配置文件地址：/etc/sysconfig/network-scripts/ifcfg-enp0s3
+1TYPE=Ethernet 2PROXY_METHOD=none 3BROWSER_ONLY=no 4BOOTPROTO=static 5DEFROUTE=yes 6IPADDR=192.168.120.61 7IPV4_FAILURE_FATAL=no 8IPV6INIT=yes 9IPV6_AUTOCONF=yes 10IPV6_DEFROUTE=yes 11IPV6_FAILURE_FATAL=no 12IPV6_ADDR_GEN_MODE=stable-privacy 13NAME=enp0s3 14UUID=03dae35b-d264-45e4-8d73-8920ab61cd02 15DEVICE=enp0s3 16ONBOOT=yes 17GETRWAY=192.168.56.1 18NETMASK=255.255.255.0 19DNS1=192.168.56.1 </description>
     </item>
     
     <item>
@@ -35,7 +35,9 @@
       <pubDate>Mon, 21 Nov 2022 15:26:19 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/virtual-space-not-enough/</guid>
-      <description>虚拟机扩容（/dev/mapper/centos-root 空间不足）</description>
+      <description>查看根分区大小 df -h
+1文件系统 类型 容量 已用 可用 已用% 挂载点 2/dev/mapper/centos-root xfs 18G 1.1G 17G 6% / 3devtmpfs devtmpfs 479M 0 479M 0% /dev 4tmpfs tmpfs 489M 0 489M 0% /dev/shm 5tmpfs tmpfs 489M 6.7M 483M 2% /run 6tmpfs tmpfs 489M 0 489M 0% /sys/fs/cgroup 7/dev/sda1 xfs 497M 125M 373M 25% /boot 8tmpfs tmpfs 98M 0 98M 0% /run/user/0 在虚拟机中添加一块物理的磁盘，重起虚拟机 查看磁盘编号 ls /dev/sd*
+1/dev/sda /dev/sda1 /dev/sda2 /dev/sdb 创建pv pvcreate /dev/sdb</description>
     </item>
     
   </channel>

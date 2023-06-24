@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/tags/hugo/</link>
     <description>Recent content in hugo on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Thu, 24 Nov 2022 20:48:28 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,8 @@
       <pubDate>Thu, 24 Nov 2022 20:48:28 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/hugo-build-blog/</guid>
-      <description>使用 Hugo 搭建自己的博客</description>
+      <description>Hugo 的安装 安装可查看 官方文档 安装完成后按照文档的快速启动项目操作 1# 创建一个项目 2hugo new site [项目名称，如：myblog] 3 4# 进入你的项目，后面所有的命令都是在项目根目录执行（未特殊标明的） 5cd myblog 6 7# 初始化 git 仓库 8git init 9git remote add origin [你的 github/gitee/gitlab 仓库地址] 下载一个你喜欢的主题 官方文档 主题库 这里有很多 我使用的是这个 主题 stars 还挺多的 直接在你的项目目录执行下面 git 命令就可以了 1git clone [主题仓库地址] themes/主题名 配置你的主题 项目根目录 config.toml 文件 1# 设置主题 2theme = &amp;#34;PaperMod&amp;#34; 具体主题相关配置可按照自己下载的主体来，如我使用的这个主体可以在他的仓库看下有 exampleSite 分支，切到这个分支下可找到 config.yml 文件 PS：如果主题的配置文件是 yml 或 yaml 格式，可以随便百度或 google yml to toml 解决配置转换问题
+创建你的内容 运行如下命令 1hugo new posts/first-post.</description>
     </item>
     
     <item>
@@ -26,7 +23,8 @@
       <pubDate>Thu, 24 Nov 2022 20:29:38 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/hugo-supprt-comments/</guid>
-      <description>Hugo PaperMod 开启评论</description>
+      <description>创建评论使用的 github 仓库 操作步骤如下图（utteranc 的操作截图） giscus 驱动与 utteranc 驱动开启操作大同小异，步骤基本相同 创建好后如我的：https://github.com/cxlcxl/comments-for-hugo，而后可在最底下的 Enable Utterances 部分取到配置 Hugo 配置文件文件修改 config.toml
+1[params] 2# ... 3comments = true 4 #使用的是 utteranc 评论，教程参考 https://utteranc.es/ 5 [params.utteranc] 6 enable = false 7 repo = &amp;#34;cxlcxl/comments-for-hugo&amp;#34; # 改成自己的配置 8 issueTerm = &amp;#34;pathname&amp;#34; 9 theme = &amp;#34;github-light&amp;#34; 10 11 ## 配置 giscus 评论,教程参考 https://giscus.app/zh-CN 12 [params.giscus] 13 enable = true 14 repo = &amp;#34;cxlcxl/comments-for-hugo&amp;#34; # 改成自己的配置 15 repoId = &amp;#34;&amp;#34; 16 category = &amp;#34;&amp;#34; 17 categoryId = &amp;#34;&amp;#34; 18 mapping = &amp;#34;pathname&amp;#34; 19 theme = &amp;#34;light_protanopia&amp;#34; 20 lang = &amp;#34;zh-CN&amp;#34; 21 crossorigin = &amp;#34;anonymous&amp;#34; comments.</description>
     </item>
     
   </channel>

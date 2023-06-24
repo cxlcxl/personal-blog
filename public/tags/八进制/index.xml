@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>八进制 on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/tags/%E5%85%AB%E8%BF%9B%E5%88%B6/</link>
     <description>Recent content in 八进制 on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Wed, 23 Nov 2022 14:31:06 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/%E5%85%AB%E8%BF%9B%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,10 @@
       <pubDate>Wed, 23 Nov 2022 14:31:06 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/computer-conversion/</guid>
-      <description>进制转换</description>
+      <description>世界上有 10 种人，懂二进制和不懂二进制的，实际上二进制只有 0 和 1，逢 2 进 1，所以 10 在二进制中并不是十进制的 10 而是十进制的 2。
+进制就是逢几进一，n 进制就是逢 n 进一。计算机只能识别二进制，人类最习惯使用的是十进制，而为了实际需要，又建立了八进制和十六进制。八进制就是逢八进一，十六进制就是逢十六进一。
+二进制转十进制 例二进制数：10010110，可转换如下
+1 1 0 0 1 0 1 1 0 // 二进制 21*2^7 + 0*2^6 + 0*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 1*2^1 + 0*2^0 3128 + 0 + 0 + 16 + 0 + 4 + 2 + 0 = 150 // 十进制 八进制转十进制 八进制：只有 0~7，逢 8 进 1</description>
     </item>
     
   </channel>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on Silent 代码搬运工</title>
     <link>https://www.silent-cxl.top/tags/golang/</link>
     <description>Recent content in golang on Silent 代码搬运工</description>
-    <image>
-      <url>https://www.silent-cxl.top/papermod-cover.png</url>
-      <link>https://www.silent-cxl.top/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>粤ICP备2022145969号-1</copyright>
     <lastBuildDate>Mon, 21 Nov 2022 11:25:27 +0800</lastBuildDate><atom:link href="https://www.silent-cxl.top/tags/golang/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +13,8 @@
       <pubDate>Mon, 21 Nov 2022 11:25:27 +0800</pubDate>
       
       <guid>https://www.silent-cxl.top/posts/golang-air/</guid>
-      <description>air 热更新使用</description>
+      <description>首先安装 air 运行命令：go install github.com/cosmtrek/air@latest 项目根目录创建 air 配置文件：.air.conf mac 系统文件内容
+1# .air.conf 文件内容 2root = &amp;#34;.&amp;#34; 3tmp_dir = &amp;#34;tmp&amp;#34; 4 5[build] 6# Just plain old shell command. You could use `make` as well. 7cmd = &amp;#34;go build -o ./tmp/main ./web/main.go&amp;#34; 8# Binary file yields from `cmd`. 9bin = &amp;#34;tmp/main&amp;#34; 10# Customize binary. 11full_bin = &amp;#34;APP_ENV=dev APP_USER=air ./tmp/main&amp;#34; 12# Watch these filename extensions. 13include_ext = [&amp;#34;go&amp;#34;, &amp;#34;tpl&amp;#34;, &amp;#34;tmpl&amp;#34;, &amp;#34;html&amp;#34;] 14# Ignore these filename extensions or directories.</description>
     </item>
     
   </channel>
